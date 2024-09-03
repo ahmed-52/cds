@@ -15,7 +15,7 @@ function App() {
 
         {/* Title */}
         <Typography variant="h6" style={{ flexGrow: 1, color: '#333333' }}>
-          Cornell Data Strategy
+          Cornell Data
         </Typography>
 
         {/* Navigation Buttons */}
