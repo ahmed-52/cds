@@ -1,10 +1,10 @@
 import React from 'react';
 import CustomNavbar from './components/CustomNavbar';
 import { SparklesPreview } from './components/ui/SparklesUi';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes } from 'react-router-dom';
 import { TextGenerate } from './components/TextGenerate';
 import { ClubOverview } from './components/ClubOverview';
-import Intro from './components/Intro';
+// import Intro from './components/Intro';
 
 
 function App() {
