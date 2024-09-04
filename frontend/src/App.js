@@ -64,7 +64,7 @@ function App() {
     <Beam></Beam>
   </section>
 
-
+{/* 
     <section className="w-full py-12 bg-[#E0DDD6]">
   <div className="max-w-[1200px] mx-auto">
     <h1 className="text-5xl text-center mb-8 font-apercu">Meet Our Team</h1>
@@ -79,7 +79,7 @@ function App() {
       ))}
     </div>
   </div>
-</section>
+</section> */}
 
 
 <Footer></Footer>
