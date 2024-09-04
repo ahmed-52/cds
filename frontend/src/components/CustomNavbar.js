@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom"; // Assuming you're using react-router-dom for navigation
-import { Menu, MenuItem, ProductItem, HoveredLink } from "./ui/Navbar";
+import { Menu, MenuItem, ProductItem } from "./ui/Navbar";
 
 const CustomNavbar = () => {
   const [active, setActive] = useState(null);
