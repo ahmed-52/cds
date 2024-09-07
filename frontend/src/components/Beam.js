@@ -5,10 +5,10 @@ import { TracingBeam } from "./ui/tracing-beam";
 
 export function Beam() {
   return (
-    <TracingBeam className="py-12">
-      <div className="max-w-2xl mx-auto antialiased pt-12 relative">
+    <TracingBeam className="">
+      <div className="max-w-2xl mx-auto antialiased py-12 relative">
         {content.map((item, index) => (
-          <div key={`content-${index}`} className="mb-10">
+          <div key={`content-${index}`} className="mb-10 px-3">
             <h2 className="bg-black text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
               {item.badge}
             </h2>
@@ -27,7 +27,9 @@ export function Beam() {
                   className="rounded-lg mb-10 object-cover"
                 />
               )}
+              <div className="pb-2">
               {item.description}
+              </div>
             </div>
           </div>
         ))}

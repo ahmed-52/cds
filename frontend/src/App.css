@@ -3,16 +3,23 @@
   src: url('/src/assets/fonts/Apercu-regular.ttf') format('truetype'),
        url('/src/assets/fonts/Apercu Light.otf') format('opentype'),
        url('/src/assets/fonts/Apercu Italic.otf') format('opentype'),
-       url('/src/assets/fonts/Apercu Mono.otf') format('opentype');
+       url('/src/assets/fonts/Apercu Mono.otf') format('opentype'); /* Mono */
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Apercu';
+  font-family: 'Apercu Bold';
   src: url('/src/assets/fonts/apercu-bold.ttf') format('truetype'),
        url('/src/assets/fonts/Apercu-medium.otf') format('opentype'),
        url('/src/assets/fonts/Apercu Light Italic.otf') format('opentype');
   font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Apercu Mono';
+  src: url('/src/assets/fonts/Apercu Mono.otf') format('opentype'); /* Mono */
+  font-weight: 400;
   font-style: normal;
 }

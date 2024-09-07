@@ -17,6 +17,7 @@ module.exports = {
     extend: {
       fontFamily: {
         apercu: ['Apercu', 'sans-serif'],
+        'apercu-mono': ['Apercu Mono', 'monospace'],
       },
       animation: {
         spotlight: "spotlight 2s ease .75s 1 forwards",
