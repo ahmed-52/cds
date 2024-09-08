@@ -24,6 +24,14 @@ const CustomNavbar = () => {
       {/* Menu Section */}
       <Menu setActive={setActive} className="flex">
 
+
+      <a 
+          href="/" 
+          className="font-apercu"
+        >
+          Home
+        </a>
+
         <MenuItem setActive={setActive} active={active} item="Projects">
           <div className="flex flex-col space-y-4">
             <ProductItem

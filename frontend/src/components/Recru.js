@@ -11,10 +11,10 @@ const Recru = () => {
             Info Session
           </p>
           <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base">
-            Location: TBD
+            Location: White Hall 106
           </p>
           <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base">
-            Time: TBD (Check Emails)
+            Time: 4:30 pm
           </p>
           <div className="mt-2">
             <img
@@ -36,10 +36,10 @@ const Recru = () => {
             Info Session
           </p>
           <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base">
-            Location: TBD
+            Location: White Hall 106
           </p>
           <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base">
-            Time: TBD (Check Emails)
+            Time: 5:00 pm
           </p>
           <div className="mt-2">
             <img

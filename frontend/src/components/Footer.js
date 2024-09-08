@@ -4,9 +4,9 @@ import React from "react";
 export function Footer() {
   return (
 <footer className="bg-white border-t-[2px] border-black text-black py-8">
-  <div className="container mx-auto grid grid-cols-3 items-center">
+  <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 items-center gap-y-4 md:gap-y-0">
     {/* Logo and Text */}
-    <div className="flex items-center">
+    <div className="flex justify-center md:justify-start items-center">
       <img
         src="logo.svg"
         alt="Cornell Data Strategy Logo"
@@ -28,10 +28,10 @@ export function Footer() {
       </a>
     </div>
 
-    <div className="flex justify-end">
+    <div className="flex justify-center md:justify-end">
       <a
         href="https://www.linkedin.com/in/ahmed-abdulla-1aa908253/"
-        className=" text-black font-apercu-mono hover:underline"
+        className="text-black font-apercu-mono hover:underline"
       >
         Website by <span className="font-bold font-apercu">Ahmed</span>
       </a>
@@ -42,6 +42,7 @@ export function Footer() {
     &copy; {new Date().getFullYear()} Cornell Data Strategy. All rights reserved.
   </div>
 </footer>
+
 
   );
 }

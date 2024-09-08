@@ -47,7 +47,7 @@ const About = () => {
               </div>
               <div className="absolute opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 p-6 z-10">
                 <p className="mt-4 text-sm sm:text-base">
-                Ahmed oversees project management and team collaboration is the club's primary software engineer.
+                Ahmed oversees project management, team collaboration, and leads the club's tech efforts.
                 </p>
                 <p className="mt-1 font-bold">Sophomore</p>
               </div>
@@ -63,11 +63,11 @@ const About = () => {
                 className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ease-in-out group-hover:opacity-0 filter brightness-75"
               />
               <div className="p-6 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 z-10">
-                <h2 className="mt-4 text-xl font-medium sm:text-2xl text-[#ECEADD] m-0">Michael Raybetz<br></br><span className='text-[16px]'>Treasurer</span></h2>
+                <h2 className="mt-4 text-xl font-medium sm:text-2xl text-[#ECEADD] m-0">Michael Raybetz<br></br><span className='text-[16px]'>Treasurer & Recruitment</span></h2>
               </div>
               <div className="absolute opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 p-6 z-10">
                 <p className="mt-4 text-sm sm:text-base">
-                  Michael manages the club's finances, ensuring our resources are allocated effectively for maximum impact.
+                  Michael manages the club's finances and leads our efforts in attracting top talent.
                 </p>
                 <p className="mt-1 font-bold">Senior</p>
               </div>
@@ -83,11 +83,11 @@ const About = () => {
                 className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ease-in-out group-hover:opacity-0 filter brightness-75"
               />
               <div className="p-6 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 z-10">
-                <h2 className="mt-4 text-xl font-medium sm:text-2xl text-[#ECEADD] m-0">Alex Stöllinger<br></br><span className='text-[16px]'>Director of Recruitment</span></h2>
+                <h2 className="mt-4 text-xl font-medium sm:text-2xl text-[#ECEADD] m-0">Alex Stöllinger<br></br><span className='text-[16px]'>Project Lead</span></h2>
               </div>
               <div className="absolute opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 p-6 z-10">
                 <p className="mt-4 text-sm sm:text-base">
-                  Alex leads our efforts in attracting top talent and ensuring our team is well-equipped to tackle complex problems.
+                Alex leads key projects, ensuring high-quality deliverables and managing collaboration between teams.
                 </p>
                 <p className="mt-1 font-bold">Senior</p>
               </div>
@@ -118,16 +118,16 @@ const About = () => {
   <span className="absolute inset-0 border-2 border-dashed border-[#ECEADD]"></span>
   <div className="relative flex h-full w-full items-end border-2 border-[#ECEADD] bg-white transition-all group-hover:bg-white group-hover:shadow-lg">
     <img 
-      src="carey.jpeg" 
-      alt="Carey Manwa"
+      src="josh.jpeg" 
+      alt="Josh De Leeuw"
       className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ease-in-out group-hover:opacity-0 filter brightness-75"
     />
     <div className="p-6 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 z-10">
-      <h2 className="mt-4 text-xl font-medium sm:text-2xl text-[#ECEADD] m-0">Carey Manwa<br></br><span className='text-[16px]'>Project Lead</span></h2>
+      <h2 className="mt-4 text-xl font-medium sm:text-2xl text-[#ECEADD] m-0">Josh De Leeuw<br></br><span className='text-[16px]'>Project Lead</span></h2>
     </div>
     <div className="absolute opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 p-6 z-10">
       <p className="mt-4 text-sm sm:text-base">
-        Carey leads key projects, ensuring high-quality deliverables and managing collaboration between teams.
+      Josh De Leeuw leads key projects, ensuring high-quality deliverables and managing collaboration between teams.
       </p>
       <p className="mt-1 font-bold">Junior</p>
     </div>
