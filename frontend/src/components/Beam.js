@@ -40,11 +40,11 @@ export function Beam() {
 
 const content = [
     {
-      title: "About Cornell Data Strategy",
+      title: "About Cornell Data Strategy Club Club",
       description: (
         <>
           <p>
-            Cornell Data Strategy is a student organization dedicated to merging the disciplines of data science and business consulting. Our mission is to offer actionable insights and forecasts that empower local businesses and the Cornell community to make informed, data-driven decisions. By combining in-depth analysis with practical strategies, we aim to address real-world challenges effectively.
+            Cornell Data Strategy Club is a student organization dedicated to merging the disciplines of data science and business consulting. Our mission is to offer actionable insights and forecasts that empower local businesses and the Cornell community to make informed, data-driven decisions. By combining in-depth analysis with practical strategies, we aim to address real-world challenges effectively.
           </p>
           <p>
             Our team brings together passionate individuals with diverse expertise, fostering an environment where students can grow, learn, and make a real impact through data.
@@ -60,7 +60,7 @@ const content = [
       description: (
         <>
           <p>
-            At Cornell Data Strategy, we specialize in translating complex data into actionable insights that help businesses make informed decisions. By leveraging data analysis, predictive modeling, and strategic business consulting, we provide comprehensive solutions tailored to specific needs.
+            At Cornell Data Strategy Club, we specialize in translating complex data into actionable insights that help businesses make informed decisions. By leveraging data analysis, predictive modeling, and strategic business consulting, we provide comprehensive solutions tailored to specific needs.
           </p>
           <p>
             From market research to product development, we aim to enhance decision-making processes for organizations through data-driven strategies.

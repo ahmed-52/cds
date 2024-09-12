@@ -9,10 +9,10 @@ export function Footer() {
     <div className="flex justify-center md:justify-start items-center">
       <img
         src="logo.svg"
-        alt="Cornell Data Strategy Logo"
+        alt="Cornell Data Strategy Club Logo"
         className="h-12 w-auto mr-4"
       />
-      <span className="font-semibold text-lg">Cornell Data Strategy</span>
+      <span className="font-semibold text-lg">Cornell Data Strategy Club</span>
     </div>
 
     {/* Navigation Links */}
@@ -39,7 +39,7 @@ export function Footer() {
   </div>
 
   <div className="text-center text-sm mt-8 text-black">
-    &copy; {new Date().getFullYear()} Cornell Data Strategy. All rights reserved.
+    &copy; {new Date().getFullYear()} Cornell Data Strategy Club. All rights reserved.
   </div>
 </footer>
 

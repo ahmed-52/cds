@@ -33,7 +33,7 @@ const Home = () => {
         <div className='max-w-[1200px] mx-auto pt-4 pb-12'>
           <h1 className='text-[20px] md:text-2xl text-white font-medium font-apercu-mono text-center mb-4 px-4'>
 
-          We are excited to announce the formation of Cornell Data Strategy, a student organization dedicated to merging data science and business consulting. Our mission is to deliver actionable insights and forecasts that empower local businesses and the Cornell community to make informed, data-driven decisions. By combining in-depth analysis with practical strategies, we aim to address real-world challenges effectively.
+          We are excited to announce the formation of Cornell Data Strategy Club, a student organization dedicated to merging data science and business consulting. Our mission is to deliver actionable insights and forecasts that empower local businesses and the Cornell community to make informed, data-driven decisions. By combining in-depth analysis with practical strategies, we aim to address real-world challenges effectively.
           </h1>
           <TextGenerate />
         </div>
@@ -55,7 +55,7 @@ const Home = () => {
               Sign up for our newsletter
             </h2>
             <p className="mx-auto mb-8 max-w-2xl text-gray-500 md:mb-12 sm:text-xl font-normal">
-            Stay informed about Cornell Data Strategy's latest projects, events, and opportunities. Join our newsletter to get updates on club initiatives, data-driven insights, and more.
+            Stay informed about Cornell Data Strategy Club's latest projects, events, and opportunities. Join our newsletter to get updates on club initiatives, data-driven insights, and more.
             </p>
             <form onSubmit={handleSubmit}>
               {/* Display success or error message */}

@@ -29,7 +29,7 @@ export const Timeline = ({ data }) => {
     >
       <div className="max-w-7xl mx-auto pt-20 pb-10 px-4 md:px-8 lg:px-10">
         <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl">
-          Cornell Data Strategy Recruitment Timeline
+          Cornell Data Strategy Club Recruitment Timeline
         </h2>
         <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
             Here is a timeline of our recruitment process. Please note that all dates are subject to change.

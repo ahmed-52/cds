@@ -8,7 +8,7 @@ export function SparklesPreview() {
       className="w-full bg-[#333333] flex flex-col items-center justify-center overflow-hidden">
       <h1
         className="md:text-4xl text-3xl lg:text-7xl font-bold text-center text-white relative z-20 font-apercu mt-[5rem]">
-        Cornell Data Strategy
+        Cornell Data Strategy Club
       </h1>
       
       <div className="w-[40rem] h-40 relative">

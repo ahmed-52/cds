@@ -16,7 +16,7 @@ const CustomNavbar = () => {
       <Link to="/" className="flex items-center">
         <img
           src="logo.svg" 
-          alt="Cornell Data Strategy Logo"
+          alt="Cornell Data Strategy Club Logo"
           className="h-10 w-auto" 
         />
       </Link>
