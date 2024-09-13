@@ -4,10 +4,35 @@
 
 
 .para {
-    font-family: "apercu-regular", "Helvetica", sans-serif;
+    font-family: "Apercu", "Helvetica", sans-serif;
     line-height: 1.25;
     font-size: 22px;
   }
   
 
   
+
+  @font-face {
+  font-family: 'Apercu';
+  src: url('../public/fonts/Apercu-regular.ttf') format('truetype'),
+       url('../public/fonts/ApercuLight.otf') format('opentype'),
+       url('../public/fonts/ApercuItalic.otf') format('opentype'),
+       url('../public/fonts/ApercuMono.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Apercu Bold';
+  src: url('../public/fonts/apercu-bold.ttf') format('truetype'),
+       url('../public/fonts/Apercu-medium.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Apercu Mono';
+  src: url('../public/fonts/ApercuMono.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}

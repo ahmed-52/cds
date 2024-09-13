@@ -103,7 +103,7 @@ const Home2 = () => {
             <h1 className="sm:text-[30px] text-[20px] font-apercu ml-3 text-[#252525] ">Cornell Data Strategy Club</h1>
               </div>
               <div className="flex items-center mb-2">
-                <h3 className="text-[40px] text-[#252525]">Who We Are</h3>
+                <h3 className="text-[40px] text-[#252525] font-apercu">Who We Are</h3>
               </div>
               <p className="para mb-6 text-[#252525]">
               Cornell Data Strategy Club is a student organization dedicated to merging the disciplines of data science and business consulting. Our mission is to 
