@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.para {
+    font-family: "apercu-regular", "Helvetica", sans-serif;
+    line-height: 1.25;
+    font-size: 22px;
+  }
+  
+
+  

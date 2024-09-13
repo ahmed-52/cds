@@ -6,6 +6,8 @@ import About from './components/About';
 import Home from './components/Home';
 import { Footer } from './components/Footer';
 import SignIn from './components/SignIn';
+import Home2 from './Home2';
+import Projects from './components/Projects';
 
 
 function App() {
@@ -21,13 +23,14 @@ function App() {
 
     <Router>
           <div className="App">
-            <CustomNavbar />
+            {/* <CustomNavbar /> */}
             <Routes>
-            <Route path="/" element={<Home></Home>} />
+            <Route path="/" element={<Home2></Home2>} />
             <Route path="/about" element={<About></About>} />
             <Route path="/login" element={<SignIn></SignIn>} />
+            <Route path="/projects" element={<Projects></Projects>} />
             </Routes>
-            <Footer></Footer>
+            {/* <Footer></Footer> */}
           </div>
   </Router>
   );

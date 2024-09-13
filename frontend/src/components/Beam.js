@@ -1,90 +1,128 @@
-"use client";
-import React from "react";
-import { twMerge } from "tailwind-merge";
-import { TracingBeam } from "./ui/tracing-beam";
+<section className='my-5'> 
+<h1 className='text-center text-[40px] md:text-[60px] font-medium font-apercu-mono text-[#333333] py-12'>Meet The Team!</h1>
 
-export function Beam() {
-  return (
-    <TracingBeam className="">
-      <div className="max-w-2xl mx-auto antialiased py-12 relative">
-        {content.map((item, index) => (
-          <div key={`content-${index}`} className="mb-10 px-3">
-            <h2 className="bg-black text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
-              {item.badge}
-            </h2>
+<div className='flex flex-wrap justify-center items-center max-w-[1300px] mx-auto gap-3'>
 
-            <p className={twMerge("text-xl text-white mb-4")}>
-              {item.title}
-            </p>
-
-            <div className="text-sm text-white prose prose-sm dark:prose-invert">
-              {item?.image && (
-                <img
-                  src={item.image}
-                  alt="blog thumbnail"
-                  height="1000"
-                  width="1000"
-                  className="rounded-lg mb-10 object-cover"
-                />
-              )}
-              <div className="pb-2">
-              {item.description}
-              </div>
-            </div>
-          </div>
-        ))}
+  <div className="group relative block w-80 h-64 sm:h-80">
+    <span className="absolute inset-0 border-2 border-dashed border-[#ECEADD]"></span>
+    <div className="relative flex h-full w-full items-end border-2 border-[#ECEADD] bg-white transition-all group-hover:bg-white group-hover:shadow-lg">
+      <img 
+        src="chris.jpeg" 
+        alt="Chris Wang"
+        className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ease-in-out group-hover:opacity-0 filter brightness-75"
+      />
+      <div className="p-6 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 z-10">
+        <h2 className="mt-4 text-xl font-medium sm:text-2xl text-[#ECEADD] m-0">Chris Wang<br></br><span className='text-[16px]'>President</span></h2>
       </div>
-    </TracingBeam>
-  );
-}
+      <div className="absolute opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 p-6 z-10">
+        <p className="mt-4 text-sm sm:text-base">
+          Chris leads the strategic direction of the club, ensuring all initiatives align with our mission to merge data science and business consulting.
+        </p>
+        <p className="mt-1 font-bold">Senior</p>
+      </div>
+    </div>
+  </div>
 
-const content = [
-    {
-      title: "About Cornell Data Strategy Club Club",
-      description: (
-        <>
-          <p>
-            Cornell Data Strategy Club is a student organization dedicated to merging the disciplines of data science and business consulting. Our mission is to offer actionable insights and forecasts that empower local businesses and the Cornell community to make informed, data-driven decisions. By combining in-depth analysis with practical strategies, we aim to address real-world challenges effectively.
-          </p>
-          <p>
-            Our team brings together passionate individuals with diverse expertise, fostering an environment where students can grow, learn, and make a real impact through data.
-          </p>
-        </>
-      ),
-      badge: "Our Mission",
-      image:
-        "10.png",
-    },
-    {
-      title: "Our Approach",
-      description: (
-        <>
-          <p>
-            At Cornell Data Strategy Club, we specialize in translating complex data into actionable insights that help businesses make informed decisions. By leveraging data analysis, predictive modeling, and strategic business consulting, we provide comprehensive solutions tailored to specific needs.
-          </p>
-          <p>
-            From market research to product development, we aim to enhance decision-making processes for organizations through data-driven strategies.
-          </p>
-        </>
-      ),
-      badge: "Our Approach",
-      image:
-        "20.png",
-    },
-    {
-      title: "Student Impact",
-      description: (
-        <>
-          <p>
-            Our club offers a unique opportunity for students to apply their analytical skills in real-world settings. Through consulting projects, students gain hands-on experience, working with local businesses and organizations to solve strategic problems using data insights.
-          </p>
-          <p>
-            We host workshops, research opportunities, and events that allow students to deepen their understanding of data strategy and its application in various industries.
-          </p>
-        </>
-      ),
-      badge: "Impact & Opportunities",
-      image:
-        "30.png",
-    },
-  ];
+  <div className="group relative block w-80 h-64 sm:h-80">
+    <span className="absolute inset-0 border-2 border-dashed border-[#ECEADD]"></span>
+    <div className="relative flex h-full w-full items-end border-2 border-[#ECEADD] bg-white transition-all group-hover:bg-white group-hover:shadow-lg">
+      <img 
+        src="ahmed.jpg" 
+        alt="Ahmed Abdulla"
+        className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ease-in-out group-hover:opacity-0 filter brightness-75"
+      />
+      <div className="p-6 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 z-10">
+        <h2 className="mt-4 text-xl font-medium sm:text-2xl text-[#ECEADD] m-0">Ahmed Abdulla<br></br><span className='text-[16px]'>Vice President</span></h2>
+      </div>
+      <div className="absolute opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 p-6 z-10">
+        <p className="mt-4 text-sm sm:text-base">
+        Ahmed oversees project management, team collaboration, and leads the club's tech efforts.
+        </p>
+        <p className="mt-1 font-bold">Sophomore</p>
+      </div>
+    </div>
+  </div>
+
+  <div className="group relative block w-80 h-64 sm:h-80">
+    <span className="absolute inset-0 border-2 border-dashed border-[#ECEADD]"></span>
+    <div className="relative flex h-full w-full items-end border-2 border-[#ECEADD] bg-white transition-all group-hover:bg-white group-hover:shadow-lg">
+      <img 
+        src="michael.jpeg" 
+        alt="Michael Raybetz"
+        className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ease-in-out group-hover:opacity-0 filter brightness-75"
+      />
+      <div className="p-6 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 z-10">
+        <h2 className="mt-4 text-xl font-medium sm:text-2xl text-[#ECEADD] m-0">Michael Raybetz<br></br><span className='text-[16px]'>Treasurer & Recruitment</span></h2>
+      </div>
+      <div className="absolute opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 p-6 z-10">
+        <p className="mt-4 text-sm sm:text-base">
+          Michael manages the club's finances and leads our efforts in attracting top talent.
+        </p>
+        <p className="mt-1 font-bold">Senior</p>
+      </div>
+    </div>
+  </div>
+
+  <div className="group relative block w-80 h-64 sm:h-80">
+    <span className="absolute inset-0 border-2 border-dashed border-[#ECEADD]"></span>
+    <div className="relative flex h-full w-full items-end border-2 border-[#ECEADD] bg-white transition-all group-hover:bg-white group-hover:shadow-lg">
+      <img 
+        src="alex_stol.jpeg" 
+        alt="Alex Stöllinger"
+        className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ease-in-out group-hover:opacity-0 filter brightness-75"
+      />
+      <div className="p-6 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 z-10">
+        <h2 className="mt-4 text-xl font-medium sm:text-2xl text-[#ECEADD] m-0">Alex Stöllinger<br></br><span className='text-[16px]'>Project Lead</span></h2>
+      </div>
+      <div className="absolute opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 p-6 z-10">
+        <p className="mt-4 text-sm sm:text-base">
+        Alex leads key projects, ensuring high-quality deliverables and managing collaboration between teams.
+        </p>
+        <p className="mt-1 font-bold">Senior</p>
+      </div>
+    </div>
+  </div>
+
+  <div className="group relative block w-80 h-64 sm:h-80">
+    <span className="absolute inset-0 border-2 border-dashed border-[#ECEADD]"></span>
+    <div className="relative flex h-full w-full items-end border-2 border-[#ECEADD] bg-white transition-all group-hover:bg-white group-hover:shadow-lg">
+      <img 
+        src="viktor.jpeg" 
+        alt="Viktor Stöllinger"
+        className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ease-in-out group-hover:opacity-0 filter brightness-75"
+      />
+      <div className="p-6 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 z-10">
+        <h2 className="mt-4 text-xl font-medium sm:text-2xl text-[#ECEADD] m-0">Viktor Stöllinger<br></br><span className='text-[16px]'>Business Development Director</span></h2>
+      </div>
+      <div className="absolute opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 p-6 z-10">
+        <p className="mt-4 text-sm sm:text-base">
+          Viktor focuses on expanding our client base and ensuring the club's growth aligns with our long-term vision.
+        </p>
+        <p className="mt-1 font-bold">Sophomore</p>
+      </div>
+    </div>
+  </div>
+
+  <div className="group relative block w-80 h-64 sm:h-80">
+<span className="absolute inset-0 border-2 border-dashed border-[#ECEADD]"></span>
+<div className="relative flex h-full w-full items-end border-2 border-[#ECEADD] bg-white transition-all group-hover:bg-white group-hover:shadow-lg">
+<img 
+src="josh.jpeg" 
+alt="Josh De Leeuw"
+className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ease-in-out group-hover:opacity-0 filter brightness-75"
+/>
+<div className="p-6 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 z-10">
+<h2 className="mt-4 text-xl font-medium sm:text-2xl text-[#ECEADD] m-0">Josh De Leeuw<br></br><span className='text-[16px]'>Project Lead</span></h2>
+</div>
+<div className="absolute opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 p-6 z-10">
+<p className="mt-4 text-sm sm:text-base">
+Josh De Leeuw leads key projects, ensuring high-quality deliverables and managing collaboration between teams.
+</p>
+<p className="mt-1 font-bold">Junior</p>
+</div>
+</div>
+</div>
+
+
+</div>
+</section>

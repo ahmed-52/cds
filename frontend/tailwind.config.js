@@ -22,7 +22,6 @@ module.exports = {
       animation: {
         spotlight: "spotlight 2s ease .75s 1 forwards",
       },
-
       keyframes: {
         spotlight: {
           "0%": {
@@ -35,13 +34,14 @@ module.exports = {
           },
         },
       },
-
+      screens: {
+        lmd: '900px', // Custom breakpoint
+      },
     },
   },
   plugins: [addVariablesForColors],
 };
 
-// This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
 function addVariablesForColors({
   addBase,
   theme
