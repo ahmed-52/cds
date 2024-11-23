@@ -113,7 +113,7 @@ const Home2 = () => {
             </section>
 
 
-            <section className="font-apercu py-10 px-10 bg-[#ECECEC]">
+            {/* <section className="font-apercu py-10 px-10 bg-[#ECECEC]">
 
 <div className="flex items-center justify-between">
   <h3 className="md:text-[40px] text-[35px] text-[#252525]">Cornell Data Strategy Club Recruitment Timeline</h3>
@@ -166,7 +166,7 @@ const Home2 = () => {
     <p className="font-apercu text-base text-[#6462F4]">Specific time slots will be communicated via email.</p>
   </div>
 </div>
-</section>
+          </section> */}
 
             <style>
             {`
