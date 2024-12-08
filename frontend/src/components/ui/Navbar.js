@@ -1,108 +1,37 @@
-"use client";
-import React from "react";
-import { motion } from "framer-motion";
-import { Link } from 'react-router-dom';
+const Navbar = ({bg,textcl,active}) => {
 
+  const size = "text-[22px]"
 
-const transition = {
-  type: "spring",
-  mass: 0.5,
-  damping: 11.5,
-  stiffness: 100,
-  restDelta: 0.001,
-  restSpeed: 0.001,
-};
-
-export const MenuItem = ({
-  setActive,
-  active,
-  item,
-  children
-}) => {
   return (
-    (<div onMouseEnter={() => setActive(item)} className="relative z-50">
-      <motion.p
-        transition={{ duration: 0.3 }}
-        className="cursor-pointer text-black hover:opacity-[0.9] dark:text-white">
-        {item}
-      </motion.p>
-      {active !== null && (
-        <motion.div
-          initial={{ opacity: 0, scale: 0.85, y: 10 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={transition}>
-          {active === item && (
-            <div
-              className="absolute top-[calc(100%_+_1.2rem)] left-1/2 transform -translate-x-1/2 pt-4">
-              <motion.div
-                transition={transition}
-                // layoutId ensures smooth animation
-                layoutId="active"
-                className="bg-[#FFFAF3] dark:bg-black backdrop-blur-sm rounded-2xl overflow-hidden border border-black/[0.2] dark:border-white/[0.2] shadow-xl">
-                <motion.div
-                  // layout ensures smooth animation
-                  layout
-                  className="w-max h-full p-4">
-                  {children}
-                </motion.div>
-              </motion.div>
-            </div>
-          )}
-        </motion.div>
-      )}
-    </div>)
-  );
-};
+    <div className={`sticky top-1 right-0 bg-${bg} pb-20 pr-20 pl-10 pt-5`}>
+      <nav className="mt-5">
+        <a href="/" className={`block py-1 ${active === 'home' ? 'text-[#1E53EF]' : `text-${textcl}`} ${size} font-shipporib1 group relative`}>
+          Home
+          <span className="absolute inset-x-0 bottom-1.5 w-12 h-[2px] bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"></span>
+        </a>
+        <a href="/services" className={`block py-1 ${active === 'services' ? 'text-[#1E53EF]' : `text-${textcl}`} ${size} font-shipporib1 group relative`}>
+          Services
+          <span className="absolute inset-x-0 bottom-1.5 w-[70px] h-[2px] bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"></span>
+        </a>
+        <a href="/projects" className={`block py-1 ${active === 'projects' ? 'text-[#1E53EF]' : `text-${textcl}`} ${size} font-shipporib1 group relative`}>
+          Projects
+          <span className="absolute inset-x-0 bottom-1.5 w-[70px] h-[2px] bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"></span>
+        </a>
+        <a href="/about" className={`block py-1 ${active === 'about' ? 'text-[#1E53EF]' : `text-${textcl}`} ${size} font-shipporib1 group relative`}>
+          About
+          <span className="absolute inset-x-0 bottom-1.5 w-12 h-[2px] bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"></span>
+        </a>
+        <a href="/join" className={`block py-1 ${active === 'join' ? 'text-[#1E53EF]' : `text-${textcl}`} ${size} font-shipporib1 group relative`}>
+          Join Us
+          <span className="absolute inset-x-0 bottom-1.5 w-[70px] h-[2px] bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"></span>
+        </a>
+        <a href="/login" className={`block py-1 ${active === 'login' ? 'text-[#1E53EF]' : `text-${textcl}`} ${size} font-shipporib1 group relative`}>
+          Login
+          <span className="absolute inset-x-0 bottom-1.5 w-[70px] h-[2px] bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"></span>
+        </a>
+      </nav>
+    </div>
+  )
+}
 
-export const Menu = ({
-  setActive,
-  children
-}) => {
-  return (
-    (<nav
-      // resets the state
-      onMouseLeave={() => setActive(null)}
-      className="relative rounded-full border border-transparent bg-[#FFFAF3] shadow-input flex justify-center items-center space-x-4 md:px-8 py-6 ">
-      {children}
-    </nav>)
-  );
-};
-
-export const ProductItem = ({
-  title,
-  description,
-  href,
-  src
-}) => {
-  return (
-    (<Link href={href} className="flex space-x-2">
-      <img
-        src={src}
-        width={140}
-        height={70}
-        alt={title}
-        className="flex-shrink-0 rounded-md shadow-2xl" />
-      <div>
-        <h4 className="text-xl font-bold mb-1 text-black dark:text-white">
-          {title}
-        </h4>
-        <p className="text-neutral-700 text-sm max-w-[10rem] dark:text-neutral-300">
-          {description}
-        </p>
-      </div>
-    </Link>)
-  );
-};
-
-export const HoveredLink = ({
-  children,
-  ...rest
-}) => {
-  return (
-    (<Link
-      {...rest}
-      className="text-neutral-700 dark:text-neutral-200 hover:text-black ">
-      {children}
-    </Link>)
-  );
-};
+export default Navbar

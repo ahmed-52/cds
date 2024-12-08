@@ -1,5 +1,5 @@
 <section className='my-5'> 
-<h1 className='text-center text-[40px] md:text-[60px] font-medium font-apercu-mono text-[#333333] py-12'>Meet The Team!</h1>
+<h1 className='text-center text-[40px] md:text-[60px] font-medium font-shippori-mono text-[#333333] py-12'>Meet The Team!</h1>
 
 <div className='flex flex-wrap justify-center items-center max-w-[1300px] mx-auto gap-3'>
 

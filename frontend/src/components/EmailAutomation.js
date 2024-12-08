@@ -58,58 +58,58 @@ const EmailAutomation = () => {
   return (
     <div className="flex items-center justify-center h-screen w-full bg-gray-100 overflow-y-auto">
       <div className="w-full p-8 bg-white rounded-lg shadow-lg">
-        <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-center font-apercu">Automate Email Sending</h2>
+        <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-center font-shippori">Automate Email Sending</h2>
         
         <div className="mb-4">
-          <label className="block text-md text-gray-700 mb-2 font-apercu">Enter NetIDs (each on a new line)</label>
+          <label className="block text-md text-gray-700 mb-2 font-shippori">Enter NetIDs (each on a new line)</label>
           <textarea
             rows="4"
             value={netIDs}
             onChange={(e) => setNetIDs(e.target.value)}
-            className="w-full p-3 bg-gray-200 text-gray-800 rounded-lg border border-gray-300 focus:border-blue-500 focus:outline-none font-apercu"
+            className="w-full p-3 bg-gray-200 text-gray-800 rounded-lg border border-gray-300 focus:border-blue-500 focus:outline-none font-shippori"
             placeholder="e.g., abc123"
           />
         </div>
         
         <div className="mb-4">
-          <label className="block text-md text-gray-700 mb-2 font-apercu">Enter Names (each on a new line)</label>
+          <label className="block text-md text-gray-700 mb-2 font-shippori">Enter Names (each on a new line)</label>
           <textarea
             rows="4"
             value={names}
             onChange={(e) => setNames(e.target.value)}
-            className="w-full p-3 bg-gray-200 text-gray-800 rounded-lg border border-gray-300 focus:border-blue-500 focus:outline-none font-apercu"
+            className="w-full p-3 bg-gray-200 text-gray-800 rounded-lg border border-gray-300 focus:border-blue-500 focus:outline-none font-shippori"
             placeholder="e.g., John Doe"
           />
         </div>
 
         <div className="mb-4">
-          <label className="block text-md text-gray-700 mb-2 font-apercu">Subject</label>
+          <label className="block text-md text-gray-700 mb-2 font-shippori">Subject</label>
           <input
             type="text"
             value={subject}
             onChange={(e) => setSubject(e.target.value)}
-            className="w-full p-3 bg-gray-200 text-gray-800 rounded-lg border border-gray-300 focus:border-blue-500 focus:outline-none font-apercu"
+            className="w-full p-3 bg-gray-200 text-gray-800 rounded-lg border border-gray-300 focus:border-blue-500 focus:outline-none font-shippori"
             placeholder="Subject of the email"
           />
         </div>
 
         <div className="mb-4">
-          <label className="block text-md text-gray-700 mb-2 font-apercu">Message Body</label>
+          <label className="block text-md text-gray-700 mb-2 font-shippori">Message Body</label>
           <textarea
             rows="3"
             value={messageBody}
             onChange={(e) => setMessageBody(e.target.value)}
-            className="w-full p-3 bg-gray-200 text-gray-800 rounded-lg border border-gray-300 focus:border-blue-500 focus:outline-none font-apercu"
+            className="w-full p-3 bg-gray-200 text-gray-800 rounded-lg border border-gray-300 focus:border-blue-500 focus:outline-none font-shippori"
             placeholder="Your message here..."
           />
         </div>
 
-        {error && <p className="text-red-500 text-center mb-4 font-apercu">{error}</p>}
-        {success && <p className="text-green-500 text-center mb-4 font-apercu">{success}</p>}
+        {error && <p className="text-red-500 text-center mb-4 font-shippori">{error}</p>}
+        {success && <p className="text-green-500 text-center mb-4 font-shippori">{success}</p>}
         
         <button
           onClick={handleUpload}
-          className="w-full px-4 py-2 bg-[#2562F5] text-white rounded-lg hover:bg-blue-700 focus:outline-none transition-all duration-200 font-apercu text-md"
+          className="w-full px-4 py-2 bg-[#2562F5] text-white rounded-lg hover:bg-blue-700 focus:outline-none transition-all duration-200 font-shippori text-md"
         >
           Send Emails
         </button>

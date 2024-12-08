@@ -3,14 +3,17 @@ import { useEffect } from "react";
 import { db } from "./firebase";
 import { collection, addDoc } from "firebase/firestore";
 import { Footer } from "./components/Footer";
-
+import Navbar from "./components/ui/Navbar";
+import Header from "./components/ui/Header";
+import Projcard from "./components/ui/Projcard";
 import "./index.css";
+
 
 const Home2 = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [animationComplete, setAnimationComplete] = useState(false);
   const [email, setEmail] = useState("");
-  const [message, setMessage] = useState({ text: '', type: '' }); 
+  const [message, setMessage] = useState({ text: '', type: '' });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,8 +21,8 @@ const Home2 = () => {
       await addDoc(collection(db, "newsletterEmails"), {
         email: email,
       });
-      setEmail(""); 
-      setMessage({ text: "Subscribed successfully!", type: "success" }); 
+      setEmail("");
+      setMessage({ text: "Subscribed successfully!", type: "success" });
     } catch (error) {
       console.error("Error adding document: ", error);
       setMessage({ text: "Error subscribing, please try again.", type: "error" });
@@ -46,7 +49,7 @@ const Home2 = () => {
           }
         });
       },
-      { threshold: 0.3 } // Trigger animation when 30% of the element is visible
+      { threshold: 0.3 }
     );
 
     const elements = document.querySelectorAll(".scroll-fade");
@@ -64,112 +67,74 @@ const Home2 = () => {
     <>
 
       <div
-        className={`fixed top-0 left-0 w-full h-full bg-[#6462F4] z-50 transition-all duration-1000 ease-in-out ${
-          animationComplete ? 'translate-y-full' : 'translate-y-0'
-        }`}
+        className={`fixed top-0 left-0 w-full h-full bg-[#dfdfdf] z-50 transition-all duration-1000 ease-in-out ${animationComplete ? 'translate-y-full' : 'translate-y-0'
+          }`}
       ></div>
 
-    <div className="relative min-h-screen flex bg-white">
-      {/* Main content on the left */}
-      <div className="flex-1">
+      <div className="relative min-h-screen flex bg-[#ffffff]">
+        {/* Main content on the left */}
+        <div className="flex-1">
 
-        <div className="">
-          {/* Hamburger Icon */}
-          {!isOpen && (
-            <button
-              className="fixed top-10 right-4 lmd:hidden z-40 text-black"
-              onClick={() => setIsOpen(!isOpen)}
-            >
-      <svg width="37" height="18" viewBox="0 0 37 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="37" height="4" fill="#9A9A9A"/>
-      <rect y="7" width="37" height="4" fill="#9A9A9A"/>
-      <rect y="14" width="37" height="4" fill="#9A9A9A"/>
-      </svg>
+          <div className="">
+            {/* Hamburger Icon */}
+            {!isOpen && (
+              <button
+                className="fixed top-10 right-4 lmd:hidden z-40 text-black"
+                onClick={() => setIsOpen(!isOpen)}
+              >
+                <svg width="37" height="18" viewBox="0 0 37 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="37" height="4" fill="#9A9A9A" />
+                  <rect y="7" width="37" height="4" fill="#9A9A9A" />
+                  <rect y="14" width="37" height="4" fill="#9A9A9A" />
+                </svg>
 
 
-            </button>
-          )}
+              </button>
+            )}
 
-          {/* Page Content */}
-          <div className="md:max-w-[1100px] lmd:ml-[70px] lg:mx-auto">
-            <section className="font-apercu pb-10 px-10">
-            <div className="flex justify-start items-center z-50  mr-auto mb-20 pt-10">
-            <img
-            src="logo.svg"
-            width={45}
-            height={45}
-            >
-            </img>
-            <h1 className="sm:text-[30px] text-[20px] font-apercu ml-3 text-[#252525] ">Cornell Data Strategy Club</h1>
+
+
+              <Header
+                theme="light"
+                textcl={"white"}
+                bg={"cas"}
+                active={"home"}
+              ></Header>
+
+            {/* Page Content */}
+            <div className="md:max-w-[1400px] xlx:mx-auto mx-[50px]">
+
+
+
+              <div className="mt-4 mb-16">
+                <img
+                  className="w-[100%] h-auto"
+                  src="homebar2.png"
+                >
+
+                </img>
+                <div className="mb-8 h-[8px] bg-das w-full"></div>
               </div>
-              <div className="flex items-center mb-2">
-                <h3 className="text-[40px] text-[#252525] font-apercu">Who We Are</h3>
-              </div>
-              <p className="para mb-6 text-[#252525]">
-              Cornell Data Strategy Club is a student organization dedicated to merging the disciplines of data science and business consulting. Our mission is to 
-              offer <span className="underline decoration-[#6562F5] decoration-[1.5px] underline-offset-[3px]">actionable insights</span> and  <span className="underline decoration-[#6562F5] decoration-[1.5px] underline-offset-[3px]">forecasts</span> that empower local businesses and the 
-              Cornell community to make informed, data-driven decisions. By combining in-depth analysis with practical strategies, we aim to address real-world challenges effectively.
-              </p>
-            </section>
 
 
-            {/* <section className="font-apercu py-10 px-10 bg-[#ECECEC]">
+              <section className="pb-10">
+                <p className="font-shippori font-medium mb-6 text-cas md:text-[35px]">
+                  We are Cornell Data Strategy, a student-run consulting organization delivering data-driven solutions and strategic insights.<br></br><br></br>
 
-<div className="flex items-center justify-between">
-  <h3 className="md:text-[40px] text-[35px] text-[#252525]">Cornell Data Strategy Club Recruitment Timeline</h3>
-  <img
-  src="timeline.svg"
-  >
-  </img>
-</div>
-<div className="flex justify-start items-start gap-2 mt-5">
-  <img
-  src="plus.svg"
-  alt="plus"
-  className="mt-2"
-  ></img>
-  <div>
-    <h1 className="font-apercu text-2xl text-[#252525] mt-0">Sept 13 - Info Session</h1>
-    <p className="font-apercu text-base text-[#6462F4]">White Hall 4:30 PM</p>
-  </div>
-</div>
-<div className="flex justify-start items-start gap-2 mt-2">
-  <img
-  src="plus.svg"
-  alt="plus"
-  className="mt-2"
-  ></img>
-  <div>
-    <h1 className="font-apercu text-2xl text-[#252525] mt-0">Sept 16 - Info Session</h1>
-    <p className="font-apercu text-base text-[#6462F4]">White Hall 5:00 PM</p>
-  </div>
-</div>
-<div className="flex justify-start items-start gap-2 mt-2">
-  <img
-  src="plus.svg"
-  alt="plus"
-  className="mt-2"
-  ></img>
-  <div>
-    <h1 className="font-apercu text-2xl text-[#252525] mt-0">Sept 23 - Application Deadline</h1>
-    <p className="font-apercu text-base text-[#6462F4]">Submit your application before midnight to be considered.</p>
-  </div>
-</div>
-<div className="flex justify-start items-start gap-2 mt-2">
-  <img
-  src="plus.svg"
-  alt="plus"
-  className="mt-2"
-  ></img>
-  <div>
-    <h1 className="font-apercu text-2xl text-[#252525] mt-0">Sept 25-27 - Interviews</h1>
-    <p className="font-apercu text-base text-[#6462F4]">Specific time slots will be communicated via email.</p>
-  </div>
-</div>
-          </section> */}
+                  We combine Cornell’s academic rigor with industry expertise to solve complex challenges.
+                  Using advanced analytics and innovative strategies, we help organizations achieve measurable
+                  results.<br></br><br></br>
 
-            <style>
-            {`
+
+                  To analyze. To innovate. To excel.
+                </p>
+                <div className="my-8 h-[8px] bg-cas w-full"></div>
+              </section>
+
+
+
+              <style>
+                {`
           @media (max-width: 1275px) {
             .flex-container {
               flex-direction: column;
@@ -177,230 +142,295 @@ const Home2 = () => {
           }
 
         `}
-      </style>
-
-      <section className="font-apercu py-10">
-  <div className="flex flex-col items-start mb-6 bg-[#6562F5]">
-    <div className="px-10 py-10">
-    <h3 className="text-[40px] text-white mb-5">What We Do</h3>
-    <p className="para mb-6 text-white max-w-[800px]">
-      We offer a variety of services to assist organizations in making data-driven decisions and developing market strategies that align with future trends and business objectives. Our focus is on predictive modeling, product development, and comprehensive data analytics services.
-    </p>
-    </div>
-  </div>
+              </style>
 
 
-  <div className="flex flex-col items-start mb-6 ">
-  <div className="px-10 py-10">
-  <h3 className="text-[40px] text-[#252525]">Our Expertise</h3>
-  <p className="para mb-6 text-[#252525] max-w-[800px]">
-    We specialize in empowering organizations with strategic insights and data-centric solutions. By leveraging predictive analytics, innovative product development, and in-depth market research, we help businesses navigate future trends and achieve their objectives.
-  </p>
-</div>
-  </div>
+              <section className="font-shippori px-8 bg-[#F7F7FA] py-10">
+                <div className="flex lmd:flex-row flex-col justify-between items-start">
+                  <div className="py-10">
+                    <p className="font-bold font-shippori text-md text-three -mb-2">D&SA</p>
+                    <h3 className="text-[50px] text-three font-bold">What We Offer</h3>
+                  </div>
+                  <p className="font-cond text-[22px] font-normal max-w-[650px] leading-[1.2] my-auto text-three">
+                    We provide strategic insights and execute customized solutions that set us apart. Leveraging predictive analytics, innovative product development, and actionable strategies, we help organizations navigate challenges and achieve impactful results.
+                  </p>
+
+                </div>
+
+              </section>
+
+              <div className=" mt-10 h-[2px] bg-[#7f7f7f] w-full"></div>
+
+              <section className="font-ant my-10">
+                {/* <div className="flex flex-col mb-6 bg-white">
+                  <div className="flex flex-col lmd:flex-row justify-between">
+
+                    <div className="pl-8 py-[30px]">
+                      <h3 className="md:text-[33px] text-[25px] font-ant text-das mb-5 leading-[1.2]">
+                        Trusted by Organizations Across
+                        <span className="block">Industries</span>
+                      </h3>
+                      <p className="font-ant md:text-[20px] text-[15px] mb-6 text-cas max-w-[550px] leading-[1.2]">
+                        At Cornell Data Strategy, we deliver data-driven solutions that drive measurable impact. Trusted by startups and established businesses, we help unlock the full potential of your data.
+                      </p>
+                      <a href="mailto:c.data.strategy@gmail.com">
+                    <button className="bg-das py-2 rounded-md text-sm flex justify-center items-center hover:bg-hov px-5 text-cas font-ant transition-transform duration-300 hover:translate-y-1">
+                      Book a call
+                    </button>
+                  </a>
+                    </div>
+
+                    <div className="flex lmd:justify-center justify-start items-center w-full lmd:w-1/2 py-6">
+                      <img
+                        className="w-auto h-auto lmd:pl-3 pl-[32px] max-w-full max-h-[322px]"
+                        src="consulting.png"
+                        alt="Consulting"
+                      />
+                    </div>
+                  </div>
+                </div> */}
+
+
+                <div className="flex flex-col lxl:flex-row gap-8 mt-12">
+                  {/* Predictive Modeling & Market Research */}
+                  <div
+                    className="bg-[#F7F7FA] text-cas font-ant p-8 flex-1 scroll-fade transform transition-transform duration-1000 ease-out hover:scale-110"
+                    data-delay="0.2s"
+                    data-translate="70px"
+                  >
+                    <div className="flex items-center justify-between">
+                      <h3 className="text-[30px] mb-4">
+                        Market<br></br>Research
+                      </h3>
+                      <img className="mb-10" src="svg/bat.svg" alt="Predictive Modeling" />
+                    </div>
+                    <p className="text-[18px] font-shippori font-bold leading-[1.2]">
+                      We aim to utilize predictive modeling to assist organizations in anticipating future trends and behaviors. Through data-driven insights, we plan to support businesses in making informed decisions and developing more effective market strategies.
+                    </p>
+                  </div>
+
+                  {/* Product Development and Strategy */}
+                  <div
+                    className="bg-[#F7F7FA] text-cas font-ant p-8 flex-1 scroll-fade transform transition-transform duration-1000 ease-out hover:scale-110"
+                    data-delay="0.4s"
+                    data-translate="24px"
+                  >
+                    <div className="flex items-center justify-around">
+                      <h3 className="text-[30px] mb-4">
+                        Strategy & Implementation
+                      </h3>
+                      <img className="mb-10" src="svg/stair.svg" alt="Product Development" />
+                    </div>
+                    <p className="text-[18px] font-shippori font-bold leading-[1.2]">
+                      Our goal is to guide product development using advanced data analytics and thorough research. From ideation to product launch, we strive to help businesses refine their strategies to better align with market needs and business objectives.
+                    </p>
+                  </div>
+
+                  {/* Data Analytics & Corporate Advisory */}
+                  <div
+                    className="bg-[#F7F7FA] text-cas font-ant p-8 flex-1 scroll-fade transform transition-transform duration-1000 ease-out hover:scale-110"
+                    data-delay="0.6s"
+                    data-translate="32px"
+                  >
+                    <div className="flex items-center justify-between">
+                      <h3 className="text-[30px] mb-4">
+                        Advanced<br></br> Data Modeling
+                      </h3>
+                      <img className="mb-10 ml-2" src="svg/block.svg" alt="Data Analytics" />
+                    </div>
+                    <p className="text-[18px] font-shippori font-bold leading-[1.2]">
+                      We seek to offer comprehensive data analytics services, aiming to identify emerging trends and actionable insights. Our focus is on improving corporate strategies and enhancing decision-making processes across diverse industries.
+                    </p>
+                  </div>
+                </div>
+
+              </section>
 
 
 
 
-  
-
-  <div className="flex flex-col lg:flex-row gap-8">
-    {/* Predictive Modeling & Market Research */}
-    <div
-      className="bg-[#252525] text-white p-8 flex-1 scroll-fade transform transition-transform duration-1000 ease-out hover:scale-110"
-      data-delay="0.2s"
-      data-translate="70px"
-    >
-      <h3 className="text-[30px] font-semibold mb-4">
-        Predictive Modeling & Market Research
-      </h3>
-      <p>
-        We aim to utilize predictive modeling to assist organizations in anticipating future trends and behaviors. Through data-driven insights, we plan to support businesses in making informed decisions and developing more effective market strategies.
-      </p>
-    </div>
-
-    {/* Product Development and Strategy */}
-    <div
-      className="bg-[#2562F5] text-white p-8 flex-1 scroll-fade transform transition-transform duration-1000 ease-out hover:scale-110"
-      data-delay="0.4s"
-      data-translate="24px"
-    >
-      <h3 className="text-[30px] font-semibold mb-4">
-        Product Development and Strategy
-      </h3>
-      <p>
-        Our goal is to guide product development using advanced data analytics and thorough research. From ideation to product launch, we strive to help businesses refine their strategies to better align with market needs and business objectives.
-      </p>
-    </div>
-
-    {/* Data Analytics & Corporate Advisory */}
-    <div
-      className="bg-[#6462F4] text-white p-8 flex-1 scroll-fade transform transition-transform duration-1000 ease-out hover:scale-110"
-      data-delay="0.6s"
-      data-translate="32px"
-    >
-      <h3 className="text-[30px] font-semibold mb-4">
-        Data Analytics & Corporate Advisory
-      </h3>
-      <p>
-        We seek to offer comprehensive data analytics services, aiming to identify emerging trends and actionable insights. Our focus is on improving corporate strategies and enhancing decision-making processes across diverse industries.
-      </p>
-    </div>
-  </div>
-        </section>
-        
 
 
 
-  {/* Contact Section */}
-  <section className="font-apercu py-10 px-10 bg-white">
-    <div className="flex items-center mb-2">
-      <h3 className="text-[40px] text-[#252525]">Interested in Collaborating?</h3>
-    </div>
-    <p className="para mb-6 text-[#252525]">
-      If you're interested in working with us or need our services to solve your organization's challenges, feel free to reach out! We're always looking for new projects and exciting opportunities to collaborate. Contact us at <span className="underline decoration-[#6562F5] decoration-[1.5px] underline-offset-[3px]">c.data.strategy@gmail.com</span> and let’s explore how we can help your business thrive.
-    </p>
-  </section>
+              {/* Contact Section */}
+              {/* <section className="font-shippori py-10 px-10 bg-white">
+                <div className="flex items-center mb-2">
+                  <h3 className="text-[40px] text-[#252525]">Interested in Collaborating?</h3>
+                </div>
+                <p className="para mb-6 text-[#252525]">
+                  If you're interested in working with us or need our services to solve your organization's challenges, feel free to reach out! We're always looking for new projects and exciting opportunities to collaborate. Contact us at <a
+                    href="mailto:c.data.strategy@gmail.com"
+                    className="underline decoration-[1.5px] underline-offset-[3px] text-inherit"
+                  >
+                    c.data.strategy@gmail.com
+                  </a>
+                  and let’s explore how we can help your business thrive.
+                </p>
+
+              </section> */}
 
 
-            <section className="font-apercu mr-auto p-10">
-            <section className="bg-white">
-          <div className="max-w-screen-md">
-            <h2 className="mb-4 text-3xl tracking-tight font-apercu font-normal text-gray-900 sm:text-4xl">
-              Sign up for our newsletter
-            </h2>
-            <p className="mb-3 max-w-2xl text-gray-500 md:mb-12 sm:text-xl text-start font-normal">
-            Stay informed about Cornell Data Strategy Club's latest projects, events, and opportunities. Join our newsletter to get updates on club initiatives, data-driven insights, and more.
-            </p>
-            <form className="" onSubmit={handleSubmit}>
-  {/* Display success or error message */}
-  {message.text && (
-    <p
-      className={`mb-3 text-start font-apercu-mono ${
-        message.type === 'success' ? 'text-green-600' : 'text-red-600'
-      }`}
-    >
-      {message.text}
-    </p>
-  )}
+              <section className="font-shippori px-8 bg-cas my-28 p-12">
 
-  <div className="items-center mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
-    <div className="relative w-full">
-      <label
-        htmlFor="email"
-        className="hidden mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                <div className="flex flex-col justify-between items-start text-white">
+                  <h2 className="font-gs font-regular text-lg m-0">Our Impact</h2>
+                  <h2 className="text-[50px] font-cond -mt-3">Latest Projects</h2>
+                </div>
+
+                <div className="flex flex-col lxl:flex-row gap-8 mt-10">
+                  <Projcard
+                    title={"Driving Growth for a B2B Service Provider"}
+                    body={
+                      "Boosted leads by 15% and secured $400K in contracts within three months by optimizing outreach and leveraging trade events"
+                    }
+                    link={"/projects"}
+                    image={"projects/proj2"}
+                  />
+                                    <Projcard
+                    title={"Improving Retention for an E-Commerce Client"}
+                    body={
+                      "Enhanced repeat purchases by 8% and improved inventory turnover by 17% through personalized recommendations and A/B testing."
+                    }
+                    link={"/projects"}
+                    image={"projects/proj4"}
+                  />
+                                    <Projcard
+                    title={"Transforming Customer Experience for a Retailer"}
+                    body={
+                      "Boosted retention by 12% and customer satisfaction by 23% within six months by standardizing layouts and staff training."
+                    }
+                    link={"/projects"}
+                    image={"projects/proj5"}
+                  />
+                  
+                </div>
+
+              </section>
+
+
+              <section className="my-[100px] bg-[#F7F7FA] py-5 px-10">
+                                <h1 className="md:text-[40px] text-[22px] font-bold text-three font-shippori text-start mb-2 mt-10">
+                                Interested? Let’s Talk.
+                                </h1>
+                                <p className="md:text-[22px] text-[15px] text-black font-shippori text-start mb-2 max-w-[1000px]">
+                                    As a student-led initiative, we provide these services at no cost, ensuring our focus remains on delivering impactful solutions and gaining practical experience.
+                                </p>
+
+                                <a href="mailto:c.data.strategy@gmail.com">
+                                    <button className="bg-das py-2 rounded-md text-sm my-4 flex justify-center items-center hover:bg-hov px-5 text-white font-ant transition-transform duration-300 hover:translate-y-1">
+                                        Contact
+
+                                    </button>
+                                </a>
+
+                            </section>
+
+
+
+              {/* Add more sections as needed */}
+            </div>
+          </div>
+        </div>
+
+
+        {/* Overlay for mobile */}
+        {isOpen && (
+  <div className="fixed inset-0 bg-[#333333] z-20">
+    <div className="absolute top-10 right-4">
+      <button
+        className="text-white"
+        onClick={() => setIsOpen(!isOpen)}
       >
-        Email address
-      </label>
-      <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
         <svg
-          className="w-5 h-5 text-gray-500 dark:text-gray-400"
-          fill="currentColor"
-          viewBox="0 0 20 20"
+          width="26"
+          height="26"
+          viewBox="0 0 26 26"
+          fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          {/* SVG content */}
+          <rect
+            y="23.4629"
+            width="33.1814"
+            height="3.58717"
+            transform="rotate(-45 0 23.4629)"
+            fill="white"
+          />
+          <rect
+            width="33.1814"
+            height="3.58717"
+            transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 26 23.4629)"
+            fill="white"
+          />
         </svg>
-      </div>
-      <input
-        className="block p-3 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:rounded-none sm:rounded-l-lg focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700"
-        placeholder="Enter your email"
-        type="email"
-        id="email"
-        required
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-    </div>
-    <div>
-      <button
-        type="submit"
-        className="py-3 px-5 w-full text-sm bg-[#6462F4] hover:bg-[#4341a0] font-medium text-center text-white font-apercu-mono rounded-lg border cursor-pointer"
-      >
-        Subscribe
       </button>
     </div>
+    <nav className="flex flex-col items-center justify-center h-full">
+      <a
+        href="/"
+        className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
+      >
+        Home
+        <span
+          className="absolute inset-x-0 bottom-1.5 w-12 h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
+        ></span>
+      </a>
+
+      <a
+        href="/services"
+        className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
+      >
+        Capabilities
+        <span
+          className="absolute inset-x-0 bottom-1.5 w-[100px] h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
+        ></span>
+      </a>
+
+      <a
+        href="/projects"
+        className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
+      >
+        Impact
+        <span
+          className="absolute inset-x-0 bottom-1.5 w-[70px] h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
+        ></span>
+      </a>
+
+      <a
+        href="/about"
+        className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
+      >
+        Our People
+        <span
+          className="absolute inset-x-0 bottom-1.5 w-[100px] h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
+        ></span>
+      </a>
+
+      <a
+        href="/careers"
+        className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
+      >
+        Careers
+        <span
+          className="absolute inset-x-0 bottom-1.5 w-[70px] h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
+        ></span>
+      </a>
+
+      <a
+        href="/contact-us"
+        className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
+      >
+        Contact Us
+        <span
+          className="absolute inset-x-0 bottom-1.5 w-[100px] h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
+        ></span>
+      </a>
+    </nav>
   </div>
-              </form>
-
-          </div>
-      </section>
-      </section>
-
-            {/* Add more sections as needed */}
-          </div>
-        </div>
+)}
       </div>
-
-      {/* Sidebar on the right, with sticky positioning */}
-      <div className="hidden lmd:block mr-[2%]">
-        <div className="sticky top-10 right-0 bg-white pb-20 pt-5 pr-20 pl-10">
-          <nav className="mt-5">
-            
-          <a href="/" className="block py-1 text-black text-[18px] font-apercu group relative hover:text-[#c3c3c3]">
-            Home
-            <span className="absolute inset-x-0 bottom-1.5 w-12 h-0.5 bg-[#6562F5] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"></span>
-          </a>
-
-          <a href="/projects" className="block py-1 text-black text-[18px] font-apercu group relative hover:text-[#c3c3c3]">
-            Projects
-            <span className="absolute inset-x-0 bottom-1.5 w-[70px] h-0.5 bg-[#6562F5] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"></span>
-          </a>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSencB7ERcHEKmd80SMZuUKJJNnMUtS-ZYCmWHRnNakLm_YeMw/viewform" className="block py-1 text-black text-[18px] font-apercu group relative hover:text-[#c3c3c3]">
-            Apply
-            <span className="absolute inset-x-0 bottom-1.5 w-12 h-0.5 bg-[#6562F5] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"></span>
-          </a>
-
-          <a href="/about" className="block py-1 text-black text-[18px] font-apercu group relative hover:text-[#c3c3c3]">
-            About
-            <span className="absolute inset-x-0 bottom-1.5 w-12 h-0.5 bg-[#6562F5] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"></span>
-          </a>
-          </nav>
-        </div>
-      </div>
-
-      {/* Overlay for mobile */}
-      {isOpen && (
-        <div
-          className="fixed inset-0 bg-[#333333] z-20"
-        >
-          <div className="absolute top-10 right-4">
-            <button
-              className="text-white"
-              onClick={() => setIsOpen(!isOpen)}
-            >
-          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect y="23.4629" width="33.1814" height="3.58717" transform="rotate(-45 0 23.4629)" fill="white"/>
-          <rect width="33.1814" height="3.58717" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 26 23.4629)" fill="white"/>
-          </svg>
-
-
-            </button>
-          </div>
-          <nav className="flex flex-col items-center justify-center h-full">
-          <a href="/" className="block py-1 text-white text-[18px] font-apercu group relative hover:text-[#c3c3c3]">
-            Home
-            <span className="absolute inset-x-0 bottom-1.5 w-12 h-0.5 bg-[#6562F5] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"></span>
-          </a>
-
-          <a href="/projects" className="block py-1 text-white text-[18px] font-apercu group relative hover:text-[#c3c3c3]">
-            Projects
-            <span className="absolute inset-x-0 bottom-1.5 w-[70px] h-0.5 bg-[#6562F5] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"></span>
-          </a>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSencB7ERcHEKmd80SMZuUKJJNnMUtS-ZYCmWHRnNakLm_YeMw/viewform" className="block py-1 text-white text-[18px] font-apercu group relative hover:text-[#c3c3c3]">
-            Apply
-            <span className="absolute inset-x-0 bottom-1.5 w-12 h-0.5 bg-[#6562F5] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"></span>
-          </a>
-
-          <a href="/about" className="block py-1 text-white text-[18px] font-apercu group relative hover:text-[#c3c3c3]">
-            About
-            <span className="absolute inset-x-0 bottom-1.5 w-12 h-0.5 bg-[#6562F5] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"></span>
-          </a>
-          </nav>
-        </div>
-      )}
-    </div>
-    <Footer></Footer>
+      <Footer
+        theme={"light"}
+      ></Footer>
     </>
   );
 };

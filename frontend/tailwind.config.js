@@ -15,9 +15,20 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      colors: {
+        das: '#2562F5',
+        cas: '#252526',
+        hov: '#113CA3',
+        three: '#333333',
+      },
       fontFamily: {
-        apercu: ['Apercu', 'sans-serif'],
-        'apercu-mono': ['Apercu Mono', 'monospace'],
+        shippori: ['Shippori', 'serif'],
+        b1: ['Shipporib1', 'sans-serif'],
+        ant: ['Shipporiant', 'sans-serif'],
+        georgia: ['Georgia', 'serif'],
+        generalSans: ['GeneralSans', 'sans-serif'],
+        cond: ['GoldmanSansCd', 'sans-serif'],
+        gs: ['GoldmanSans', 'sans-serif'],
       },
       animation: {
         spotlight: "spotlight 2s ease .75s 1 forwards",
@@ -35,7 +46,9 @@ module.exports = {
         },
       },
       screens: {
-        lmd: '900px', // Custom breakpoint
+        lmd: '900px',
+        lxl: '1200px',
+        xlx: '1600px',
       },
     },
   },

@@ -7,7 +7,7 @@ const Recru = () => {
       title: "Sept 13",
       content: (
         <div>
-          <p className="text-neutral-800 text-2xl md:text-4xl font-normal mb-4 font-apercu-mono">
+          <p className="text-neutral-800 text-2xl md:text-4xl font-normal mb-4 font-shippori-mono">
             Info Session
           </p>
           <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base">
@@ -32,7 +32,7 @@ const Recru = () => {
       title: "Sept 16",
       content: (
         <div>
-          <p className="text-neutral-800 font-apercu-mono text-2xl md:text-4xl font-normal mb-4">
+          <p className="text-neutral-800 font-shippori-mono text-2xl md:text-4xl font-normal mb-4">
             Info Session
           </p>
           <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base">
@@ -57,7 +57,7 @@ const Recru = () => {
       title: "Sept 23",
       content: (
         <div>
-            <p className="text-neutral-800 font-apercu-mono text-2xl md:text-4xl font-normal mb-4">
+            <p className="text-neutral-800 font-shippori-mono text-2xl md:text-4xl font-normal mb-4">
             Application <span className="underline">Deadline</span>
             </p>
             <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base">
@@ -79,7 +79,7 @@ const Recru = () => {
         title: "Sept 25-27",
         content: (
           <div>
-            <p className="text-neutral-800 font-apercu-mono text-2xl md:text-4xl font-normal mb-4">
+            <p className="text-neutral-800 font-shippori-mono text-2xl md:text-4xl font-normal mb-4">
             In-person Interviewes
             </p>
             <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base">

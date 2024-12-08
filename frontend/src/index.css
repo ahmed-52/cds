@@ -4,35 +4,125 @@
 
 
 .para {
-    font-family: "Apercu", "Helvetica", sans-serif;
+    font-family: "Shipporib1", serif;
     line-height: 1.25;
     font-size: 22px;
   }
   
 
-  
+@font-face {
+  font-family: 'Aeonik';
+  src: url('../public/fonts/Aeonik-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
 
-  @font-face {
-  font-family: 'Apercu';
-  src: url('../public/fonts/Apercu-regular.ttf') format('truetype'),
-       url('../public/fonts/ApercuLight.otf') format('opentype'),
-       url('../public/fonts/ApercuItalic.otf') format('opentype'),
-       url('../public/fonts/ApercuMono.otf') format('opentype');
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('../public/fonts/GeneralSans-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GoldmanSans';
+  src: url('../public/fonts/GoldmanSans_Bd.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GoldmanSans';
+  src: url('../public/fonts/GoldmanSans_Blk.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GoldmanSans';
+  src: url('../public/fonts/GoldmanSans_Md.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GoldmanSans';
+  src: url('../public/fonts/GoldmanSans_Rg.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Apercu Bold';
-  src: url('../public/fonts/apercu-bold.ttf') format('truetype'),
-       url('../public/fonts/Apercu-medium.otf') format('opentype');
+  font-family: 'GoldmanSans';
+  src: url('../public/fonts/GoldmanSans_Th.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GoldmanSansCd';
+  src: url('../public/fonts/GoldmanSansCd_Bd.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GoldmanSansCd';
+  src: url('../public/fonts/GoldmanSansCd_Rg.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+
+  
+@font-face {
+  font-family: 'Shipporib1';
+  src: url('../public/fonts/Shipporib1.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Shipporiant';
+  src: url('../public/fonts/Shipporiant.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Shippori';
+  src: url('../public/fonts/ShipporiMinchoB1-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Shippori';
+  src: url('../public/fonts/ShipporiMinchoB1-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Shippori';
+  src: url('../public/fonts/ShipporiMinchoB1-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Shippori';
+  src: url('../public/fonts/ShipporiMinchoB1-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Apercu Mono';
-  src: url('../public/fonts/ApercuMono.otf') format('opentype');
-  font-weight: 400;
+  font-family: 'Shippori';
+  src: url('../public/fonts/ShipporiMinchoB1-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
   font-style: normal;
 }

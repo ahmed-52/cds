@@ -8,7 +8,7 @@ import { collection, addDoc } from "firebase/firestore";
 
 const Home = () => {
   const [email, setEmail] = useState("");
-  const [message, setMessage] = useState({ text: '', type: '' }); 
+  const [message, setMessage] = useState({ text: '', type: '' });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -16,8 +16,8 @@ const Home = () => {
       await addDoc(collection(db, "newsletterEmails"), {
         email: email,
       });
-      setEmail(""); 
-      setMessage({ text: "Subscribed successfully!", type: "success" }); 
+      setEmail("");
+      setMessage({ text: "Subscribed successfully!", type: "success" });
     } catch (error) {
       console.error("Error adding document: ", error);
       setMessage({ text: "Error subscribing, please try again.", type: "error" });
@@ -30,10 +30,10 @@ const Home = () => {
       <SparklesPreview />
 
       <section className='w-full bg-[#333333]'>
-        <div className='max-w-[1200px] mx-auto pt-4 pb-12'>
-          <h1 className='text-[20px] md:text-2xl text-white font-medium font-apercu-mono text-center mb-4 px-4'>
+        <div className='max-w-[1400px] mx-auto pt-4 pb-12'>
+          <h1 className='text-[20px] md:text-2xl text-white font-medium font-shippori-mono text-center mb-4 px-4'>
 
-          We are excited to announce the formation of Cornell Data Strategy Club, a student organization dedicated to merging data science and business consulting. Our mission is to deliver actionable insights and forecasts that empower local businesses and the Cornell community to make informed, data-driven decisions. By combining in-depth analysis with practical strategies, we aim to address real-world challenges effectively.
+            We are excited to announce the formation of Cornell Data Strategy Club, a student organization dedicated to merging data science and business consulting. Our mission is to deliver actionable insights and forecasts that empower local businesses and the Cornell community to make informed, data-driven decisions. By combining in-depth analysis with practical strategies, we aim to address real-world challenges effectively.
           </h1>
           <TextGenerate />
         </div>
@@ -42,7 +42,7 @@ const Home = () => {
       <Recru />
 
       <section className='bg-[#6462F4] py-12'>
-        <h1 className='md:text-7xl text-4xl text-white font-medium font-apercu-mono mt-4 mb-12 text-center'>
+        <h1 className='md:text-7xl text-4xl text-white font-medium font-shippori-mono mt-4 mb-12 text-center'>
           What we do?
         </h1>
         <ClubOverview />
@@ -51,19 +51,18 @@ const Home = () => {
       <section className="bg-white">
         <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
           <div className="mx-auto max-w-screen-md sm:text-center">
-            <h2 className="mb-4 text-3xl tracking-tight font-apercu-mono font-normal text-gray-900 sm:text-4xl">
+            <h2 className="mb-4 text-3xl tracking-tight font-shippori-mono font-normal text-gray-900 sm:text-4xl">
               Sign up for our newsletter
             </h2>
             <p className="mx-auto mb-8 max-w-2xl text-gray-500 md:mb-12 sm:text-xl font-normal">
-            Stay informed about Cornell Data Strategy Club's latest projects, events, and opportunities. Join our newsletter to get updates on club initiatives, data-driven insights, and more.
+              Stay informed about Cornell Data Strategy Club's latest projects, events, and opportunities. Join our newsletter to get updates on club initiatives, data-driven insights, and more.
             </p>
             <form onSubmit={handleSubmit}>
               {/* Display success or error message */}
               {message.text && (
                 <p
-                  className={`mb-3 text-center font-apercu-mono ${
-                    message.type === 'success' ? 'text-green-600' : 'text-red-600'
-                  }`}
+                  className={`mb-3 text-center font-shippori-mono ${message.type === 'success' ? 'text-green-600' : 'text-red-600'
+                    }`}
                 >
                   {message.text}
                 </p>
@@ -98,7 +97,7 @@ const Home = () => {
                 <div>
                   <button
                     type="submit"
-                    className="py-3 px-5 w-full text-sm bg-[#6462F4] hover:bg-[#4341a0] font-medium text-center text-white font-apercu-mono rounded-lg border cursor-pointer"
+                    className="py-3 px-5 w-full text-sm bg-[#6462F4] hover:bg-[#4341a0] font-medium text-center text-white font-shippori-mono rounded-lg border cursor-pointer"
                   >
                     Subscribe
                   </button>

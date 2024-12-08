@@ -1,13 +1,15 @@
 import React from 'react';
-import CustomNavbar from './components/CustomNavbar';
+
 import { BrowserRouter as Router, Routes } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 import About from './components/About';
-import Home from './components/Home';
-import { Footer } from './components/Footer';
 import SignIn from './components/SignIn';
 import Home2 from './Home2';
-import Projects from './components/Projects';
+import Project from './components/Project';
+import Services from './components/Services';
+import { Footer } from './components/Footer';
+import Careers from './components/Careers';
+import Contact from './components/Contact';
 
 
 function App() {
@@ -23,12 +25,15 @@ function App() {
 
     <Router>
           <div className="App">
-            {/* <CustomNavbar /> */}
+
             <Routes>
             <Route path="/" element={<Home2></Home2>} />
             <Route path="/about" element={<About></About>} />
             <Route path="/login" element={<SignIn></SignIn>} />
-            <Route path="/projects" element={<Projects></Projects>} />
+            <Route path="/projects" element={<Project></Project>} />
+            <Route path="/services" element={<Services></Services>} />
+            <Route path="/careers" element={<Careers></Careers>} />
+            <Route path="/contact-us" element={<Contact></Contact>} />
             </Routes>
             {/* <Footer></Footer> */}
           </div>
