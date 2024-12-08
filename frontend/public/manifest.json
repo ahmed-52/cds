@@ -1,6 +1,6 @@
 {
-  "short_name": "DAT",
-  "name": "Cornell Data Strategy Club",
+  "short_name": "D&SA",
+  "name": "Cornell Data Strategy",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,12 +8,12 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "l512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
