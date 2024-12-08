@@ -1,11 +1,23 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { addDoc, collection } from "firebase/firestore";
-import { db } from "../firebase";// Ensure correct Firebase import
+import { db } from "../firebase"; // Ensure correct Firebase import
 
 export function Footer({ theme }) {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState({ text: "", type: "" });
+  const [currentTime, setCurrentTime] = useState(
+    new Date().toLocaleTimeString("en-US", { timeZone: "America/New_York" })
+  );
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTime(
+        new Date().toLocaleTimeString("en-US", { timeZone: "America/New_York" })
+      );
+    }, 1000); // Update every second
+    return () => clearInterval(interval); // Cleanup interval on unmount
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -41,28 +53,20 @@ export function Footer({ theme }) {
 
         {/* Navigation Links */}
         <div className="flex space-x-6 text-md font-medium">
-          <a
-            href="/about"
-            className={`hover:underline ${textClass}`}
-          >
+          <a href="/about" className={`hover:underline ${textClass}`}>
             Who We Are
           </a>
-          <a
-            href="/services"
-            className={`hover:underline ${textClass}`}
-          >
+          <a href="/services" className={`hover:underline ${textClass}`}>
             What We Do
           </a>
-          <a
-            href="/apply"
-            className={`hover:underline ${textClass}`}
-          >
+          <a href="/apply" className={`hover:underline ${textClass}`}>
             How To Join
           </a>
         </div>
 
         {/* Social Media Icons */}
         <div className="flex space-x-4">
+          
           <a
             className="h-[30px] w-[30px]"
             href="https://www.linkedin.com/company/cornell-data-strategy-club/"
@@ -80,12 +84,15 @@ export function Footer({ theme }) {
             <img src="/svg/insta.svg" alt="Instagram" />
           </a>
         </div>
+        
       </div>
 
       {/* Newsletter Signup */}
       <div className="mt-6 text-center">
-        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-          
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4"
+        >
           <p className="font-shippori">Subscribe To Our Newsletter</p>
           <input
             className="p-2 w-64 text-sm rounded border border-gray-300 focus:ring-primary-500 focus:border-primary-500"
@@ -113,11 +120,17 @@ export function Footer({ theme }) {
         )}
       </div>
 
+      {/* Location and Time */}
+
       {/* Footer Bottom Text */}
       <div className={`text-center text-sm mt-6 ${textClass}`}>
-        <p>This organization is a registered student organization of Cornell University.</p>
+        <p>
+          This organization is a registered student organization of Cornell
+          University.
+        </p>
         <p className="mt-2">
-          &copy; {new Date().getFullYear()} Cornell Data Strategy Club. All rights reserved.
+          &copy; {new Date().getFullYear()} Cornell Data Strategy Club. All
+          rights reserved.
         </p>
       </div>
     </footer>

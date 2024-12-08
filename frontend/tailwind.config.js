@@ -28,7 +28,6 @@ module.exports = {
         georgia: ['Georgia', 'serif'],
         generalSans: ['GeneralSans', 'sans-serif'],
         cond: ['GoldmanSansCd', 'sans-serif'],
-        gs: ['GoldmanSans', 'sans-serif'],
       },
       animation: {
         spotlight: "spotlight 2s ease .75s 1 forwards",

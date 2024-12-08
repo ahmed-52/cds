@@ -273,7 +273,7 @@ const Home2 = () => {
               <section className="font-shippori px-8 bg-cas my-28 p-12">
 
                 <div className="flex flex-col justify-between items-start text-white">
-                  <h2 className="font-gs font-regular text-lg m-0">Our Impact</h2>
+                  <h2 className="font-generalSans font-regular text-lg m-0">Our Impact</h2>
                   <h2 className="text-[50px] font-cond -mt-3">Latest Projects</h2>
                 </div>
 

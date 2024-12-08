@@ -95,7 +95,7 @@ const Contact = () => {
                             <p className="font-shippori text-cas md:text-[22px] text-[18px] leading-relaxed mt-4 font-bold">
                              Ithaca, New York
                             </p>
-                            <p className="font-shippori text-cas md:text-[22px] text-[18px] leading-relaxed font-bold">
+                            <p className="font-shippori text-cas md:text-[22px] text-[18px] leading-relaxed">
                                  <span className="font-medium text-black">{currentTime}</span>
                             </p>
                         </div>

@@ -2,21 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.para {
-    font-family: "Shipporib1", serif;
-    line-height: 1.25;
-    font-size: 22px;
-  }
-  
-
-@font-face {
-  font-family: 'Aeonik';
-  src: url('../public/fonts/Aeonik-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-
 @font-face {
   font-family: 'GeneralSans';
   src: url('../public/fonts/GeneralSans-Medium.otf') format('opentype');
@@ -24,40 +9,6 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'GoldmanSans';
-  src: url('../public/fonts/GoldmanSans_Bd.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'GoldmanSans';
-  src: url('../public/fonts/GoldmanSans_Blk.ttf') format('truetype');
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'GoldmanSans';
-  src: url('../public/fonts/GoldmanSans_Md.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'GoldmanSans';
-  src: url('../public/fonts/GoldmanSans_Rg.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'GoldmanSans';
-  src: url('../public/fonts/GoldmanSans_Th.ttf') format('truetype');
-  font-weight: 100;
-  font-style: normal;
-}
 
 @font-face {
   font-family: 'GoldmanSansCd';
@@ -75,54 +26,61 @@
 
 
 
-
-  
 @font-face {
   font-family: 'Shipporib1';
-  src: url('../public/fonts/Shipporib1.ttf') format('truetype');
+  src: url('../public/fonts/Shipporib1.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Shipporiant';
-  src: url('../public/fonts/Shipporiant.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-
-@font-face {
-  font-family: 'Shippori';
-  src: url('../public/fonts/ShipporiMinchoB1-Regular.ttf') format('truetype');
+  src: url('../public/fonts/Shipporiant.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Shippori';
-  src: url('../public/fonts/ShipporiMinchoB1-Medium.ttf') format('truetype');
+  src: url('../public/fonts/ShipporiMinchoB1-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Shippori';
+  src: 
+       url('../public/fonts/ShipporiMinchoB1-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Shippori';
-  src: url('../public/fonts/ShipporiMinchoB1-SemiBold.ttf') format('truetype');
+  src: 
+       url('../public/fonts/ShipporiMinchoB1-SemiBold.woff') format('woff');
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Shippori';
-  src: url('../public/fonts/ShipporiMinchoB1-Bold.ttf') format('truetype');
+  src: 
+       url('../public/fonts/ShipporiMinchoB1-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Shippori';
-  src: url('../public/fonts/ShipporiMinchoB1-ExtraBold.ttf') format('truetype');
+  src: 
+       url('../public/fonts/ShipporiMinchoB1-ExtraBold.woff') format('woff');
   font-weight: 800;
   font-style: normal;
+}
+
+.para {
+  font-family: "Shipporib1", serif;
+  line-height: 1.25;
+  font-size: 22px;
 }
