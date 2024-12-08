@@ -154,7 +154,7 @@ const About = () => {
               active={"impact"}
             ></Header>
 
-            <div className="md:max-w-[1400px] xlx:mx-auto mx-[50px]">
+            <div className="md:max-w-[1400px] xlx:mx-auto md:mx-[50px] mx-[20px]">
 
               <div className="mt-12 mb-16"></div>
               <div className="mt-12 mb-16">
@@ -234,7 +234,7 @@ const About = () => {
                 {/* Directors and VPs */}
                 <div>
                   <h2 className="text-2xl font-semibold mb-6">Directors & VPs</h2>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center sm:justify-items-start">
                     {directorsAndVPs.map((member, index) => (
                       <TeamMember
                         key={index}

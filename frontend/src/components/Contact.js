@@ -5,13 +5,15 @@ import Header from "./ui/Header";
 import { db } from "../firebase";
 import { addDoc } from "firebase/firestore";
 import { collection } from "firebase/firestore";
-
+import { useEffect } from "react";
 const Contact = () => {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
         message: "",
     });
+    const [currentTime, setCurrentTime] = useState(new Date().toLocaleTimeString("en-US", { timeZone: "America/New_York" })); // Live clock state
+
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -22,6 +24,16 @@ const Contact = () => {
         setFormData({ ...formData, [name]: value });
     };
 
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentTime(new Date().toLocaleTimeString("en-US", { timeZone: "America/New_York" }));
+        }, 1000);
+
+        return () => clearInterval(interval); // Cleanup interval on component unmount
+    }, []);
+
+
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
@@ -31,11 +43,11 @@ const Contact = () => {
                 message: formData.message,
                 timestamp: new Date().toISOString(),
             });
-    
+
             // Reset form and show success message
             setFormData({ name: "", email: "", message: "" });
             setSuccess(true);
-    
+
             setTimeout(() => {
                 setSuccess(false);
             }, 3000);
@@ -43,29 +55,27 @@ const Contact = () => {
             console.error("Error adding document: ", error);
         }
     };
-    
+
 
     return (
         <>
-                                {!isOpen && (
-                            <button
-                                className="fixed top-10 right-4 lmd:hidden z-40 text-black"
-                                onClick={() => setIsOpen(!isOpen)}
-                            >
-                                <svg width="37" height="18" viewBox="0 0 37 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="37" height="4" fill="#9A9A9A" />
-                                    <rect y="7" width="37" height="4" fill="#9A9A9A" />
-                                    <rect y="14" width="37" height="4" fill="#9A9A9A" />
-                                </svg>
+            {!isOpen && (
+                <button
+                    className="fixed top-10 right-4 lmd:hidden z-40 text-black"
+                    onClick={() => setIsOpen(!isOpen)}
+                >
+                    <svg width="37" height="18" viewBox="0 0 37 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="37" height="4" fill="#9A9A9A" />
+                        <rect y="7" width="37" height="4" fill="#9A9A9A" />
+                        <rect y="14" width="37" height="4" fill="#9A9A9A" />
+                    </svg>
+                </button>
+            )}
 
-
-                            </button>
-                        )}
-                        
             <Header theme="light" bg="cas" textcl="white" active="contact" />
-            
+
             <div className="relative min-h-screen bg-white flex flex-col">
-                <div className="md:max-w-[1400px] xlx:mx-auto mx-[50px] mt-16">
+                <div className="md:max-w-[1400px] xlx:mx-auto md:mx-[50px] mx-[20px] mt-16">
                     <h1 className="text-[40px] font-cond text-black mb-6">Contact Us</h1>
                     <div className="h-[10px] w-full bg-das mb-10"></div>
 
@@ -82,10 +92,16 @@ const Contact = () => {
                                     c.data.strategy@gmail.com
                                 </a>
                             </p>
+                            <p className="font-shippori text-cas md:text-[22px] text-[18px] leading-relaxed mt-4 font-bold">
+                             Ithaca, New York
+                            </p>
+                            <p className="font-shippori text-cas md:text-[22px] text-[18px] leading-relaxed font-bold">
+                                 <span className="font-medium text-black">{currentTime}</span>
+                            </p>
                         </div>
 
                         {/* Right Column: Form */}
-                        <form onSubmit={handleSubmit} className="space-y-6">
+                        <form onSubmit={handleSubmit} className="space-y-6 mb-10">
                             {success && (
                                 <p className="text-green-600 font-medium">
                                     Thank you for reaching out! We will get back to you soon.
@@ -147,101 +163,11 @@ const Contact = () => {
                 </div>
             </div>
 
-
             {isOpen && (
-  <div className="fixed inset-0 bg-[#333333] z-20">
-    <div className="absolute top-10 right-4">
-      <button
-        className="text-white"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        <svg
-          width="26"
-          height="26"
-          viewBox="0 0 26 26"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect
-            y="23.4629"
-            width="33.1814"
-            height="3.58717"
-            transform="rotate(-45 0 23.4629)"
-            fill="white"
-          />
-          <rect
-            width="33.1814"
-            height="3.58717"
-            transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 26 23.4629)"
-            fill="white"
-          />
-        </svg>
-      </button>
-    </div>
-    <nav className="flex flex-col items-center justify-center h-full">
-      <a
-        href="/"
-        className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
-      >
-        Home
-        <span
-          className="absolute inset-x-0 bottom-1.5 w-12 h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
-        ></span>
-      </a>
-
-      <a
-        href="/services"
-        className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
-      >
-        Capabilities
-        <span
-          className="absolute inset-x-0 bottom-1.5 w-[100px] h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
-        ></span>
-      </a>
-
-      <a
-        href="/projects"
-        className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
-      >
-        Impact
-        <span
-          className="absolute inset-x-0 bottom-1.5 w-[70px] h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
-        ></span>
-      </a>
-
-      <a
-        href="/about"
-        className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
-      >
-        Our People
-        <span
-          className="absolute inset-x-0 bottom-1.5 w-[100px] h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
-        ></span>
-      </a>
-
-      <a
-        href="/careers"
-        className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
-      >
-        Careers
-        <span
-          className="absolute inset-x-0 bottom-1.5 w-[70px] h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
-        ></span>
-      </a>
-
-      <a
-        href="/contact-us"
-        className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
-      >
-        Contact Us
-        <span
-          className="absolute inset-x-0 bottom-1.5 w-[100px] h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
-        ></span>
-      </a>
-    </nav>
-  </div>
-)}
-
+                <div className="fixed inset-0 bg-[#333333] z-20">
+                    {/* Mobile Menu */}
+                </div>
+            )}
 
             <Footer theme={"dark"} />
         </>

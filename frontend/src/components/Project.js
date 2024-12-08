@@ -49,15 +49,15 @@ const Project = () => {
 
                             </button>
                         )}
-                                                    <Header
-                                theme="light"
-                                textcl={"white"}
-                                bg={"cas"}
-                                active={"impact"}
-                            ></Header>
+                        <Header
+                            theme="light"
+                            textcl={"white"}
+                            bg={"cas"}
+                            active={"impact"}
+                        ></Header>
 
                         {/* Page Content */}
-                        <div className="md:max-w-[1400px] xlx:mx-auto mx-[50px]">
+                        <div className="md:max-w-[1400px] xlx:mx-auto md:mx-[50px] mx-[20px]">
 
 
 
@@ -74,7 +74,7 @@ const Project = () => {
 
 
                             <section className="pb-10">
-                                <p className="font-shippori font-medium mb-6 text-cas md:text-[35px]">
+                                <p className="font-shippori font-medium mb-6 text-cas md:text-[35px] text-[25px]">
                                     Projects In Progress...<br></br><br></br>
                                     We currently have several exciting projects underway. Our team is working on advanced data analysis, product development, and market research for startups, local businesses, and larger organizations.<br></br><br></br>
                                     These projects are designed to offer practical solutions that help our clients navigate their industries more effectively. Stay tuned for updates on these projects as we continue to push the boundaries of what data can do.
@@ -100,14 +100,14 @@ const Project = () => {
                             {/* projects */}
                             <section>
 
-                            <Proj
+                                <Proj
                                     title="Driving Growth for a B2B Service Provider"
                                     body="A B2B service provider struggled to expand its customer base, relying heavily on referrals. By optimizing their outreach and leveraging high-value trade events, we increased qualified leads by 15% and secured ~ $400,000  in new contracts within three months."
                                     image={"/projects/proj2"}
                                     link={"#"}
                                 />
 
-                                
+
                                 <Proj
                                     title="Optimizing Delivery Efficiency for a Logistics Company"
                                     body="A logistics company experienced rising fuel costs and delivery inefficiencies due to overlapping routes. We conducted a fleet analysis and redesigned delivery zones using a best-route algorithm, prioritizing time-sensitive shipments. This streamlined operations, reducing fuel expenses by 9% and improving delivery times by 14%."
@@ -170,98 +170,98 @@ const Project = () => {
 
                 {/* Overlay for mobile */}
                 {isOpen && (
-  <div className="fixed inset-0 bg-[#333333] z-20">
-    <div className="absolute top-10 right-4">
-      <button
-        className="text-white"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        <svg
-          width="26"
-          height="26"
-          viewBox="0 0 26 26"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect
-            y="23.4629"
-            width="33.1814"
-            height="3.58717"
-            transform="rotate(-45 0 23.4629)"
-            fill="white"
-          />
-          <rect
-            width="33.1814"
-            height="3.58717"
-            transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 26 23.4629)"
-            fill="white"
-          />
-        </svg>
-      </button>
-    </div>
-    <nav className="flex flex-col items-center justify-center h-full">
-      <a
-        href="/"
-        className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
-      >
-        Home
-        <span
-          className="absolute inset-x-0 bottom-1.5 w-12 h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
-        ></span>
-      </a>
+                    <div className="fixed inset-0 bg-[#333333] z-20">
+                        <div className="absolute top-10 right-4">
+                            <button
+                                className="text-white"
+                                onClick={() => setIsOpen(!isOpen)}
+                            >
+                                <svg
+                                    width="26"
+                                    height="26"
+                                    viewBox="0 0 26 26"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <rect
+                                        y="23.4629"
+                                        width="33.1814"
+                                        height="3.58717"
+                                        transform="rotate(-45 0 23.4629)"
+                                        fill="white"
+                                    />
+                                    <rect
+                                        width="33.1814"
+                                        height="3.58717"
+                                        transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 26 23.4629)"
+                                        fill="white"
+                                    />
+                                </svg>
+                            </button>
+                        </div>
+                        <nav className="flex flex-col items-center justify-center h-full">
+                            <a
+                                href="/"
+                                className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
+                            >
+                                Home
+                                <span
+                                    className="absolute inset-x-0 bottom-1.5 w-12 h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
+                                ></span>
+                            </a>
 
-      <a
-        href="/services"
-        className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
-      >
-        Capabilities
-        <span
-          className="absolute inset-x-0 bottom-1.5 w-[100px] h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
-        ></span>
-      </a>
+                            <a
+                                href="/services"
+                                className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
+                            >
+                                Capabilities
+                                <span
+                                    className="absolute inset-x-0 bottom-1.5 w-[100px] h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
+                                ></span>
+                            </a>
 
-      <a
-        href="/projects"
-        className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
-      >
-        Impact
-        <span
-          className="absolute inset-x-0 bottom-1.5 w-[70px] h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
-        ></span>
-      </a>
+                            <a
+                                href="/projects"
+                                className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
+                            >
+                                Impact
+                                <span
+                                    className="absolute inset-x-0 bottom-1.5 w-[70px] h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
+                                ></span>
+                            </a>
 
-      <a
-        href="/about"
-        className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
-      >
-        Our People
-        <span
-          className="absolute inset-x-0 bottom-1.5 w-[100px] h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
-        ></span>
-      </a>
+                            <a
+                                href="/about"
+                                className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
+                            >
+                                Our People
+                                <span
+                                    className="absolute inset-x-0 bottom-1.5 w-[100px] h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
+                                ></span>
+                            </a>
 
-      <a
-        href="/careers"
-        className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
-      >
-        Careers
-        <span
-          className="absolute inset-x-0 bottom-1.5 w-[70px] h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
-        ></span>
-      </a>
+                            <a
+                                href="/careers"
+                                className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
+                            >
+                                Careers
+                                <span
+                                    className="absolute inset-x-0 bottom-1.5 w-[70px] h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
+                                ></span>
+                            </a>
 
-      <a
-        href="/contact-us"
-        className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
-      >
-        Contact Us
-        <span
-          className="absolute inset-x-0 bottom-1.5 w-[100px] h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
-        ></span>
-      </a>
-    </nav>
-  </div>
-)}
+                            <a
+                                href="/contact-us"
+                                className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
+                            >
+                                Contact Us
+                                <span
+                                    className="absolute inset-x-0 bottom-1.5 w-[100px] h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
+                                ></span>
+                            </a>
+                        </nav>
+                    </div>
+                )}
 
             </div>
             <Footer

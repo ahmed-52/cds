@@ -50,14 +50,14 @@ const Services = () => {
                             </button>
                         )}
 
-<Header
-                                theme="light"
-                                textcl={"white"}
-                                bg={"cas"}
-                                active={"capabilities"}
-                            ></Header>
+                        <Header
+                            theme="light"
+                            textcl={"white"}
+                            bg={"cas"}
+                            active={"capabilities"}
+                        ></Header>
                         {/* Page Content */}
-                        <div className="md:max-w-[1400px] xlx:mx-auto mx-[50px] font-shippori">
+                        <div className="md:max-w-[1400px] xlx:mx-auto md:mx-[50px] mx-[20px] font-shippori">
 
 
 
@@ -75,7 +75,7 @@ const Services = () => {
 
 
                             <section className="pb-10">
-                                <p className="font-shippori font-medium mb-6 text-cas md:text-[35px]">
+                                <p className="font-shippori font-medium mb-6 text-cas md:text-[35px] text-[25px]">
                                     At Cornell Data Strategy, we specialize in leveraging data science to address critical business challenges.<br></br><br></br>
 
                                     Our focus extends to solving operational inefficiencies, expanding market opportunities, tackling financial complexities, and uncovering the root causes of business issues.<br></br><br></br>
@@ -251,98 +251,98 @@ const Services = () => {
 
                 {/* Overlay for mobile */}
                 {isOpen && (
-  <div className="fixed inset-0 bg-[#333333] z-20">
-    <div className="absolute top-10 right-4">
-      <button
-        className="text-white"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        <svg
-          width="26"
-          height="26"
-          viewBox="0 0 26 26"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect
-            y="23.4629"
-            width="33.1814"
-            height="3.58717"
-            transform="rotate(-45 0 23.4629)"
-            fill="white"
-          />
-          <rect
-            width="33.1814"
-            height="3.58717"
-            transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 26 23.4629)"
-            fill="white"
-          />
-        </svg>
-      </button>
-    </div>
-    <nav className="flex flex-col items-center justify-center h-full">
-      <a
-        href="/"
-        className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
-      >
-        Home
-        <span
-          className="absolute inset-x-0 bottom-1.5 w-12 h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
-        ></span>
-      </a>
+                    <div className="fixed inset-0 bg-[#333333] z-20">
+                        <div className="absolute top-10 right-4">
+                            <button
+                                className="text-white"
+                                onClick={() => setIsOpen(!isOpen)}
+                            >
+                                <svg
+                                    width="26"
+                                    height="26"
+                                    viewBox="0 0 26 26"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <rect
+                                        y="23.4629"
+                                        width="33.1814"
+                                        height="3.58717"
+                                        transform="rotate(-45 0 23.4629)"
+                                        fill="white"
+                                    />
+                                    <rect
+                                        width="33.1814"
+                                        height="3.58717"
+                                        transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 26 23.4629)"
+                                        fill="white"
+                                    />
+                                </svg>
+                            </button>
+                        </div>
+                        <nav className="flex flex-col items-center justify-center h-full">
+                            <a
+                                href="/"
+                                className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
+                            >
+                                Home
+                                <span
+                                    className="absolute inset-x-0 bottom-1.5 w-12 h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
+                                ></span>
+                            </a>
 
-      <a
-        href="/services"
-        className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
-      >
-        Capabilities
-        <span
-          className="absolute inset-x-0 bottom-1.5 w-[100px] h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
-        ></span>
-      </a>
+                            <a
+                                href="/services"
+                                className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
+                            >
+                                Capabilities
+                                <span
+                                    className="absolute inset-x-0 bottom-1.5 w-[100px] h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
+                                ></span>
+                            </a>
 
-      <a
-        href="/projects"
-        className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
-      >
-        Impact
-        <span
-          className="absolute inset-x-0 bottom-1.5 w-[70px] h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
-        ></span>
-      </a>
+                            <a
+                                href="/projects"
+                                className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
+                            >
+                                Impact
+                                <span
+                                    className="absolute inset-x-0 bottom-1.5 w-[70px] h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
+                                ></span>
+                            </a>
 
-      <a
-        href="/about"
-        className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
-      >
-        Our People
-        <span
-          className="absolute inset-x-0 bottom-1.5 w-[100px] h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
-        ></span>
-      </a>
+                            <a
+                                href="/about"
+                                className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
+                            >
+                                Our People
+                                <span
+                                    className="absolute inset-x-0 bottom-1.5 w-[100px] h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
+                                ></span>
+                            </a>
 
-      <a
-        href="/careers"
-        className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
-      >
-        Careers
-        <span
-          className="absolute inset-x-0 bottom-1.5 w-[70px] h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
-        ></span>
-      </a>
+                            <a
+                                href="/careers"
+                                className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
+                            >
+                                Careers
+                                <span
+                                    className="absolute inset-x-0 bottom-1.5 w-[70px] h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
+                                ></span>
+                            </a>
 
-      <a
-        href="/contact-us"
-        className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
-      >
-        Contact Us
-        <span
-          className="absolute inset-x-0 bottom-1.5 w-[100px] h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
-        ></span>
-      </a>
-    </nav>
-  </div>
-)}
+                            <a
+                                href="/contact-us"
+                                className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
+                            >
+                                Contact Us
+                                <span
+                                    className="absolute inset-x-0 bottom-1.5 w-[100px] h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
+                                ></span>
+                            </a>
+                        </nav>
+                    </div>
+                )}
             </div>
             <Footer
                 theme={"dark"}

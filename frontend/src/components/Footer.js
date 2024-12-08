@@ -29,7 +29,7 @@ export function Footer({ theme }) {
     <footer
       className={`${bgClass} border-t-[2px] border-black ${textClass} py-8`}
     >
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-around gap-3 md:gap-0">
         {/* Logo and Name */}
         <div className="flex items-center mb-4 md:mb-0">
           <img
