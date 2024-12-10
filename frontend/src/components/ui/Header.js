@@ -1,23 +1,23 @@
 const Header = ({ theme, textcl, active, bg }) => {
-    const size = "text-[19px]";
-    const fontFamily = "font-shippori"; // Tailwind class for General Sans Medium
-  
-    return (
-      <header className={`py-3 bg-${bg} mb-10`}>
-        {/* Top Header Section */}
-        <div className="flex justify-start lmd:justify-around items-center px-10">
-          {/* Logo Section */}
-          <div className="flex items-center">
-            <img
-              src={`${theme === "light" ? "/daslight.png" : "/das.png"}`}
-              width={67}
-              height={67}
-              alt="Logo"
-            />
-          </div>
-  
-          {/* Navbar Section */}
-          <div className="hidden lmd:block">
+  const size = "text-[19px]";
+  const fontFamily = "font-gs"; // Tailwind class for General Sans Medium
+
+  return (
+    <header className={`py-3 bg-${bg}`}>
+      {/* Top Header Section */}
+      <div className="flex justify-start lmd:justify-around items-center px-10">
+        {/* Logo Section */}
+        <div className="flex items-center">
+          <img
+            src={`${theme === "light" ? "/das.png" : "/dasligh.png"}`}
+            width={67}
+            height={67}
+            alt="Logo"
+          />
+        </div>
+
+        {/* Navbar Section */}
+        <div className="hidden lmd:block">
           <nav className="flex space-x-8 ">
             <a
               href="/"
@@ -63,20 +63,19 @@ const Header = ({ theme, textcl, active, bg }) => {
             </a>
 
           </nav>
-          </div>
-
-          <a
-              href="/login"
-              className={`py-1 ${active === "Signin" ? "text-[#1E53EF]" : `text-${textcl}`} ${size} ${fontFamily} group relative hidden lmd:block`}
-            >
-              Sign In
-              <span className="absolute inset-x-0 bottom-1.5 w-12 h-[2px] bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"></span>
-            </a>
-
         </div>
-      </header>
-    );
-  };
-  
-  export default Header;
-  
+
+        <a
+          href="/login"
+          className={`py-1 ${active === "Signin" ? "text-[#1E53EF]" : `text-${textcl}`} ${size} ${fontFamily} group relative hidden lmd:block`}
+        >
+          Sign In
+          <span className="absolute inset-x-0 bottom-1.5 w-12 h-[2px] bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"></span>
+        </a>
+
+      </div>
+    </header>
+  );
+};
+
+export default Header;

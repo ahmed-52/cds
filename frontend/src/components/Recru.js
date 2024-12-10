@@ -7,7 +7,7 @@ const Recru = () => {
       title: "Sept 13",
       content: (
         <div>
-          <p className="text-neutral-800 text-2xl md:text-4xl font-normal mb-4 font-shippori-mono">
+          <p className="text-neutral-800 text-2xl md:text-4xl font-normal mb-4 font-gs-mono">
             Info Session
           </p>
           <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base">
@@ -32,7 +32,7 @@ const Recru = () => {
       title: "Sept 16",
       content: (
         <div>
-          <p className="text-neutral-800 font-shippori-mono text-2xl md:text-4xl font-normal mb-4">
+          <p className="text-neutral-800 font-gs-mono text-2xl md:text-4xl font-normal mb-4">
             Info Session
           </p>
           <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base">
@@ -57,10 +57,10 @@ const Recru = () => {
       title: "Sept 23",
       content: (
         <div>
-            <p className="text-neutral-800 font-shippori-mono text-2xl md:text-4xl font-normal mb-4">
+          <p className="text-neutral-800 font-gs-mono text-2xl md:text-4xl font-normal mb-4">
             Application <span className="underline">Deadline</span>
-            </p>
-            <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base">
+          </p>
+          <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base">
             Submit your application before midnight to be considered.
           </p>
           <div className="mt-2">
@@ -76,13 +76,13 @@ const Recru = () => {
       ),
     },
     {
-        title: "Sept 25-27",
-        content: (
-          <div>
-            <p className="text-neutral-800 font-shippori-mono text-2xl md:text-4xl font-normal mb-4">
+      title: "Sept 25-27",
+      content: (
+        <div>
+          <p className="text-neutral-800 font-gs-mono text-2xl md:text-4xl font-normal mb-4">
             In-person Interviewes
-            </p>
-            <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base">
+          </p>
+          <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base">
             Time: Specific time slots will be communicated via email.
           </p>
           <div className="mt-2">
@@ -94,9 +94,9 @@ const Recru = () => {
               className="rounded-lg shadow-lg"
             />
           </div>
-          </div>
-        ),
-      },
+        </div>
+      ),
+    },
 
   ];
 

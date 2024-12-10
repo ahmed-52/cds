@@ -168,20 +168,18 @@ const About = () => {
                 </img>
               </div>
 
-
               <section className="pb-10">
+  <p className="font-gs font-[300]  mb-6 text-cas md:text-[25px] text-[20px]">
+    <span className="font-extrabold  md:text-[40px] text-[30px]">Who We Are</span><br /><br />
+    The Cornell Data Strategy Club was founded by <strong>Ahmed Abdulla</strong> and <strong>Chris Wang</strong>, who share a unified vision of <span className="underline">strategy</span> driven by rigorous <span className="underline">data analysis</span> and <span className="underline">logical reasoning</span>. Their mission is to create a space where students can tackle real-world challenges and make a meaningful impact through data-driven solutions.
+  </p>
 
+  <p className="font-gs font-[300]  mb-6 mt-10 text-cas md:text-[25px] text-[20px]">
+    <span className="font-extrabold  md:text-[40px] text-[30px]">Our Philosophy</span><br /><br />
+    Our projects are rooted in collaboration, creativity, and a commitment to delivering actionable insights. Whether it’s helping businesses expand their market reach or optimize operations, we empower students to turn data into real impact.
+  </p>
+</section>
 
-                <p className="font-shippori text-[20px] mb-6 text-cas md:text-[25px]">
-                  <span className="font-extrabold text-[40px]">Who We Are</span><br></br>
-                  The Cornell Data Strategy Club was founded by <strong>Ahmed Abdulla</strong> and <strong>Chris Wang</strong>, who share a unified vision of <span className="underline">strategy</span> driven by rigorous <span className="underline">data analysis</span> and <span className="underline">logical reasoning</span>. Their mission is to create a space where students can tackle real-world challenges and make a meaningful impact through data-driven solutions.
-                </p>
-
-                <p className="font-shippori text-[20px] mb-6 mt-10 text-cas md:text-[25px]">
-                  <span className="font-extrabold text-[40px]">Our Philosophy</span><br></br>
-                  Our projects are rooted in collaboration, creativity, and a commitment to delivering actionable insights. Whether it’s helping businesses expand their market reach or optimize operations, we empower students to turn data into real impact.
-                </p>
-              </section>
 
 
 
@@ -205,10 +203,10 @@ const About = () => {
               <section className="bg-das text-white py-12 px-10 md:px-16 flex flex-col md:flex-row items-center justify-between my-5">
                 {/* Text Content */}
                 <div className="max-w-screen-md">
-                  <h2 className="text-[35px] font-bold mb-4 font-shippori">
+                  <h2 className="text-[35px] font-bold mb-4 font-gs">
                     Student <span className="font-normal">Impact</span>
                   </h2>
-                  <p className="text-[22px] font-shippori ">
+                  <p className="text-[22px] font-gs ">
                     Our club offers a unique opportunity for students to apply their analytical skills in real-world settings. Through consulting projects, students gain hands-on experience, working with local businesses and organizations to solve strategic problems using data insights.
                   </p>
                 </div>
@@ -227,7 +225,7 @@ const About = () => {
 
 
               <section className="container mx-auto my-12 space-y-12">
-                <h1 className="text-[40px] font-bold font-shippori mt-20 text-center mb-12">
+                <h1 className="text-[40px] font-bold font-gs mt-20 text-center mb-12">
                   Minds Behind Cornell Data Strategy
                 </h1>
 
@@ -334,7 +332,7 @@ const About = () => {
     <nav className="flex flex-col items-center justify-center h-full">
       <a
         href="/"
-        className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
+        className="block py-1 text-white text-[18px] font-gs group relative hover:text-[#c3c3c3]"
       >
         Home
         <span
@@ -344,7 +342,7 @@ const About = () => {
 
       <a
         href="/services"
-        className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
+        className="block py-1 text-white text-[18px] font-gs group relative hover:text-[#c3c3c3]"
       >
         Capabilities
         <span
@@ -354,7 +352,7 @@ const About = () => {
 
       <a
         href="/projects"
-        className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
+        className="block py-1 text-white text-[18px] font-gs group relative hover:text-[#c3c3c3]"
       >
         Impact
         <span
@@ -364,7 +362,7 @@ const About = () => {
 
       <a
         href="/about"
-        className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
+        className="block py-1 text-white text-[18px] font-gs group relative hover:text-[#c3c3c3]"
       >
         Our People
         <span
@@ -374,7 +372,7 @@ const About = () => {
 
       <a
         href="/careers"
-        className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
+        className="block py-1 text-white text-[18px] font-gs group relative hover:text-[#c3c3c3]"
       >
         Careers
         <span
@@ -384,7 +382,7 @@ const About = () => {
 
       <a
         href="/contact-us"
-        className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
+        className="block py-1 text-white text-[18px] font-gs group relative hover:text-[#c3c3c3]"
       >
         Contact Us
         <span

@@ -74,11 +74,12 @@ const Project = () => {
 
 
                             <section className="pb-10">
-                                <p className="font-shippori font-medium mb-6 text-cas md:text-[35px] text-[25px]">
-                                    Projects In Progress...<br></br><br></br>
-                                    We currently have several exciting projects underway. Our team is working on advanced data analysis, product development, and market research for startups, local businesses, and larger organizations.<br></br><br></br>
-                                    These projects are designed to offer practical solutions that help our clients navigate their industries more effectively. Stay tuned for updates on these projects as we continue to push the boundaries of what data can do.
-                                </p>
+                            <p className="font-gs font-[300] mb-6 text-cas md:text-[25px] text-[20px]">
+  Projects In Progress...<br /><br />
+  We currently have several exciting projects underway. Our team is working on advanced data analysis, product development, and market research for startups, local businesses, and larger organizations.<br /><br />
+  These projects are designed to offer practical solutions that help our clients navigate their industries more effectively. Stay tuned for updates on these projects as we continue to push the boundaries of what data can do.
+</p>
+
                             </section>
 
 
@@ -142,15 +143,15 @@ const Project = () => {
 
 
                             <section className="my-[100px]">
-                                <h1 className="md:text-[30px] text-[22px] font-b1 text-black text-start mt-10">
+                                <h1 className="md:text-[30px] text-[22px] font-bold text-black text-start mt-10">
                                     Let’s talk! We’re here to help you achieve your goals.
                                 </h1>
-                                <p className="md:text-[22px] text-[15px] text-black font-shippori text-start max-w-[1000px]">
+                                <p className="md:text-[22px] text-[15px] text-black font-gs text-start max-w-[1000px]">
                                     As a student-led initiative, we provide these services at no cost, ensuring our focus remains on delivering impactful solutions and gaining practical experience.
                                 </p>
 
                                 <a href="mailto:c.data.strategy@gmail.com">
-                                    <button className="bg-das py-2 rounded-md text-sm my-4 flex justify-center items-center hover:bg-hov px-5 text-white font-ant transition-transform duration-300 hover:translate-y-1">
+                                    <button className="bg-das py-2 rounded-md text-sm my-4 flex justify-center items-center hover:bg-hov px-5 text-white font-gs transition-transform duration-300 hover:translate-y-1">
                                         Book a call
 
                                     </button>
@@ -202,7 +203,7 @@ const Project = () => {
                         <nav className="flex flex-col items-center justify-center h-full">
                             <a
                                 href="/"
-                                className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
+                                className="block py-1 text-white text-[18px] font-gs group relative hover:text-[#c3c3c3]"
                             >
                                 Home
                                 <span
@@ -212,7 +213,7 @@ const Project = () => {
 
                             <a
                                 href="/services"
-                                className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
+                                className="block py-1 text-white text-[18px] font-gs group relative hover:text-[#c3c3c3]"
                             >
                                 Capabilities
                                 <span
@@ -222,7 +223,7 @@ const Project = () => {
 
                             <a
                                 href="/projects"
-                                className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
+                                className="block py-1 text-white text-[18px] font-gs group relative hover:text-[#c3c3c3]"
                             >
                                 Impact
                                 <span
@@ -232,7 +233,7 @@ const Project = () => {
 
                             <a
                                 href="/about"
-                                className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
+                                className="block py-1 text-white text-[18px] font-gs group relative hover:text-[#c3c3c3]"
                             >
                                 Our People
                                 <span
@@ -242,7 +243,7 @@ const Project = () => {
 
                             <a
                                 href="/careers"
-                                className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
+                                className="block py-1 text-white text-[18px] font-gs group relative hover:text-[#c3c3c3]"
                             >
                                 Careers
                                 <span
@@ -252,7 +253,7 @@ const Project = () => {
 
                             <a
                                 href="/contact-us"
-                                className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
+                                className="block py-1 text-white text-[18px] font-gs group relative hover:text-[#c3c3c3]"
                             >
                                 Contact Us
                                 <span

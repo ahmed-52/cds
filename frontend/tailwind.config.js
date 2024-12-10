@@ -22,12 +22,14 @@ module.exports = {
         three: '#333333',
       },
       fontFamily: {
-        shippori: ['Shippori', 'serif'],
+        Domine: ['Domine', 'serif'],
         b1: ['Shipporib1', 'sans-serif'],
         ant: ['Shipporiant', 'sans-serif'],
         georgia: ['Georgia', 'serif'],
         generalSans: ['GeneralSans', 'sans-serif'],
         cond: ['GoldmanSansCd', 'sans-serif'],
+        gs: ['GoldmanSans', 'sans-serif'],
+        gserif: ['GoldmanSerif', 'serif'],
       },
       animation: {
         spotlight: "spotlight 2s ease .75s 1 forwards",

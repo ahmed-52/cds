@@ -41,7 +41,7 @@ export function SidebarDemo() {
       ),
     },
   ];
-  
+
   const [open, setOpen] = useState(false);
 
   // Function to render the correct component based on the URL path
@@ -147,7 +147,7 @@ const Dashboard2 = () => {
   return (
     <div className="flex flex-1 p-4">
       <div className="overflow-x-auto w-full">
-        <h1 className="text-2xl font-semibold text-gray-800 text-center py-2 dark:text-gray-200 font-shippori-mono">Interested Members</h1>
+        <h1 className="text-2xl font-semibold text-gray-800 text-center py-2 dark:text-gray-200 font-gs-mono">Interested Members</h1>
         <table className="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
           <thead className="text-left">
             <tr>

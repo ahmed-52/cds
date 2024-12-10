@@ -7,10 +7,10 @@ export function SparklesPreview() {
     (<div
       className="w-full bg-[#333333] flex flex-col items-center justify-center overflow-hidden">
       <h1
-        className="md:text-4xl text-3xl lg:text-7xl font-bold text-center text-white relative z-20 font-shippori mt-[5rem]">
+        className="md:text-4xl text-3xl lg:text-7xl font-bold text-center text-white relative z-20 font-gs mt-[5rem]">
         Cornell Data Strategy Club
       </h1>
-      
+
       <div className="w-[40rem] h-40 relative">
         {/* Gradients */}
         <div
@@ -35,7 +35,7 @@ export function SparklesPreview() {
         <div
           className="absolute inset-0 w-full h-full bg-[#333333] [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]">
 
-          </div>
+        </div>
 
       </div>
     </div>)

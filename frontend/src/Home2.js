@@ -101,24 +101,45 @@ const Home2 = () => {
               active={"home"}
             ></Header>
 
+            <div className="relative mb-16 max-h-[100vh] overflow-hidden">
+              <img
+                className="w-[100%] h-auto"
+                src="homehero1.jpg"
+              />
+              <div className="absolute inset-0 bg-black opacity-50"></div>
+              <div className="absolute inset-0 flex flex-col justify-start md:justify-end items-start mb-20 max-w-[1000px] mx-10 mt-5 md:mx-20">
+                <h1 className="text-[35px] md:text-[45px] lmd:text-[73px] font-gserif font-[300] text-start text-white">We are Cornell Data Strategy</h1>
+                <p className="font-gs font-[300] mb-6 text-white text-[12px] lmd:text-[25px] md:text-[15]px]">
+                  a student-run consulting organization delivering data-driven solutions and strategic insights.
+                  We combine Cornell’s academic rigor with industry expertise to solve complex challenges. Using advanced analytics and innovative strategies, we help organizations achieve measurable results.
+
+                  To analyze. To innovate. To excel.
+                </p>
+                <button
+                  className="flex font-gserif justify-start gap-2 items-center mt-3 group bg-white hover:bg-slate-200 text-cas py-2 px-5"
+                  onClick={() => window.location.href = '/projects'}
+                >
+                  <span>See our Impact</span>
+                  <img
+                    className="mt-1 transition-transform duration-300 transform group-hover:translate-x-2"
+                    src="/svg/inblack.svg"
+                    alt="Arrow Icon"
+                  />
+                </button>
+
+              </div>
+            </div>
+
             {/* Page Content */}
             <div className="md:max-w-[1400px] xlx:mx-auto md:mx-[50px] mx-[20px]">
 
 
 
-              <div className="mt-4 mb-16">
-                <img
-                  className="w-[100%] h-auto"
-                  src="homebar2.png"
-                >
-
-                </img>
-                <div className="mb-8 h-[8px] bg-das w-full"></div>
-              </div>
 
 
-              <section className="pb-10">
-                <p className="font-shippori font-medium mb-6 text-cas md:text-[35px] text-[25px] text-[25px]">
+
+              {/* <section className="pb-10">
+                <p className="font-gs font-regular mb-6 text-cas md:text-[35px text-[25px]">
                   We are Cornell Data Strategy, a student-run consulting organization delivering data-driven solutions and strategic insights.<br></br><br></br>
 
                   We combine Cornell’s academic rigor with industry expertise to solve complex challenges.
@@ -129,7 +150,7 @@ const Home2 = () => {
                   To analyze. To innovate. To excel.
                 </p>
                 <div className="my-8 h-[8px] bg-cas w-full"></div>
-              </section>
+              </section> */}
 
 
 
@@ -145,10 +166,10 @@ const Home2 = () => {
               </style>
 
 
-              <section className="font-shippori px-8 bg-[#F7F7FA] py-10">
+              <section className="font-gs px-8 bg-[#F7F7FA] py-10">
                 <div className="flex lmd:flex-row flex-col justify-between items-start">
                   <div className="py-10">
-                    <p className="font-bold font-shippori text-md text-three -mb-2">D&SA</p>
+                    <p className="font-bold font-gs text-md text-three -mb-2">D&SA</p>
                     <h3 className="md:text-[50px] text-[35px] text-three font-bold">What We Offer</h3>
                   </div>
                   <p className="font-cond text-[22px] font-normal max-w-[650px] leading-[1.2] my-auto text-three">
@@ -161,20 +182,20 @@ const Home2 = () => {
 
               <div className=" mt-10 h-[2px] bg-[#7f7f7f] w-full"></div>
 
-              <section className="font-ant my-10">
+              <section className="font-gs my-10">
                 {/* <div className="flex flex-col mb-6 bg-white">
                   <div className="flex flex-col lmd:flex-row justify-between">
 
                     <div className="pl-8 py-[30px]">
-                      <h3 className="md:text-[33px] text-[25px] font-ant text-das mb-5 leading-[1.2]">
+                      <h3 className="md:text-[33px] text-[25px] font-gs text-das mb-5 leading-[1.2]">
                         Trusted by Organizations Across
                         <span className="block">Industries</span>
                       </h3>
-                      <p className="font-ant md:text-[20px] text-[15px] mb-6 text-cas max-w-[550px] leading-[1.2]">
+                      <p className="font-gs md:text-[20px] text-[15px] mb-6 text-cas max-w-[550px] leading-[1.2]">
                         At Cornell Data Strategy, we deliver data-driven solutions that drive measurable impact. Trusted by startups and established businesses, we help unlock the full potential of your data.
                       </p>
                       <a href="mailto:c.data.strategy@gmail.com">
-                    <button className="bg-das py-2 rounded-md text-sm flex justify-center items-center hover:bg-hov px-5 text-cas font-ant transition-transform duration-300 hover:translate-y-1">
+                    <button className="bg-das py-2 rounded-md text-sm flex justify-center items-center hover:bg-hov px-5 text-cas font-gs transition-transform duration-300 hover:translate-y-1">
                       Book a call
                     </button>
                   </a>
@@ -194,51 +215,51 @@ const Home2 = () => {
                 <div className="flex flex-col lxl:flex-row gap-8 mt-12">
                   {/* Predictive Modeling & Market Research */}
                   <div
-                    className="bg-[#F7F7FA] text-cas font-ant p-8 flex-1 scroll-fade transform transition-transform duration-1000 ease-out hover:scale-110"
+                    className="bg-[#F7F7FA] text-cas font-gs p-8 flex-1 scroll-fade transform transition-transform duration-1000 ease-out hover:scale-110"
                     data-delay="0.2s"
                     data-translate="70px"
                   >
                     <div className="flex items-center justify-between">
-                      <h3 className="text-[30px] mb-4">
+                      <h3 className="text-[30px] font-medium  mb-2 font-gs">
                         Market<br></br>Research
                       </h3>
                       <img className="mb-10" src="svg/bat.svg" alt="Predictive Modeling" />
                     </div>
-                    <p className="text-[18px] font-shippori font-bold leading-[1.2]">
+                    <p className="text-[18px] font-gs leading-[1.2]">
                       We aim to utilize predictive modeling to assist organizations in anticipating future trends and behaviors. Through data-driven insights, we plan to support businesses in making informed decisions and developing more effective market strategies.
                     </p>
                   </div>
 
                   {/* Product Development and Strategy */}
                   <div
-                    className="bg-[#F7F7FA] text-cas font-ant p-8 flex-1 scroll-fade transform transition-transform duration-1000 ease-out hover:scale-110"
+                    className="bg-[#F7F7FA] text-cas font-gs p-8 flex-1 scroll-fade transform transition-transform duration-1000 ease-out hover:scale-110"
                     data-delay="0.4s"
                     data-translate="24px"
                   >
-                    <div className="flex items-center justify-around">
-                      <h3 className="text-[30px] mb-4">
-                        Strategy & Implementation
+                    <div className="flex items-center justify-between">
+                      <h3 className="text-[30px] font-medium  mb-2 font-gs">
+                        Strategy & <br></br>Implementation
                       </h3>
                       <img className="mb-10" src="svg/stair.svg" alt="Product Development" />
                     </div>
-                    <p className="text-[18px] font-shippori font-bold leading-[1.2]">
+                    <p className="text-[18px] font-gs leading-[1.2]">
                       Our goal is to guide product development using advanced data analytics and thorough research. From ideation to product launch, we strive to help businesses refine their strategies to better align with market needs and business objectives.
                     </p>
                   </div>
 
                   {/* Data Analytics & Corporate Advisory */}
                   <div
-                    className="bg-[#F7F7FA] text-cas font-ant p-8 flex-1 scroll-fade transform transition-transform duration-1000 ease-out hover:scale-110"
+                    className="bg-[#F7F7FA] text-cas font-gs p-8 flex-1 scroll-fade transform transition-transform duration-1000 ease-out hover:scale-110"
                     data-delay="0.6s"
                     data-translate="32px"
                   >
                     <div className="flex items-center justify-between">
-                      <h3 className="text-[30px] mb-4">
+                      <h3 className="text-[30px] font-medium  mb-2 font-gs">
                         Advanced<br></br> Data Modeling
                       </h3>
                       <img className="mb-10 ml-2" src="svg/block.svg" alt="Data Analytics" />
                     </div>
-                    <p className="text-[18px] font-shippori font-bold leading-[1.2]">
+                    <p className="text-[18px] font-gs leading-[1.2]">
                       We seek to offer comprehensive data analytics services, aiming to identify emerging trends and actionable insights. Our focus is on improving corporate strategies and enhancing decision-making processes across diverse industries.
                     </p>
                   </div>
@@ -253,7 +274,7 @@ const Home2 = () => {
 
 
               {/* Contact Section */}
-              {/* <section className="font-shippori py-10 px-10 bg-white">
+              {/* <section className="font-gs py-10 px-10 bg-white">
                 <div className="flex items-center mb-2">
                   <h3 className="text-[40px] text-[#252525]">Interested in Collaborating?</h3>
                 </div>
@@ -270,7 +291,7 @@ const Home2 = () => {
               </section> */}
 
 
-              <section className="font-shippori px-8 bg-cas my-28 p-12">
+              <section className="font-gs px-8 bg-cas my-28 p-12">
 
                 <div className="flex flex-col justify-between items-start text-white">
                   <h2 className="font-generalSans font-regular text-lg m-0">Our Impact</h2>
@@ -309,15 +330,15 @@ const Home2 = () => {
 
 
               <section className="my-[100px] bg-[#F7F7FA] py-5 px-10">
-                <h1 className="md:text-[40px] text-[22px] font-bold text-three font-shippori text-start mb-2 mt-10">
+                <h1 className="md:text-[40px] text-[22px] font-medium text-three font-gs text-start mb-2 mt-10">
                   Interested? Let’s Talk.
                 </h1>
-                <p className="md:text-[22px] text-[15px] text-black font-shippori text-start mb-2 max-w-[1000px]">
+                <p className="md:text-[22px] text-[15px] text-black font-gs text-start mb-2 max-w-[1000px]">
                   As a student-led initiative, we provide these services at no cost, ensuring our focus remains on delivering impactful solutions and gaining practical experience.
                 </p>
 
                 <a href="mailto:c.data.strategy@gmail.com">
-                  <button className="bg-das py-2 rounded-md text-sm my-4 flex justify-center items-center hover:bg-hov px-5 text-white font-ant transition-transform duration-300 hover:translate-y-1">
+                  <button className="bg-das py-2 rounded-md text-sm my-4 flex justify-center items-center hover:bg-hov px-5 text-white font-gs transition-transform duration-300 hover:translate-y-1">
                     Contact
 
                   </button>
@@ -367,7 +388,7 @@ const Home2 = () => {
             <nav className="flex flex-col items-center justify-center h-full">
               <a
                 href="/"
-                className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
+                className="block py-1 text-white text-[18px] font-gs group relative hover:text-[#c3c3c3]"
               >
                 Home
                 <span
@@ -377,7 +398,7 @@ const Home2 = () => {
 
               <a
                 href="/services"
-                className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
+                className="block py-1 text-white text-[18px] font-gs group relative hover:text-[#c3c3c3]"
               >
                 Capabilities
                 <span
@@ -387,7 +408,7 @@ const Home2 = () => {
 
               <a
                 href="/projects"
-                className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
+                className="block py-1 text-white text-[18px] font-gs group relative hover:text-[#c3c3c3]"
               >
                 Impact
                 <span
@@ -397,7 +418,7 @@ const Home2 = () => {
 
               <a
                 href="/about"
-                className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
+                className="block py-1 text-white text-[18px] font-gs group relative hover:text-[#c3c3c3]"
               >
                 Our People
                 <span
@@ -407,7 +428,7 @@ const Home2 = () => {
 
               <a
                 href="/careers"
-                className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
+                className="block py-1 text-white text-[18px] font-gs group relative hover:text-[#c3c3c3]"
               >
                 Careers
                 <span
@@ -417,7 +438,7 @@ const Home2 = () => {
 
               <a
                 href="/contact-us"
-                className="block py-1 text-white text-[18px] font-shippori group relative hover:text-[#c3c3c3]"
+                className="block py-1 text-white text-[18px] font-gs group relative hover:text-[#c3c3c3]"
               >
                 Contact Us
                 <span

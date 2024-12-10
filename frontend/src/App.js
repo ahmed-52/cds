@@ -10,6 +10,7 @@ import Services from './components/Services';
 import { Footer } from './components/Footer';
 import Careers from './components/Careers';
 import Contact from './components/Contact';
+import Dashboard from './components/Dashboard';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
             <Route path="/services" element={<Services></Services>} />
             <Route path="/careers" element={<Careers></Careers>} />
             <Route path="/contact-us" element={<Contact></Contact>} />
+            <Route path="/dashboard" element={<Dashboard />} />
             </Routes>
             {/* <Footer></Footer> */}
           </div>

@@ -14,7 +14,7 @@ const Proj = ({ title, body, image, link }) => {
       style={{ backgroundImage: `url('${image}.png')` }}
     >
       <div className="bg-black/30 text-white p-8 md:p-12">
-        <h2 className="text-2xl md:text-4xl font-bold mb-4 font-b1">{title}</h2>
+        <h2 className="text-2xl md:text-4xl mb-4 font-cond">{title}</h2>
         <p className="text-sm md:text-base leading-relaxed max-w-[600px]">
           {body}
         </p>

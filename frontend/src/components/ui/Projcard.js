@@ -8,8 +8,8 @@ const Projcard = ({ title, body, image, link }) => {
       style={{ backgroundImage: `url('${image}.png')` }}
     >
       <div className="bg-black/40 text-white md:p-10 p-4 flex flex-col items-start justify-around">
-        <h2 className="text-xl md:text-2xl font-bold mb-4 font-b1">{title}</h2>
-        <p className="text-sm md:text-lg leading-relaxed max-w-[600px]">
+        <h2 className="text-xl md:text-2xl mb-4 font-generalSans">{title}</h2>
+        <p className="text-sm md:text-lg font-georgia leading-relaxed max-w-[600px]">
           {body}
         </p>
 

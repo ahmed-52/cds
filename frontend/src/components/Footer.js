@@ -66,7 +66,7 @@ export function Footer({ theme }) {
 
         {/* Social Media Icons */}
         <div className="flex space-x-4">
-          
+
           <a
             className="h-[30px] w-[30px]"
             href="https://www.linkedin.com/company/cornell-data-strategy-club/"
@@ -84,7 +84,7 @@ export function Footer({ theme }) {
             <img src="/svg/insta.svg" alt="Instagram" />
           </a>
         </div>
-        
+
       </div>
 
       {/* Newsletter Signup */}
@@ -93,7 +93,7 @@ export function Footer({ theme }) {
           onSubmit={handleSubmit}
           className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4"
         >
-          <p className="font-shippori">Subscribe To Our Newsletter</p>
+          <p className="font-gs">Subscribe To Our Newsletter</p>
           <input
             className="p-2 w-64 text-sm rounded border border-gray-300 focus:ring-primary-500 focus:border-primary-500"
             placeholder="Enter your email"
@@ -111,9 +111,8 @@ export function Footer({ theme }) {
         </form>
         {message.text && (
           <p
-            className={`mt-2 text-sm ${
-              message.type === "success" ? "text-green-600" : "text-red-600"
-            }`}
+            className={`mt-2 text-sm ${message.type === "success" ? "text-green-600" : "text-red-600"
+              }`}
           >
             {message.text}
           </p>
