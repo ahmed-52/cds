@@ -108,7 +108,7 @@ const Home2 = () => {
               />
               <div className="absolute inset-0 bg-black opacity-50"></div>
               <div className="absolute inset-0 flex flex-col justify-start md:justify-end items-start mb-20 max-w-[1000px] mx-10 mt-5 md:mx-20">
-                <h1 className="text-[35px] md:text-[45px] lmd:text-[73px] font-gserif font-[300] text-start text-white">We are Cornell Data Strategy</h1>
+                <h1 className="text-[30px] md:text-[45px] lmd:text-[73px] font-gserif font-[300] text-start text-white">We are Cornell Data Strategy</h1>
                 <p className="font-gs font-[300] mb-6 text-white text-[12px] lmd:text-[25px] md:text-[15]px]">
                   a student-run consulting organization delivering data-driven solutions and strategic insights.
                   We combine Cornell’s academic rigor with industry expertise to solve complex challenges. Using advanced analytics and innovative strategies, we help organizations achieve measurable results.
@@ -170,9 +170,9 @@ const Home2 = () => {
                 <div className="flex lmd:flex-row flex-col justify-between items-start">
                   <div className="py-10">
                     <p className="font-bold font-gs text-md text-three -mb-2">D&SA</p>
-                    <h3 className="md:text-[50px] text-[35px] text-three font-bold">What We Offer</h3>
+                    <h3 className="md:text-[50px] text-[30px] text-three font-bold">What We Offer</h3>
                   </div>
-                  <p className="font-cond text-[22px] font-normal max-w-[650px] leading-[1.2] my-auto text-three">
+                  <p className="font-cond text-[18px] md:text-[22px] font-normal max-w-[650px] leading-[1.2] my-auto text-three">
                     We provide strategic insights and execute customized solutions that set us apart. Leveraging predictive analytics, innovative product development, and actionable strategies, we help organizations navigate challenges and achieve impactful results.
                   </p>
 
@@ -225,7 +225,7 @@ const Home2 = () => {
                       </h3>
                       <img className="mb-10" src="svg/bat.svg" alt="Predictive Modeling" />
                     </div>
-                    <p className="text-[18px] font-gs leading-[1.2]">
+                    <p className="md:text-[18px] text-[15px] font-gs leading-[1.2]">
                       We aim to utilize predictive modeling to assist organizations in anticipating future trends and behaviors. Through data-driven insights, we plan to support businesses in making informed decisions and developing more effective market strategies.
                     </p>
                   </div>
@@ -242,7 +242,7 @@ const Home2 = () => {
                       </h3>
                       <img className="mb-10" src="svg/stair.svg" alt="Product Development" />
                     </div>
-                    <p className="text-[18px] font-gs leading-[1.2]">
+                    <p className="md:text-[18px] text-[15px] font-gs leading-[1.2]">
                       Our goal is to guide product development using advanced data analytics and thorough research. From ideation to product launch, we strive to help businesses refine their strategies to better align with market needs and business objectives.
                     </p>
                   </div>
@@ -259,7 +259,7 @@ const Home2 = () => {
                       </h3>
                       <img className="mb-10 ml-2" src="svg/block.svg" alt="Data Analytics" />
                     </div>
-                    <p className="text-[18px] font-gs leading-[1.2]">
+                    <p className="md:text-[18px] text-[15px] font-gs leading-[1.2]">
                       We seek to offer comprehensive data analytics services, aiming to identify emerging trends and actionable insights. Our focus is on improving corporate strategies and enhancing decision-making processes across diverse industries.
                     </p>
                   </div>

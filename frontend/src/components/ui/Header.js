@@ -9,7 +9,7 @@ const Header = ({ theme, textcl, active, bg }) => {
         {/* Logo Section */}
         <div className="flex items-center">
           <img
-            src={`${theme === "light" ? "/das.png" : "/dasligh.png"}`}
+            src={`${theme === "light" ? "/das.png" : "/daslight.png"}`}
             width={67}
             height={67}
             alt="Logo"
