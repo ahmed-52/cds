@@ -23,12 +23,12 @@ const About = () => {
 
   const directorsAndVPs = [
     {
-      image: "chris.jpeg",
+      image: "chriswang1.png",
       name: "Chris Wang '26",
       title: "Director, Strategy & Implementation",
     },
     {
-      image: "/ahmed.jpg",
+      image: "/ahmed.png",
       name: "Ahmed Abdulla '27",
       title: "Co-director, Strategy & Implementation",
     },
@@ -152,7 +152,7 @@ const About = () => {
               theme="light"
               textcl={"white"}
               bg={"cas"}
-              active={"impact"}
+              active={"our-people"}
             ></Header>
 
             <div className="md:max-w-[1400px] xlx:mx-auto md:mx-[50px] mx-[20px]">
@@ -170,15 +170,26 @@ const About = () => {
               </div>
 
               <section className="pb-10">
-  <p className="font-gs font-[300]  mb-6 text-cas md:text-[25px] text-[20px]">
-    <span className="font-extrabold  md:text-[40px] text-[30px]">Who We Are</span><br /><br />
+              <div className="flex flex-col md:flex-row items-center md:items-start mb-6">
+              {/* <img src="chrisahmed.png" 
+              width={800}
+              className="h-auto mb-4 md:mb-0 md:mr-6" alt="Chris and Ahmed" /> */}
+  <div>
+  <div>
+  <h2 className="font-extrabold md:text-[40px] text-[30px] mb-0">Who We Are</h2>
+  <p className="font-gs font-[300] text-cas md:text-[25px] text-[20px] mt-4">
     The Cornell Data Strategy Club was founded by <strong>Ahmed Abdulla</strong> and <strong>Chris Wang</strong>, who share a unified vision of <span className="underline">strategy</span> driven by rigorous <span className="underline">data analysis</span> and <span className="underline">logical reasoning</span>. Their mission is to create a space where students can tackle real-world challenges and make a meaningful impact through data-driven solutions.
   </p>
+</div>
+  </div>
+</div>
 
-  <p className="font-gs font-[300]  mb-6 mt-10 text-cas md:text-[25px] text-[20px]">
-    <span className="font-extrabold  md:text-[40px] text-[30px]">Our Philosophy</span><br /><br />
+<div>
+  <h2 className="font-extrabold md:text-[40px] text-[30px] mb-0 mt-10">Our Philosophy</h2>
+  <p className="font-gs font-[300] mb-6 text-cas md:text-[25px] text-[20px]">
     Our projects are rooted in collaboration, creativity, and a commitment to delivering actionable insights. Whether it’s helping businesses expand their market reach or optimize operations, we empower students to turn data into real impact.
   </p>
+</div>
 </section>
 
 
@@ -199,28 +210,6 @@ const About = () => {
               {/* <div className="h-[10px] w-full bg-das"></div> */}
 
 
-
-
-              <section className="bg-das text-white py-12 px-10 md:px-16 flex flex-col md:flex-row items-center justify-between my-5">
-                {/* Text Content */}
-                <div className="max-w-screen-md">
-                  <h2 className="text-[35px] font-bold mb-4 font-gs">
-                    Student <span className="font-normal">Impact</span>
-                  </h2>
-                  <p className="text-[22px] font-gs ">
-                    Our club offers a unique opportunity for students to apply their analytical skills in real-world settings. Through consulting projects, students gain hands-on experience, working with local businesses and organizations to solve strategic problems using data insights.
-                  </p>
-                </div>
-
-                {/* Icon */}
-                <div className="mt-6 md:mt-0">
-                  <img
-                    src="/svg/collective.svg" // Replace with your icon path
-                    alt="Student Impact Icon"
-                    className="h-24 w-24 md:h-32 md:w-32"
-                  />
-                </div>
-              </section>
 
 
 
@@ -293,6 +282,27 @@ const About = () => {
 
 
 
+
+              <section className="bg-das text-white py-12 px-10 md:px-16 flex flex-col md:flex-row items-center justify-between my-5">
+                {/* Text Content */}
+                <div className="max-w-screen-md">
+                  <h2 className="text-[35px] font-bold mb-4 font-gs">
+                    Student <span className="font-normal">Impact</span>
+                  </h2>
+                  <p className="text-[22px] font-gs ">
+                    Our club offers a unique opportunity for students to apply their analytical skills in real-world settings. Through consulting projects, students gain hands-on experience, working with local businesses and organizations to solve strategic problems using data insights.
+                  </p>
+                </div>
+
+                {/* Icon */}
+                <div className="mt-6 md:mt-0">
+                  <img
+                    src="/svg/collective.svg" // Replace with your icon path
+                    alt="Student Impact Icon"
+                    className="h-24 w-24 md:h-32 md:w-32"
+                  />
+                </div>
+              </section>
               {/* Add more sections as needed */}
             </div>
           </div>
