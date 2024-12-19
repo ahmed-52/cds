@@ -1,17 +1,17 @@
 const Header = ({ theme, textcl, active, bg }) => {
   const size = "text-[19px]";
-  const fontFamily = "font-gs"; // Tailwind class for General Sans Medium
+  const fontFamily = "font-Domine"; // Tailwind class for General Sans Medium
 
   return (
-    <header className={`py-3 bg-${bg}`}>
+    <header className={` bg-${bg} shadow-inner py-5`}>
       {/* Top Header Section */}
       <div className="flex justify-start lmd:justify-around items-center px-10">
         {/* Logo Section */}
         <div className="flex items-center">
           <img
-            src={`${theme === "light" ? "/das.png" : "/daslight.png"}`}
-            width={67}
-            height={67}
+            src={`${theme === "light" ? "/svg/newlogo.svg" : "/svg/newlogodark.svg"}`}
+            width={170}
+            height={170}
             alt="Logo"
           />
         </div>

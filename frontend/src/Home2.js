@@ -95,15 +95,15 @@ const Home2 = () => {
 
 
             <Header
-              theme="light"
-              textcl={"white"}
-              bg={"cas"}
-              active={"home"}
+                            theme="dark"
+                            textcl={"cas"}
+                            bg={"#7297C5"}
+                            active={"home"}
             ></Header>
 
             <div className="relative mb-16 max-h-[100vh] overflow-hidden">
               <img
-                className="w-[100%] h-auto"
+                className="w-[100%] max-h-[90vh] object-cover"
                 src="homehero1.jpg"
               />
               <div className="absolute inset-0 bg-black opacity-50"></div>

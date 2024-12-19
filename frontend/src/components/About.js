@@ -51,20 +51,21 @@ const About = () => {
 
   const engagementManagers = [
     {
-      image: null,
-      name: "Druhv Raina '26",
-      title: "Manager, Business Development",
-    },
-    {
-      image: null,
-      name: "Sourabh Velaga '26",
-      title: "Engagement Manager, Strategy & Implementation",
-    },
-    {
-      image: null,
+      image: 'josh.jpeg',
       name: "Josh De Leeuw '25",
       title: "Engagement Manager, Talent Strategy",
     },
+
+    {
+      image: "Velaga.jpg",
+      name: "Sourabh Velaga '26",
+      title: "Engagement Manager, Strategy & Implementation",
+    },
+    // {
+    //   image: "",
+    //   name: "Druhv Raina '26",
+    //   title: "Manager, Business Development",
+    // },
   ];
 
   const seniorAssociates = [
@@ -245,9 +246,9 @@ const About = () => {
                 </div>
 
                 {/* Engagement Managers */}
-                {/* <div>
+                <div>
         <h2 className="text-2xl font-semibold mb-6">Engagement Managers</h2>
-        <div className="flex flex-col sm:flex-row justify-center gap-8">
+        <div className="flex flex-col sm:flex-row justify-start gap-8">
           {engagementManagers.map((member, index) => (
             <TeamMember
               key={index}
@@ -257,7 +258,7 @@ const About = () => {
             />
           ))}
         </div>
-      </div> */}
+      </div>
 
                 {/* Senior Associates */}
                 {/* <div>
