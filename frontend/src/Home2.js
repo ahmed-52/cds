@@ -108,8 +108,8 @@ const Home2 = () => {
               />
               <div className="absolute inset-0 bg-black opacity-50"></div>
               <div className="absolute inset-0 flex flex-col justify-start md:justify-end items-start mb-20 max-w-[1000px] mx-10 mt-5 md:mx-20">
-                <h1 className="text-[30px] md:text-[45px] lmd:text-[73px] font-gserif font-[300] text-start text-white">We are Cornell Data Strategy</h1>
-                <p className="font-gs font-[300] mb-6 text-white text-[12px] lmd:text-[25px] md:text-[15]px]">
+                <h1 className="text-[30px] md:text-[60px] font-gserif font-[300] text-start text-white">We are Cornell Data Strategy</h1>
+                <p className="font-gs font-[300] mb-6 text-white text-[12px] md:text-[22px]">
                   a student-run consulting organization delivering data-driven solutions and strategic insights.
                   We combine Cornell’s academic rigor with industry expertise to solve complex challenges. Using advanced analytics and innovative strategies, we help organizations achieve measurable results.
 
