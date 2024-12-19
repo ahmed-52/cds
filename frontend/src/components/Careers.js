@@ -66,7 +66,7 @@ const Careers = () => {
                                     Joining Cornell Data Strategy</h1>
                                 <img
                                     className="w-[100%] h-auto"
-                                    src="/careers.png"
+                                    src="/svg/arrowhero.svg"
                                 >
 
                                 </img>
