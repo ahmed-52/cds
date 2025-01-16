@@ -101,34 +101,41 @@ const Home2 = () => {
                             active={"home"}
             ></Header>
 
-            <div className="relative mb-16 max-h-[100vh] overflow-hidden">
-              <img
-                className="w-[100%] max-h-[90vh] object-cover"
-                src="homehero1.jpg"
-              />
-              <div className="absolute inset-0 bg-black opacity-50"></div>
-              <div className="absolute inset-0 flex flex-col justify-start md:justify-end items-start mb-20 max-w-[1000px] mx-10 mt-5 md:mx-20">
-                <h1 className="text-[30px] md:text-[60px] font-gserif font-[300] text-start text-white">We are Cornell Data Strategy</h1>
-                <p className="font-gs font-[300] mb-6 text-white text-[12px] md:text-[22px]">
-                  a student-run consulting organization delivering data-driven solutions and strategic insights.
-                  We combine Cornell’s academic rigor with industry expertise to solve complex challenges. Using advanced analytics and innovative strategies, we help organizations achieve measurable results.
+<div className="relative mb-16 overflow-hidden">
+  <img
+    // On mobile: no fixed height (use h-auto)
+    // On desktop: max-h-[90vh] 
+    className="w-full h-[500px] sm:h-auto md:max-h-[90vh] object-cover"
+    src="homehero1.jpg"
+  />
+  <div className="absolute inset-0 bg-black opacity-50"></div>
+  <div className="absolute inset-0 flex flex-col justify-end items-start mb-20 max-w-[1000px] mx-10 mt-5 md:mx-20">
+    <h1 className="text-[30px] md:text-[40px] lg:text-[60px] font-gserif font-[300] text-start text-white">
+      We are Cornell Data Strategy
+    </h1>
+    <p className="font-gs font-[300] mb-6 text-white text-[12px] md:text-[22px]">
+      a student-run consulting organization delivering data-driven solutions
+      and strategic insights. Using advanced
+      analytics and innovative strategies, we help organizations achieve
+      measurable results.
+      <br />
+      <br />
+      To analyze. To innovate. To excel.
+    </p>
+    <button
+      className="flex font-gserif justify-start gap-2 items-center mt-3 group bg-white hover:bg-slate-200 text-cas py-2 px-5"
+      onClick={() => window.location.href = '/projects'}
+    >
+      <span>See our Impact</span>
+      <img
+        className="mt-1 transition-transform duration-300 transform group-hover:translate-x-2"
+        src="/svg/inblack.svg"
+        alt="Arrow Icon"
+      />
+    </button>
+  </div>
+</div>
 
-                  To analyze. To innovate. To excel.
-                </p>
-                <button
-                  className="flex font-gserif justify-start gap-2 items-center mt-3 group bg-white hover:bg-slate-200 text-cas py-2 px-5"
-                  onClick={() => window.location.href = '/projects'}
-                >
-                  <span>See our Impact</span>
-                  <img
-                    className="mt-1 transition-transform duration-300 transform group-hover:translate-x-2"
-                    src="/svg/inblack.svg"
-                    alt="Arrow Icon"
-                  />
-                </button>
-
-              </div>
-            </div>
 
             {/* Page Content */}
             <div className="md:max-w-[1400px] xlx:mx-auto md:mx-[50px] mx-[20px]">

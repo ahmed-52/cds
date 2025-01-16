@@ -20,6 +20,7 @@ module.exports = {
         cas: '#252526',
         hov: '#113CA3',
         three: '#333333',
+        cool: '#212121',
       },
       fontFamily: {
         Domine: ['Domine', 'serif'],

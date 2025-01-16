@@ -28,7 +28,7 @@ const About = () => {
       title: "Director, Strategy & Implementation",
     },
     {
-      image: "/ahmed.png",
+      image: "/ahmed1.png",
       name: "Ahmed Abdulla '27",
       title: "Co-director, Strategy & Implementation",
     },
