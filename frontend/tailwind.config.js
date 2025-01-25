@@ -15,6 +15,9 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      aspectRatio: {
+        '360/412.5': '360 / 412.5',
+      },
       colors: {
         das: '#2562F5',
         cas: '#252526',

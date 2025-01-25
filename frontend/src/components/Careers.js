@@ -20,7 +20,9 @@ const Careers = () => {
         return () => clearTimeout(timer);
     }, []);
 
-
+const onClick = () => {
+    window.open("https://docs.google.com/forms/d/e/1FAIpQLSceTQZWDOCguSu0uKlJB8CHwhPRkPeRb0PW3nVmiMiTVoAUsg/viewform?usp=header", "_blank");
+    }
 
     return (
         <>
@@ -64,7 +66,7 @@ const Careers = () => {
                                 <h1 className="lg:text-[60px] font-bold text-[40px] text-cool mb-3 font-Domine">
                                     Joining Cornell Data Strategy</h1>
                                 <p className="font-Domine text-[20px] text-cool para2 max-w-[1000px]">We're looking for passionate people to join us on our mission to empowering data-driven leaders through impactful projects, critical thinking, and innovative solutions.</p>
-                                <button className="bg-das text-white font-bold hover:bg-hov px-6 py-2 mt-6 font-Domine flex justify-end gap-5 items-center group">
+                                <button onClick={onClick} className="bg-das text-white font-bold hover:bg-hov px-6 py-2 mt-6 font-Domine flex justify-end gap-5 items-center group">
                                 Apply
                                 <img
                                     src="svg/anglearrow.svg"
@@ -81,7 +83,7 @@ const Careers = () => {
 
                             <section className="">
                                 <h1 className="font-Domine text-cool text-[40px] mb-5 text-start">What sets us apart?</h1>
-                                <div className="bg-[#F7F7FA] py-10">
+                                <div className="bg-[#F7F7FA] py-10 px-3 md:px-0">
                                     <div className="flex flex-col md:flex-row items-start justify-around gap-8">
                                         <div className="md:max-w-[370px]">
                                             <h1 className="font-Domine text-2xl font-bold text-three mb-3">1.1 Projects That Matter</h1>
@@ -123,7 +125,7 @@ const Careers = () => {
                                             {/* 1) Club Fest */}
                                             <div className="relative mb-10">
                                                 {/* White circle */}
-                                                <div className="absolute -left-[34px] top-1.5 bg-white w-4 h-4 rounded-full" />
+                                                <div className="absolute -left-[33px] top-1.5 bg-white w-4 h-4 rounded-full" />
                                                 <p className="text-sm mb-1">February 2nd</p>
                                                 <p className="text-lg font-semibold mb-0.5">Club fest</p>
                                                 <p className="text-sm">Barton Hall</p>
@@ -131,7 +133,7 @@ const Careers = () => {
 
                                             {/* 2) Club Info Session */}
                                             <div className="relative mb-10">
-                                                <div className="absolute -left-[34px] top-1.5 bg-white w-4 h-4 rounded-full" />
+                                                <div className="absolute -left-[33px] top-1.5 bg-white w-4 h-4 rounded-full" />
                                                 <p className="text-sm mb-1">February 4th &amp; 6th</p>
                                                 <p className="text-lg font-semibold mb-0.5">Club Info Session</p>
                                                 <p className="text-sm">Location: TBD</p>
@@ -139,7 +141,7 @@ const Careers = () => {
 
                                             {/* 3) Resume & Interview Workshop */}
                                             <div className="relative mb-10">
-                                                <div className="absolute -left-[34px] top-1.5 bg-white w-4 h-4 rounded-full" />
+                                                <div className="absolute -left-[33px] top-1.5 bg-white w-4 h-4 rounded-full" />
                                                 <p className="text-sm mb-1">February 8th</p>
                                                 <p className="text-lg font-semibold mb-0.5">Resume &amp; Interview Workshop</p>
                                                 <p className="text-sm">Location: TBD</p>
@@ -147,7 +149,7 @@ const Careers = () => {
 
                                             {/* 4) Application Due (blue circle) */}
                                             <div className="relative mt-16">
-                                                <div className="absolute -left-[34px] top-1 bg-blue-500 w-4 h-4 rounded-full" />
+                                                <div className="absolute -left-[33px] top-2 bg-blue-500 w-4 h-4 rounded-full" />
                                                 <p className="text-sm">February 10th</p>
                                                 <p className="text-lg font-semibold">Application Due</p>
                                             </div>
@@ -240,17 +242,16 @@ const Careers = () => {
 
                                 <div className="flex justify-start items-center mt-10">
                                     <div className="bg-green-600 w-3 h-3 rounded-full" />
-                                    <h2 className="font-Domine text-lg font-bold ml-2 text-three">Applications are live—be part of something bigger.
-                                    </h2>
+                                    <h2 className="font-Domine sm:text-lg text-base font-bold md:ml-2 ml-1 text-three">Applications are live—be part of something bigger.</h2>
                                 </div>
 
-                                <button className="bg-das text-white font-bold hover:bg-hov px-6 py-2 mt-6 font-Domine flex justify-end gap-5 items-center group">
-  Apply
-  <img
-    src="svg/anglearrow.svg"
-    className="transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-[-1px]"
-  />
-</button>
+                                <button onClick={onClick} className="bg-das text-white font-bold hover:bg-hov px-6 py-2 mt-6 font-Domine flex justify-end gap-5 items-center group">
+                                Apply
+                                <img
+                                    src="svg/anglearrow.svg"
+                                    className="transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-[-1px]"
+                                />
+                                </button>
 
                             </section>
 

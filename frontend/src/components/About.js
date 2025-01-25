@@ -23,28 +23,23 @@ const About = () => {
 
   const directorsAndVPs = [
     {
-      image: "chriswang1.png",
+      image: "team/chris.png",
       name: "Chris Wang '26",
       title: "Director, Strategy & Implementation",
     },
     {
-      image: "/ahmed1.png",
+      image: "team/ahmed.png",
       name: "Ahmed Abdulla '27",
       title: "Co-director, Strategy & Implementation",
     },
     {
-      image: "/alex_stol.jpeg",
-      name: "Alex Stöllinger '26",
-      title: "Vice President, Strategy & Implementation",
-    },
-    {
-      image: "michael.jpeg",
+      image: "team/michael.png",
       name: "Michael Raybetz '25",
       title: "Director, Talent Strategy",
     },
     {
-      image: "/viktor.jpeg",
-      name: "Viktor Stöllinger '27",
+      image: "team/druhv.png",
+      name: "Dhruv Raina '26",
       title: "Director, Business Development",
     },
   ];
@@ -53,13 +48,23 @@ const About = () => {
     {
       image: 'josh.jpeg',
       name: "Josh De Leeuw '25",
-      title: "Engagement Manager, Talent Strategy",
+      title: "Talent Strategy",
+    },
+    {
+      image: "/alex_stol.jpeg",
+      name: "Alex Stöllinger '26",
+      title: "Strategy & Implementation",
+    },
+    {
+      image: "/viktor.jpeg",
+      name: "Viktor Stöllinger '27",
+      title: "Business Development",
     },
 
     {
-      image: "Velaga.jpg",
+      image: "team/sourabh.png",
       name: "Sourabh Velaga '26",
-      title: "Engagement Manager, Strategy & Implementation",
+      title: "Strategy & Implementation",
     },
     // {
     //   image: "",
@@ -70,45 +75,45 @@ const About = () => {
 
   const seniorAssociates = [
     {
-      image: null,
+      image: "/team/neha.png",
       name: "Neha Sudarshan '28",
-      title: "Senior Associate, Strategy & Implementation",
+      title: "Strategy & Implementation",
     },
     {
-      image: null,
+      image: "/team/carolyn.png",
       name: "Carolyn Fu '28",
-      title: "Senior Associate, Strategy & Implementation",
+      title: "Strategy & Implementation",
     },
   ];
 
   const associates = [
     {
-      image: "/images/sharvari.jpg",
+      image: "/team/sharvari.png",
       name: "Sharvari Vartak '28",
       title: "Associate, Strategy & Implementation",
     },
     {
-      image: "/images/daniel.jpg",
+      image: "/team/daniel.png",
       name: "Daniel Khanin '28",
       title: "Associate, Strategy & Implementation",
     },
     {
-      image: "/images/alexandra.jpg",
+      image: "/team/lexi.png",
       name: "Alexandra Kramer '28",
       title: "Associate, Strategy & Implementation",
     },
     {
-      image: "/images/lorraine.jpg",
+      image: "/team/lorraine.png",
       name: "Lorraine Yang '27",
       title: "Associate, Strategy & Implementation",
     },
     {
-      image: "/images/saesha.jpg",
+      image: "/team/saesha.png",
       name: "Saesha Agarwal '28",
       title: "Associate, Strategy & Implementation",
     },
     {
-      image: "/images/sonja.jpg",
+      image: "/team/sonja.png",
       name: "Sonja Wong '28",
       title: "Associate, Strategy & Implementation",
     },
@@ -169,28 +174,41 @@ const About = () => {
                 </img>
               </div>
 
-              <section className="pb-10">
-              <div className="flex flex-col md:flex-row items-center md:items-start mb-6">
-              {/* <img src="chrisahmed.png" 
-              width={800}
-              className="h-auto mb-4 md:mb-0 md:mr-6" alt="Chris and Ahmed" /> */}
-  <div>
-  <div>
-  <h2 className="font-extrabold md:text-[40px] text-[30px] mb-0">Who We Are</h2>
-  <p className="font-gs font-[300] text-cas md:text-[25px] text-[20px] mt-4">
-    The Cornell Data Strategy Club was founded by <strong>Ahmed Abdulla</strong> and <strong>Chris Wang</strong>, who share a unified vision of <span className="underline">strategy</span> driven by rigorous <span className="underline">data analysis</span> and <span className="underline">logical reasoning</span>. Their mission is to create a space where students can tackle real-world challenges and make a meaningful impact through data-driven solutions.
-  </p>
-</div>
-  </div>
-</div>
+              <section className="pb-16">
+  {/* Group2 with "Who We Are" */}
 
-<div>
-  <h2 className="font-extrabold md:text-[40px] text-[30px] mb-0 mt-10">Our Philosophy</h2>
-  <p className="font-gs font-[300] mb-6 text-cas md:text-[25px] text-[20px]">
-    Our projects are rooted in collaboration, creativity, and a commitment to delivering actionable insights. Whether it’s helping businesses expand their market reach or optimize operations, we empower students to turn data into real impact.
-  </p>
+  <div className="flex flex-col md:flex-row gap-2 mb-20">
+<div className="max-w-2xl md:mr-10 md:order-1">
+      <h2 className="font-Domine font-bold text-3xl md:text-4xl mb-4">Our Philosophy</h2>
+      <p className="font-Domine font-light text-gray-700 md:text-lg leading-relaxed">
+        Our projects are rooted in collaboration, creativity, and a commitment to delivering actionable insights. Whether it’s helping businesses expand their market reach or optimize operations, we empower students to turn data into real impact.
+      </p>
+    </div>
+
+    <div className="max-w-2xl my-auto">
+    <h2 className="font-Domine font-bold text-3xl md:text-4xl mb-4 text-center md:text-left">Who We Are</h2>
+<p className="font-Domine font-light text-gray-700 md:text-lg leading-relaxed text-center md:text-left">
+  The Cornell Data Strategy Club was founded with a unified vision of <span className="underline">strategy</span> driven by rigorous <span className="underline">data analysis</span> and <span className="underline">logical reasoning</span>. We are committed to creating a space where students can tackle real-world challenges and make a meaningful impact through data-driven solutions.
+</p>
+
+    </div>
+    
 </div>
+  <div className="flex justify-center">
+    {/* Group2 Image */}
+    <img
+      src="team/group2.png"
+      className="w-full max-w-screen-lmd shadow-lg "
+      alt="Group Photo"
+    />
+  </div>
 </section>
+
+
+
+
+
+
 
 
 
@@ -214,30 +232,36 @@ const About = () => {
 
 
 
-              <section className="container mx-auto my-12 space-y-12">
-                <h1 className="text-[40px] font-bold font-gs mt-20 text-center mb-12">
+              <section className="container px-10 my-12">
+                <h1 className="text-[40px] font-bold font-gs mt-20 text-center mb-3">
                   Minds Behind Cornell Data Strategy
                 </h1>
+                <p className="text-center text-[18px] font-gs text-gray-600 mb-3">
+                  Meet the talented individuals who drive our mission forward. Our team is composed of dedicated professionals from diverse backgrounds, each bringing unique skills and perspectives to the table. Together, we strive to create impactful solutions and foster a collaborative environment where innovation thrives.
+                </p>
+
+                <div className=" mt-6 h-[4px] bg-[#2562F5] w-full mb-16"></div>
 
                 {/* Directors and VPs */}
-                <div>
-                  <h2 className="text-2xl font-semibold mb-6">Directors & VPs</h2>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center sm:justify-items-start">
-                    {directorsAndVPs.map((member, index) => (
-                      <TeamMember
-                        key={index}
-                        image={member.image}
-                        name={member.name}
-                        title={member.title}
-                      />
-                    ))}
-                  </div>
-                </div>
+                <h2 className="text-3xl md:text-5xl font-gs mb-8 text-cas">Directors</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-5 gap-1">
+  {directorsAndVPs.map((member, index) => (
+    <TeamMember
+      key={index}
+      image={member.image}
+      name={member.name}
+      title={member.title}
+    />
+  ))}
+</div>
+
+<div className="my-10 h-[1px] bg-[#7f7f7f] md:w-2/3 w-full"></div>
+
 
                 {/* Engagement Managers */}
                 <div>
-        <h2 className="text-2xl font-semibold mb-6">Engagement Managers</h2>
-        <div className="flex flex-col sm:flex-row justify-start gap-8">
+                <h2 className="text-3xl md:text-5xl font-gs mb-8 text-cas">Engagement Managers</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 gap-y-5">
           {engagementManagers.map((member, index) => (
             <TeamMember
               key={index}
@@ -249,10 +273,12 @@ const About = () => {
         </div>
       </div>
 
+      <div className="my-10 h-[1px] bg-[#7f7f7f] md:w-2/3 w-full"></div>
+
                 {/* Senior Associates */}
-                {/* <div>
-        <h2 className="text-2xl font-semibold mb-6">Senior Associates</h2>
-        <div className="flex flex-col sm:flex-row justify-center gap-8">
+                <div>
+                <h2 className="text-3xl md:text-5xl font-gs mb-8 text-cas">Senior Associates</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-5 gap-1">
           {seniorAssociates.map((member, index) => (
             <TeamMember
               key={index}
@@ -262,12 +288,14 @@ const About = () => {
             />
           ))}
         </div>
-      </div> */}
+      </div>
+
+      <div className="my-10 h-[1px] bg-[#7f7f7f] md:w-2/3 w-full"></div>
 
                 {/* Associates */}
-                {/* <div>
-        <h2 className="text-2xl font-semibold mb-6">Associates</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <div>
+                <h2 className="text-3xl md:text-5xl font-gs mb-8 text-cas">Associates</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-5 gap-1 mb-12">
           {associates.map((member, index) => (
             <TeamMember
               key={index}
@@ -277,14 +305,14 @@ const About = () => {
             />
           ))}
         </div>
-      </div> */}
+              </div>
               </section>
 
 
 
 
-              <section className="bg-das text-white py-12 px-10 md:px-16 flex flex-col md:flex-row items-center justify-between my-5">
-                {/* Text Content */}
+              {/* <section className="bg-das text-white py-12 px-10 md:px-16 flex flex-col md:flex-row items-center justify-between my-5">
+       
                 <div className="max-w-screen-md">
                   <h2 className="text-[35px] font-bold mb-4 font-gs">
                     Student <span className="font-normal">Impact</span>
@@ -294,7 +322,7 @@ const About = () => {
                   </p>
                 </div>
 
-                {/* Icon */}
+      
                 <div className="mt-6 md:mt-0">
                   <img
                     src="/svg/collective.svg" // Replace with your icon path
@@ -302,8 +330,8 @@ const About = () => {
                     className="h-24 w-24 md:h-32 md:w-32"
                   />
                 </div>
-              </section>
-              {/* Add more sections as needed */}
+              </section> */}
+          
             </div>
           </div>
         </div>
