@@ -119,6 +119,15 @@ const About = () => {
     },
   ];
 
+  const advisory = [
+    {
+      image: 'team/DasSreyoshi.jpg',
+      name: "Das Sreyoshi",
+      title: "Faculty Advisor – Economics, Finance & Data Science",
+    }
+    
+  ];
+
 
 
 
@@ -306,6 +315,28 @@ const About = () => {
           ))}
         </div>
               </div>
+
+
+
+
+              <div className="my-10 h-[1px] bg-[#7f7f7f] md:w-2/3 w-full"></div>
+
+{/* Associates */}
+<div>
+<h2 className="text-3xl md:text-5xl font-gs mb-8 text-cas">Advisory</h2>
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-5 gap-1 mb-12">
+{advisory.map((member, index) => (
+<TeamMember
+key={index}
+image={member.image}
+name={member.name}
+title={member.title}
+/>
+))}
+</div>
+</div>
+
+
               </section>
 
 
