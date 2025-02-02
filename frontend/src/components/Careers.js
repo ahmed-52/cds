@@ -134,15 +134,16 @@ const onClick = () => {
                                             {/* 2) Club Info Session */}
                                             <div className="relative mb-10">
                                                 <div className="absolute -left-[33px] top-1.5 bg-white w-4 h-4 rounded-full" />
-                                                <p className="text-sm mb-1">February 4th &amp; 6th</p>
+                                                <p className="text-sm mb-1">February 4th &amp; 5th</p>
                                                 <p className="text-lg font-semibold mb-0.5">Club Info Session</p>
-                                                <p className="text-sm">Location: TBD</p>
+                                                <p className="text-sm mb-1">Feb 4th: Warren Hall <strong>B51 </strong>5-6pm</p>
+                                                <p className="text-sm">Feb 5th: Warren Hall <strong>150 </strong>5-6pm</p>
                                             </div>
 
                                             {/* 3) Resume & Interview Workshop */}
                                             <div className="relative mb-10">
                                                 <div className="absolute -left-[33px] top-1.5 bg-white w-4 h-4 rounded-full" />
-                                                <p className="text-sm mb-1">February 8th</p>
+                                                <p className="text-sm mb-1">February 6th</p>
                                                 <p className="text-lg font-semibold mb-0.5">Resume &amp; Interview Workshop</p>
                                                 <p className="text-sm">Location: TBD</p>
                                             </div>
@@ -346,7 +347,7 @@ const onClick = () => {
                                 href="/careers"
                                 className="block py-1 text-white text-[18px] font-gs group relative hover:text-[#c3c3c3]"
                             >
-                                Careers
+                                Membership
                                 <span
                                     className="absolute inset-x-0 bottom-1.5 w-[70px] h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
                                 ></span>

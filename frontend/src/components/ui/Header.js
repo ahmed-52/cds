@@ -49,9 +49,9 @@ const Header = ({ theme, textcl, active, bg }) => {
             </a>
             <a
               href="/careers"
-              className={`py-1 ${active === "careers" ? "text-[#1E53EF]" : `text-${textcl}`} ${size} ${fontFamily} group relative`}
+              className={`py-1 ${active === "membership" ? "text-[#1E53EF]" : `text-${textcl}`} ${size} ${fontFamily} group relative`}
             >
-              Careers
+              Membership
               <span className="absolute inset-x-0 bottom-1.5 w-[70px] h-[2px] bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"></span>
             </a>
             <a

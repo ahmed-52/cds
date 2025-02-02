@@ -437,7 +437,7 @@ const Home2 = () => {
                 href="/careers"
                 className="block py-1 text-white text-[18px] font-gs group relative hover:text-[#c3c3c3]"
               >
-                Careers
+                Membership
                 <span
                   className="absolute inset-x-0 bottom-1.5 w-[70px] h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
                 ></span>
