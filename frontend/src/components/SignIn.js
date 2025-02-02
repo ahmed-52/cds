@@ -46,7 +46,7 @@ const SignIn = () => {
               <input
                 type="email"
                 id="email"
-                placeholder="you@company.com"
+                placeholder="netid@cornell.edu"
                 className="w-full px-4 py-3 border border-gray-300 rounded-md text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-das focus:border-das"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}

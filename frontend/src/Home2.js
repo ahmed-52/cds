@@ -106,11 +106,11 @@ const Home2 = () => {
     // On mobile: no fixed height (use h-auto)
     // On desktop: max-h-[90vh] 
     className="w-full h-[500px] sm:h-auto md:max-h-[90vh] object-cover"
-    src="homehero1.jpg"
+    src="cornellHome.png"
   />
   <div className="absolute inset-0 bg-black opacity-50"></div>
-  <div className="absolute inset-0 flex flex-col justify-end items-start mb-20 max-w-[1000px] mx-10 mt-5 md:mx-20">
-    <h1 className="text-[30px] md:text-[40px] lg:text-[60px] font-gserif font-[300] text-start text-white">
+  <div className="absolute inset-0 flex flex-col justify-end items-start mb-20 max-w-[1000px] mx-5 mt-5 md:mx-20">
+    <h1 className="text-[30px] md:text-[40px] lg:text-[60px] font-gserif font-[300] text-start text-white md:leading-normal leading-none mb-1">
       We are Cornell Data Strategy
     </h1>
     <p className="font-gs font-[300] mb-6 text-white text-[12px] md:text-[22px]">
