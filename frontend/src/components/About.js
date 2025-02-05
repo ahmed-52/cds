@@ -20,104 +20,98 @@ const About = () => {
     return () => clearTimeout(timer);
   }, []);
 
-
   const directorsAndVPs = [
     {
       image: "team/chris.png",
       name: "Chris Wang '26",
-      title: "Director, Strategy & Implementation",
+      title: "Director, Strategy & Advisory",
     },
     {
       image: "team/ahmed.png",
       name: "Ahmed Abdulla '27",
-      title: "Co-director, Strategy & Implementation",
-    },
-    {
-      image: "team/michael.png",
-      name: "Michael Raybetz '25",
-      title: "Director, Talent Strategy",
+      title: "Director, Technology Implementation",
     },
     {
       image: "team/druhv.png",
       name: "Dhruv Raina '26",
       title: "Director, Business Development",
     },
-  ];
-
-  const engagementManagers = [
     {
-      image: 'josh.jpeg',
+      image: "josh.jpeg",
       name: "Josh De Leeuw '25",
-      title: "Talent Strategy",
+      title: "Director, Platform & Innovation",
     },
+    {
+      image: "team/michael.png",
+      name: "Michael Raybetz '25",
+      title: "Director, Talent Strategy",
+    },
+  ];
+  
+  const engagementManagers = [
     {
       image: "/alex_stol.jpeg",
       name: "Alex Stöllinger '26",
-      title: "Strategy & Implementation",
+      title: "Technology Implementation",
     },
     {
       image: "/viktor.jpeg",
       name: "Viktor Stöllinger '27",
       title: "Business Development",
     },
-
     {
       image: "team/sourabh.png",
       name: "Sourabh Velaga '26",
-      title: "Strategy & Implementation",
+      title: "Strategy & Advisory",
     },
-    // {
-    //   image: "",
-    //   name: "Druhv Raina '26",
-    //   title: "Manager, Business Development",
-    // },
   ];
-
+  
   const seniorAssociates = [
     {
-      image: "/team/neha.png",
+      image: "team/neha.png",
       name: "Neha Sudarshan '28",
-      title: "Strategy & Implementation",
+      title: "Technology Implementation",
     },
     {
-      image: "/team/carolyn.png",
+      image: "team/carolyn.png",
       name: "Carolyn Fu '28",
-      title: "Strategy & Implementation",
+      title: "Strategy & Advisory",
     },
   ];
-
+  
   const associates = [
     {
-      image: "/team/sharvari.png",
+      image: "team/sharvari.png",
       name: "Sharvari Vartak '28",
-      title: "Associate, Strategy & Implementation",
+      title: "Strategy & Advisory",
     },
     {
-      image: "/team/daniel.png",
+      image: "team/daniel.png",
       name: "Daniel Khanin '28",
-      title: "Associate, Strategy & Implementation",
+      title: "Technology Implementation",
     },
     {
-      image: "/team/lexi.png",
+      image: "team/lexi.png",
       name: "Alexandra Kramer '28",
-      title: "Associate, Strategy & Implementation",
+      title: "Strategy & Advisory",
     },
     {
-      image: "/team/lorraine.png",
+      image: "team/lorraine.png",
       name: "Lorraine Yang '27",
-      title: "Associate, Strategy & Implementation",
+      title: "Technology Implementation",
     },
     {
-      image: "/team/saesha.png",
+      image: "team/saesha.png",
       name: "Saesha Agarwal '28",
-      title: "Associate, Strategy & Implementation",
+      title: "Strategy & Implementation",
     },
     {
-      image: "/team/sonja.png",
+      image: "team/sonja.png",
       name: "Sonja Wong '28",
-      title: "Associate, Strategy & Implementation",
+      title: "Technology Implementation",
     },
   ];
+  
 
   const advisory = [
     {

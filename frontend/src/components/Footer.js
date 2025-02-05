@@ -77,7 +77,7 @@ export function Footer({ theme }) {
           </a>
           <a
             className="h-[28px] w-[28px] mt-1"
-            href="#"
+            href="https://www.instagram.com/cornelldatastrategy/"
             target="_blank"
             rel="noopener noreferrer"
           >
