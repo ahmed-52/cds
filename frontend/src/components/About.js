@@ -68,6 +68,11 @@ const About = () => {
   
   const seniorAssociates = [
     {
+      image: "farhan.png",
+      name: "Farhan Mashrur '27",
+      title: "Technology Implementation",
+    },
+    {
       image: "team/neha.png",
       name: "Neha Sudarshan '28",
       title: "Technology Implementation",
