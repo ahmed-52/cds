@@ -101,11 +101,6 @@ const About = () => {
       title: "Strategy & Advisory",
     },
     {
-      image: "team/lorraine.png",
-      name: "Lorraine Yang '27",
-      title: "Technology Implementation",
-    },
-    {
       image: "team/saesha.png",
       name: "Saesha Agarwal '28",
       title: "Strategy & Implementation",
