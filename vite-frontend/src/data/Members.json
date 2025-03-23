@@ -1,0 +1,127 @@
+{
+    "directorsAndVPs": [
+      {
+        "image": "team/chris.png",
+        "name": "Chris Wang '26",
+        "title": "Director, Strategy & Advisory"
+      },
+      {
+        "image": "team/ahmed.png",
+        "name": "Ahmed Abdulla '27",
+        "title": "Director, Technology Implementation"
+      },
+      {
+        "image": "team/druhv.png",
+        "name": "Dhruv Raina '26",
+        "title": "Director, Business Development"
+      },
+      {
+        "image": "team/michael.png",
+        "name": "Michael Raybetz '25",
+        "title": "Director, Talent Strategy"
+      }
+    ],
+    "engagementManagers": [
+      {
+        "image": "team/viktor.jpeg",
+        "name": "Viktor Stöllinger '27",
+        "title": "Business Development"
+      },
+      {
+        "image": "team/sourabh.png",
+        "name": "Sourabh Velaga '26",
+        "title": "Strategy & Advisory"
+      },
+      {
+        "image": "team/farhan.png",
+        "name": "Farhan Mashrur '27",
+        "title": "Technology Implementation"
+      },
+      {
+        "image": "team/keira.png",
+        "name": "Keira Kim '28",
+        "title": "Social Media & Marketing"
+      }
+
+    ],
+    "seniorAssociates": [
+
+      {
+        "image": "team/carolyn.png",
+        "name": "Carolyn Fu '28",
+        "title": "Strategy & Advisory"
+      },
+      {
+        "image": "team/sharvari.png",
+        "name": "Sharvari Vartak '28",
+        "title": "Strategy & Advisory"
+      },
+      {
+        "image": "team/saesha.png",
+        "name": "Saesha Agarwal '28",
+        "title": "Technology Implementation"
+      }
+    ],
+    "associates": [
+      {
+        "image": "team/max.png",
+        "name": "Max Zheng '28",
+        "title": "Business Development"
+      },
+      {
+        "image": "team/lexi.png",
+        "name": "Alexandra Kramer '28",
+        "title": "Strategy & Advisory"
+      },
+      {
+        "image": "team/alexandra.png",
+        "name": "Alexandra Mastrongianni '28",
+        "title": "Strategy & Advisory"
+      },
+      
+      {
+        "image": "team/sonja.png",
+        "name": "Sonja Wong '28",
+        "title": "Technology Implementation"
+      },
+      {
+        "image": "team/arsh.png",
+        "name": "Arsh Singh '28",
+        "title": "Technology Implementation"
+      },
+      {
+        "image": "team/daniel.png",
+        "name": "Daniel Khanin '28",
+        "title": "Technology Implementation"
+      },
+      
+
+      {
+        "image": "team/arianna.png",
+        "name": "Arianna Hsu '28",
+        "title": "Platform & Innovation"
+      },
+      {
+        "image": "team/dixon.png",
+        "name": "Dixon Yang '28",
+        "title": "Strategy & Advisory"
+      },
+      {
+        "image": "team/nicolo.png",
+        "name": "Nicolo Cavazzoni '25",
+        "title": "Strategy & Advisory"
+      },
+      {
+        "image": "team/danielz.png",
+        "name": "Daniel Zlotnick '28",
+        "title": "Technology Implementation"
+      }
+    ],
+    "advisory": [
+      {
+        "image": "team/DasSreyoshi.jpg",
+        "name": "Das Sreyoshi",
+        "title": "Faculty Advisor – Economics, Finance & Data Science"
+      }
+    ]
+  }

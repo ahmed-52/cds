@@ -1,0 +1,38 @@
+{
+    "strategy": {
+      "examples": [
+        {
+          "title": "CASE ONE",
+          "url": "https://docs.google.com/document/d/10czPGn3UiSuCKFcd1bze5mdIL1xsPyRSFdwwOyb4gT4/edit?usp=sharing"
+        },
+        {
+          "title": "CASE TWO",
+          "url": "https://docs.google.com/document/d/1DyiXrkWTvJK-kQ6899FwIgRIupc2KYRchRIZQYk5dpY/edit?usp=sharing"
+        }
+      ]
+    },
+    "tech": {
+      "examples": [
+        {
+          "title": "Tech Mock One",
+          "url": "https://docs.google.com/document/d/1oZy41lG3ST-S5Z2kiJx4bNdoYCRVvwZl/edit?usp=sharing&ouid=116806329359083084315&rtpof=true&sd=true"
+        }
+      ]
+    },
+    "business": {
+      "examples": [
+        {
+          "title": "Business Mock One",
+          "url": "https://drive.google.com/file/d/1daeUZ_SX-YOGRSuojQKNUQH0OHpMbU7r/view?usp=sharing"
+        }
+      ]
+    },
+    "platform": {
+      "examples": [
+        {
+          "title": "Platform Innovation Mock One",
+          "url": "https://drive.google.com/file/d/1ZkbCgMTGNGHhgJGuD0Ne9qNm0kjuD7N7/view?usp=sharing"
+        }
+      ]
+    }
+  }

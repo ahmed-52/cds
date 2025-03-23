@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "title": "Enhancing Workflow Efficiency",
+        "body": "Resolved order fulfillment delays by identifying coordination bottlenecks between sales, warehousing, and logistics. Results: 16% faster fulfillment, 22% less internal email, and 18% better on-time delivery.",
+        "image": "/projects/industrial.jpeg",
+        "link": "/projects"
+      },
+      {
+        "id": 2,
+        "title": "Optimizing Patient and Payer Strategy",
+        "body": "Implemented a data-driven healthcare framework for operational improvements and insurance negotiations, increasing patient visits by 17% and payer reimbursements by 9%.",
+        "image": "/projects/payerstrat.png",
+        "link": "/projects"
+      },
+      {
+        "id": 3,
+        "title": "Driving Customer Acquisition",
+        "body": "Helped an HVAC provider enter new markets by analyzing sales data and optimizing lead targeting based on seasonal demand. Results: 2.7x increase in qualified leads and $400K+ in new contracts.",
+        "image": "/projects/hvac.jpeg",
+        "link": "/projects"
+      }
+]

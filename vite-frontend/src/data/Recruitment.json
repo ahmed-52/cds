@@ -1,0 +1,65 @@
+{
+    "spring": {
+      "title": "Recruitment SP",
+      "events": [
+        {
+          "date": "February 2nd",
+          "name": "Club fest",
+          "location": "Barton Hall"
+        },
+        {
+          "date": "February 4th & 5th",
+          "name": "Club Info Session",
+          "details": [
+            "Feb 4th: Warren Hall B51 5-6pm",
+            "Feb 5th: Warren Hall 150 5-6pm"
+          ]
+        },
+        {
+          "date": "February 6th",
+          "name": "Resume & Interview Workshop",
+          "location": "Location: TBD"
+        },
+        {
+          "date": "February 10th",
+          "name": "Application Due",
+          "highlight": true
+        }
+      ],
+      "applicationLink": "https://docs.google.com/forms/d/e/1FAIpQLSceTQZWDOCguSu0uKlJB8CHwhPRkPeRb0PW3nVmiMiTVoAUsg/viewform?usp=header"
+    },
+    "fall": {
+      "title": "Recruitment FA",
+      "events": [
+        {
+          "date": "September 2nd",
+          "name": "Club fest",
+          "location": "Barton Hall"
+        },
+        {
+          "date": "September 4th & 5th",
+          "name": "Club Info Session",
+          "details": [
+            "Sept 4th: Warren Hall B51 5-6pm",
+            "Sept 5th: Warren Hall 150 5-6pm"
+          ]
+        },
+        {
+          "date": "September 6th",
+          "name": "Resume & Interview Workshop",
+          "location": "Location: TBD"
+        },
+        {
+          "date": "September 10th",
+          "name": "Application Due",
+          "highlight": true
+        }
+      ],
+      "applicationLink": "https://docs.google.com/forms/d/e/1FAIpQLSceTQZWDOCguSu0uKlJB8CHwhPRkPeRb0PW3nVmiMiTVoAUsg/viewform?usp=header"
+    },
+    "offseason": {
+      "title": "Next Recruitment",
+      "message": "Our next recruitment period will begin soon. Please check back at the start of the semester for application details and events.",
+      "applicationLink": "https://docs.google.com/forms/d/e/1FAIpQLSceTQZWDOCguSu0uKlJB8CHwhPRkPeRb0PW3nVmiMiTVoAUsg/viewform?usp=header"
+    }
+  }

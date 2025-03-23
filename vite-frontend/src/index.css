@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Domine';
+  src: url('../fonts/Domine-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Domine';
+  src: url('../fonts/DomineMedium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Domine';
+  src: url('../fonts/DomineSemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Domine';
+  src: url('../fonts/Domine-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@theme {
+
+  --font-domine: "Domine", serif;
+  --font-inter: "inter", sans-serif;
+  --color-primary: #1E53EF;
+  --color-secondary: #FFD166;
+  --color-textcl: #252526;
+  --color-dark-blue: #031E72;
+  --color-light-blue: #E4F2FF;
+  --breakpoint-lmd: 900px;
+  --breakpoint-lxl: 1200px;
+
+
+}
+
+body {
+  font-family: var(--font-domine);
+  color: var(--color-textcl);
+}
+
+.hero {
+  background: linear-gradient(220deg, #0B1F6B 0%, #1942CB 40%, #102583 100%);
+}
+
+
+.text-44 {
+  font-size: clamp(2.0rem, 4vw, 2.75rem); /* 32px - 44px */
+  font-family: Domine;
+  color: #252526;
+  
+}
+
+.text-56 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem); /* 40px - 56px */
+  font-family: Domine;
+  color: #252526;
+}
+
+.text-18 {
+  font-size: clamp(1.0rem, 2vw, 1.125rem); /* 16px - 18px */
+  font-family: inter;
+  color: #252526;
+}
+
+.text-16 {
+  font-size: clamp(0.875rem, 1.75vw, 1.0rem); /* 14px - 16px */
+  font-family: inter;
+  color: #252526;
+}
+
+.text-26 {
+  font-size: clamp(1.375rem, 2.75vw, 1.625rem); /* 22px - 26px */
+  font-family: inter;
+  color: #252526;
+}
+
+.text-24 {
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem); /* 20px - 24px */
+  font-family: Domine;
+  color: #252526;
+}
+
+.text-24-inter {
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem); /* 20px - 24px */
+  font-family: inter;
+  color: #252526;
+}
+
+.text-22-inter {
+  font-size: clamp(1.125rem, 2.25vw, 1.375rem); 
+  font-family: inter;
+  color: #252526;
+}
+
+
+
+/* about  */
