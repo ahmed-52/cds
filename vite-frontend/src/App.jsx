@@ -8,6 +8,7 @@ import Membership from './pages/Membership'
 import Contact from './pages/Contact'
 import Projects from './pages/Projects'
 import OurServices from './pages/OurServices'
+import Signin from './pages/Signin'
 
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom'
 
@@ -30,6 +31,7 @@ function App() {
         <Route path="/services" element={<OurServices />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/signin" element={<Signin />} />
       </Routes>
       <Footer />
     </>
