@@ -1,5 +1,7 @@
 [build]
   command = "CI=false npm run build"
+  publish = "vite-frontend/dist"
+  base = "vite-frontend"
 
 [build.environment]
   NODE_VERSION = "20.10.0"

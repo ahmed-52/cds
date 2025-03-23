@@ -24,7 +24,7 @@ const OurServices = () => {
               From mapping out competitive landscape to forecasting sector growth, we deliver top-tier 
               market insights for our clients.
             </p>
-            <a href="#" className="text-16 font-semibold text-primary hover:underline mt-auto">
+            <a href="/services#services" className="text-16 font-semibold text-primary hover:underline mt-auto">
               Learn more
             </a>
           </div>
@@ -39,7 +39,7 @@ const OurServices = () => {
               We utilize predictive analytics, machine learning, and natural language processing to 
               anticipate future trends and behaviors.
             </p>
-            <a href="#" className="text-16 font-semibold text-primary hover:underline mt-auto">
+            <a href="/services#services" className="text-16 font-semibold text-primary hover:underline mt-auto">
               Learn more
             </a>
           </div>
@@ -54,7 +54,7 @@ const OurServices = () => {
               We help organizations to scale their businesses, either to the next stage or 
               expanding their current business model.
             </p>
-            <a href="#" className="text-16 font-semibold text-primary hover:underline mt-auto">
+            <a href="/services#services" className="text-16 font-semibold text-primary hover:underline mt-auto">
               Learn more
             </a>
           </div>
@@ -69,7 +69,7 @@ const OurServices = () => {
               We work hand-in-hand with clients to realize the blueprints, from launching new 
               products to expanding into new markets.
             </p>
-            <a href="#" className="text-16 font-semibold text-primary hover:underline mt-auto">
+            <a href="/services#services" className="text-16 font-semibold text-primary hover:underline mt-auto">
               Learn more
             </a>
           </div>
