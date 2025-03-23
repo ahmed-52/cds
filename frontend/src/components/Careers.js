@@ -1,12 +1,8 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
-import { Footer } from "./Footer";
-import Navbar from "./ui/Navbar";
-import Header from "./ui/Header";
 
 
 import "../index.css";
-import Proj from "./ui/Proj";
 
 const Careers = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -37,27 +33,6 @@ const onClick = () => {
                 <div className="flex-1">
 
                     <div className="">
-                        {/* Hamburger Icon */}
-                        {!isOpen && (
-                            <button
-                                className="fixed top-10 right-4 lmd:hidden z-40 text-black"
-                                onClick={() => setIsOpen(!isOpen)}
-                            >
-                                <svg width="37" height="18" viewBox="0 0 37 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="37" height="4" fill="#9A9A9A" />
-                                    <rect y="7" width="37" height="4" fill="#9A9A9A" />
-                                    <rect y="14" width="37" height="4" fill="#9A9A9A" />
-                                </svg>
-
-
-                            </button>
-                        )}
-                        <Header
-                            theme="light"
-                            textcl={"white"}
-                            bg={"cas"}
-                            active={"careers"}
-                        ></Header>
 
 
                         <div className="md:max-w-[1400px] xlx:mx-auto md:mx-[50px] mx-[20px] ">
@@ -270,105 +245,7 @@ const onClick = () => {
                     </div>
                 </div>
 
-
-                {/* Overlay for mobile */}
-                {isOpen && (
-                    <div className="fixed inset-0 bg-[#333333] z-20">
-                        <div className="absolute top-10 right-4">
-                            <button
-                                className="text-white"
-                                onClick={() => setIsOpen(!isOpen)}
-                            >
-                                <svg
-                                    width="26"
-                                    height="26"
-                                    viewBox="0 0 26 26"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <rect
-                                        y="23.4629"
-                                        width="33.1814"
-                                        height="3.58717"
-                                        transform="rotate(-45 0 23.4629)"
-                                        fill="white"
-                                    />
-                                    <rect
-                                        width="33.1814"
-                                        height="3.58717"
-                                        transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 26 23.4629)"
-                                        fill="white"
-                                    />
-                                </svg>
-                            </button>
-                        </div>
-                        <nav className="flex flex-col items-center justify-center h-full">
-                            <a
-                                href="/"
-                                className="block py-1 text-white text-[18px] font-gs group relative hover:text-[#c3c3c3]"
-                            >
-                                Home
-                                <span
-                                    className="absolute inset-x-0 bottom-1.5 w-12 h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
-                                ></span>
-                            </a>
-
-                            <a
-                                href="/services"
-                                className="block py-1 text-white text-[18px] font-gs group relative hover:text-[#c3c3c3]"
-                            >
-                                Capabilities
-                                <span
-                                    className="absolute inset-x-0 bottom-1.5 w-[100px] h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
-                                ></span>
-                            </a>
-
-                            <a
-                                href="/projects"
-                                className="block py-1 text-white text-[18px] font-gs group relative hover:text-[#c3c3c3]"
-                            >
-                                Impact
-                                <span
-                                    className="absolute inset-x-0 bottom-1.5 w-[70px] h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
-                                ></span>
-                            </a>
-
-                            <a
-                                href="/about"
-                                className="block py-1 text-white text-[18px] font-gs group relative hover:text-[#c3c3c3]"
-                            >
-                                Our People
-                                <span
-                                    className="absolute inset-x-0 bottom-1.5 w-[100px] h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
-                                ></span>
-                            </a>
-
-                            <a
-                                href="/careers"
-                                className="block py-1 text-white text-[18px] font-gs group relative hover:text-[#c3c3c3]"
-                            >
-                                Membership
-                                <span
-                                    className="absolute inset-x-0 bottom-1.5 w-[70px] h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
-                                ></span>
-                            </a>
-
-                            <a
-                                href="/contact-us"
-                                className="block py-1 text-white text-[18px] font-gs group relative hover:text-[#c3c3c3]"
-                            >
-                                Contact Us
-                                <span
-                                    className="absolute inset-x-0 bottom-1.5 w-[100px] h-0.5 bg-[#1E53EF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"
-                                ></span>
-                            </a>
-                        </nav>
-                    </div>
-                )}
             </div>
-            <Footer
-                theme={"dark"}
-            ></Footer>
         </>
     );
 };

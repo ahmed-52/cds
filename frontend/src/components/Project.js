@@ -75,11 +75,10 @@ const Project = () => {
 
                             <section className="pb-10">
                             <p className="font-gs font-[300] mb-6 text-cas md:text-[25px] text-[20px]">
-  Projects In Progress...<br /><br />
-  We currently have several exciting projects underway. Our team is working on advanced data analysis, product development, and market research for startups, local businesses, and larger organizations.<br /><br />
-  These projects are designed to offer practical solutions that help our clients navigate their industries more effectively. Stay tuned for updates on these projects as we continue to push the boundaries of what data can do.
-</p>
-
+                                Projects In Progress...<br /><br />
+                                We currently have several exciting projects underway. Our team is working on advanced data analysis, product development, and market research for startups, local businesses, and larger organizations.<br /><br />
+                                These projects are designed to offer practical solutions that help our clients navigate their industries more effectively. Stay tuned for updates on these projects as we continue to push the boundaries of what data can do.
+                                </p>
                             </section>
 
 
