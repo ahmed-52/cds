@@ -1,6 +1,6 @@
 [build]
   command = "CI=false npm run build"
-  publish = "vite-frontend/dist"
+  publish = "dist"
   base = "vite-frontend"
 
 [build.environment]
