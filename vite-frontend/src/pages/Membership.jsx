@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Why from "../components/Membership/Why";
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import recruitmentData from "../data/recruitment.json";
+import recruitmentData from "../data/Recruitment.json";
 import Interview from "../components/Membership/Interview";
 
 import "../index.css";

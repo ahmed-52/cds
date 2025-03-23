@@ -1,7 +1,7 @@
 import React from 'react';
 import ProjectCard from '../components/UI/ProjectCard';
 import pastProjects from '../data/pastProjects.json';
-import currentProjects from '../data/CurrentProjects.json';
+import currentProjects from '../data/currentProjects.json';
 
 const Projects = () => {
 
