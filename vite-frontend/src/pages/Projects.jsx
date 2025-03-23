@@ -1,6 +1,6 @@
 import React from 'react';
 import ProjectCard from '../components/UI/ProjectCard';
-import pastProjects from '../data/PastProjects.json';
+import pastProjects from '../data/pastProjects.json';
 import currentProjects from '../data/CurrentProjects.json';
 
 const Projects = () => {
