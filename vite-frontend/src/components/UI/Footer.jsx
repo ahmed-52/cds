@@ -223,8 +223,9 @@ const Footer = () => {
         {/* Bottom Section with Copyright and Decorative Elements */}
         <div className="flex flex-col md:flex-row md:justify-between md:items-end">
           <div className="mb-6 md:mb-0">
-            <p className="text-[13px] mb-1 opacity-90">This organization is a registered student organization of Cornell University.</p>
-            <p className="text-[13px] opacity-90">© {getCurrentYear()} Cornell Data Strategy. All rights reserved.</p>
+             <p className="text-[13px] mb-1 opacity-90">Cornell is an equal opportunity employer and educator. <a href="https://hr.cornell.edu/eeo" className="underline hover:opacity-80" target="_blank" rel="noopener noreferrer">Learn more</a></p>
+            <p className="text-[13px] mb-1">This organization is a registered student organization of Cornell University.</p>
+            <p className="text-[13px]">© {getCurrentYear()} Cornell Data Strategy. All rights reserved.</p>
           </div>
           <div className="hidden md:flex md:flex-col md:space-y-3">
             <img src="/media/arrows.svg" alt="Decorative element" className="h-12" />

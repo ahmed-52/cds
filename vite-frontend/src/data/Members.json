@@ -16,9 +16,19 @@
         "title": "Director, Business Development"
       },
       {
+        "image": "team/farhan.png",
+        "name": "Farhan Mashrur '27",
+        "title": "VP, Technology Implementation"
+      },
+      {
         "image": "team/michael.png",
         "name": "Michael Raybetz '25",
         "title": "Director, Talent Strategy"
+      },
+      {
+        "image": "team/sourabh.png",
+        "name": "Sourabh Velaga '26",
+        "title": "VP, Strategy & Advisory"
       }
     ],
     "engagementManagers": [
@@ -26,16 +36,6 @@
         "image": "team/viktor.jpeg",
         "name": "Viktor Stöllinger '27",
         "title": "Business Development"
-      },
-      {
-        "image": "team/sourabh.png",
-        "name": "Sourabh Velaga '26",
-        "title": "Strategy & Advisory"
-      },
-      {
-        "image": "team/farhan.png",
-        "name": "Farhan Mashrur '27",
-        "title": "Technology Implementation"
       },
       {
         "image": "team/keira.png",
