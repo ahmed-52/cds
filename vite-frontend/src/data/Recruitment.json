@@ -32,34 +32,34 @@
       "title": "Recruitment FA",
       "events": [
         {
-          "date": "September 2nd",
+          "date": "September 13th",
           "name": "Club fest",
           "location": "Barton Hall"
         },
         {
-          "date": "September 4th & 5th",
+          "date": "September TBD",
           "name": "Club Info Session",
           "details": [
-            "Sept 4th: Warren Hall B51 5-6pm",
-            "Sept 5th: Warren Hall 150 5-6pm"
+            "Sept 4th: TBD",
+            "Sept 5th: TBD"
           ]
         },
         {
-          "date": "September 6th",
+          "date": "September TBD",
           "name": "Resume & Interview Workshop",
           "location": "Location: TBD"
         },
         {
-          "date": "September 10th",
+          "date": "September TBD",
           "name": "Application Due",
           "highlight": true
         }
       ],
-      "applicationLink": "https://docs.google.com/forms/d/e/1FAIpQLSceTQZWDOCguSu0uKlJB8CHwhPRkPeRb0PW3nVmiMiTVoAUsg/viewform?usp=header"
+      "applicationLink": "https://docs.google.com/forms/d/1cLMxqAZsA3Vg2kavTOIHrjejl1UNMlQVSz2IMNsKVbM/viewform?edit_requested=true"
     },
     "offseason": {
       "title": "Next Recruitment",
       "message": "Our next recruitment period will begin soon. Please check back at the start of the semester for application details and events.",
-      "applicationLink": "https://docs.google.com/forms/d/e/1FAIpQLSceTQZWDOCguSu0uKlJB8CHwhPRkPeRb0PW3nVmiMiTVoAUsg/viewform?usp=header"
+      "applicationLink": "https://docs.google.com/forms/d/1cLMxqAZsA3Vg2kavTOIHrjejl1UNMlQVSz2IMNsKVbM/viewform?edit_requested=true"
     }
   }

@@ -6,6 +6,7 @@ import recruitmentData from "../data/Recruitment.json";
 import Interview from "../components/Membership/Interview";
 
 import "../index.css";
+import CoffeeChat from "../components/Membership/CoffeeChat";
 
 const Membership = () => {
   const [currentRecruitmentSeason, setCurrentRecruitmentSeason] = useState(null);
@@ -130,7 +131,8 @@ const Membership = () => {
         
         {/* Page Content */}
         <div className="">
-          <Why/>
+         
+         <CoffeeChat/>
 
           <h1 className="text-56 text-center my-5">{getRecruitmentTitle()}</h1>
 
