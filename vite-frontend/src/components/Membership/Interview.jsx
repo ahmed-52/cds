@@ -30,8 +30,8 @@ const Interview = () => {
             </p>
           </div>
           
-          <div className="ml-[52px]">
-            <h4 className="font-bold mb-2 text-textcl">Example Interviews</h4>
+          {/* <div className="ml-[52px]"> */}
+            {/* <h4 className="font-bold mb-2 text-textcl">Example Interviews</h4>
             <div className="flex flex-col space-y-2">
               {interviewData.strategy.examples.map((item, index) => (
                 <a 
@@ -45,7 +45,7 @@ const Interview = () => {
                 </a>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
         
         {/* Tech & Implementation */}
@@ -71,7 +71,7 @@ const Interview = () => {
             </p>
           </div>
           
-          <div className="ml-[52px]">
+          {/* <div className="ml-[52px]">
             {interviewData.tech.examples.map((item, index) => (
               <a 
                 key={`tech-example-${index}`}
@@ -83,7 +83,7 @@ const Interview = () => {
                 {item.title}
               </a>
             ))}
-          </div>
+          </div> */}
         </div>
         
         {/* Business Development */}
@@ -109,7 +109,7 @@ const Interview = () => {
             </p>
           </div>
           
-          <div className="ml-[52px]">
+          {/* <div className="ml-[52px]">
             <h4 className="font-bold mb-2 text-textcl">Example Interviews</h4>
             <div className="flex flex-col space-y-2">
               {interviewData.business.examples.map((item, index) => (
@@ -124,7 +124,7 @@ const Interview = () => {
                 </a>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
         
         {/* Platform & Innovation */}
@@ -150,7 +150,7 @@ const Interview = () => {
             </p>
           </div>
           
-          <div className="ml-[52px]">
+          {/* <div className="ml-[52px]">
             <h4 className="font-bold mb-2 text-textcl">Example Interviews</h4>
             <div className="flex flex-col space-y-2">
               {interviewData.platform.examples.map((item, index) => (
@@ -165,7 +165,7 @@ const Interview = () => {
                 </a>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
