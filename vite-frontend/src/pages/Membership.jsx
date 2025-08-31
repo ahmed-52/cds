@@ -156,7 +156,7 @@ const Membership = () => {
 
                 {/* Stage 2 */}
                 <div className="mb-8">
-                  <h3 className="text-xl font-semibold mb-2">Stage 2: Final Round Interviews</h3>
+                  <h3 className="text-xl font-semibold mb-2">Stage 2: Interviews</h3>
                   <p className="leading-relaxed">
                     We'll evaluate your problem-solving approach and ability to deliver actionable solutions across 4 dimensions
                   </p>
