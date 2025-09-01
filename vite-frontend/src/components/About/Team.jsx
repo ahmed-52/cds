@@ -3,7 +3,7 @@ import TeamMember from '../UI/TeamMember';
 import membersData from '../../data/Members.json';
 
 const Team = () => {
-    const { directorsAndVPs, engagementManagers, seniorAssociates, associates, advisory } = membersData;
+    const { directorsAndVPs, engagementManagers, projectLeads, seniorAssociates, associates, advisory } = membersData;
 
     return (
         <main className='max-w-[1400px] mx-auto flex justify-center items-center'>
@@ -34,6 +34,23 @@ const Team = () => {
                     <h2 className="text-3xl md:text-5xl font-gs mb-8 text-cas">Engagement Managers</h2>
                     <div id='managers' className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 gap-y-5">
                         {engagementManagers.map((member, index) => (
+                            <TeamMember
+                                key={index}
+                                image={member.image}
+                                name={member.name}
+                                title={member.title}
+                            />
+                        ))}
+                    </div>
+                </div>
+
+                <div className="my-10 h-[1px] bg-[#7f7f7f] md:w-2/3 w-full"></div>
+
+                {/* Project Leads */}
+                <div>
+                    <h2 className="text-3xl md:text-5xl font-gs mb-8 text-cas">Project Leads</h2>
+                    <div id='project-leads' className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-5 gap-1">
+                        {projectLeads.map((member, index) => (
                             <TeamMember
                                 key={index}
                                 image={member.image}

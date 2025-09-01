@@ -14,6 +14,7 @@ function printSection(title, arr) {
 function main() {
   printSection("Directors & VPs", members.directorsAndVPs);
   printSection("Engagement Managers", members.engagementManagers);
+  printSection("Project Leads", members.projectLeads);
   printSection("Senior Associates", members.seniorAssociates);
   printSection("Associates", members.associates);
   printSection("Advisory", members.advisory);
