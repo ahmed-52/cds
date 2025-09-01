@@ -9,28 +9,19 @@ const Organization = () => {
       <div className="flex flex-col-reverse md:flex-row items-start justify-between gap-12">
         <div className="flex-1">
           <div className="mb-8">
-            <h3 id='strategy-advisory' className="text-24 font-bold mb-2">Strategy & Advisory</h3>
+            <h3 id='strategy-advisory' className="text-24 font-bold mb-2">Strategy & Transformation</h3>
             <p className="text-18">
-              Tackle our consulting cases head-on by conducting market research, financial analysis, and competitive benchmarking. Develop strategic recommendations that help clients make informed decisions on growth, operations, and efficiency.
-            </p>
+            Drive our client-facing consulting projects through market research, financial analysis, and competitive benchmarking. Deliver clear strategic recommendations on growth, operations, and efficiency. Beyond engagements, this team also leads business development and partnerships — identifying potential clients, structuring outreach, and maintaining long-term relationships. Members also publish monthly market research reports to expand our thought leadership.            </p>
           </div>
           <div className="mb-8">
             <h3 id='tech-implementation' className="text-24 font-bold mb-2">Technology Implementation</h3>
             <p className="text-18">
-              Build and deploy data science, software, and tech-driven solutions to solve client problems. From developing automation tools and analytics dashboards to integrating machine learning models and streamlining operations, this division turns strategy into execution with practical, scalable technology.
-            </p>
+            Build and deploy data science, software, and tech-driven solutions to solve client problems. From developing automation tools and analytics dashboards to integrating machine learning models and streamlining operations, this division turns strategy into execution with practical, scalable technology.            </p>
           </div>
           <div className="mb-8">
-            <h3 className="text-24 font-bold mb-2">Business Development</h3>
+            <h3 className="text-24 font-bold mb-2">Brand and Innovation</h3>
             <p id='business-development' className="text-18">
-              Expand our reach by identifying potential clients, industry partners, and funding opportunities. Take the lead on outreach, deal structuring, and partnership negotiations, ensuring long-term engagement and value creation.
-            </p>
-          </div>
-          <div className="mb-8">
-            <h3 className="text-24 font-bold mb-2">Platform & Innovation</h3>
-            <p id='platform-innovation' className="text-18">
-              Shape the internal backbone of our organization by developing knowledge management systems, optimizing recruitment strategies, and refining branding & digital presence. Lead projects in UI/UX design, marketing strategy, and operational improvements to make our work more efficient and impactful.
-            </p>
+            Lead both the internal and external presence of the organization. This team manages recruitment, knowledge systems, and club operations, while also driving external relations, partnerships, and fundraising. They shape the club’s brand through social media, marketing campaigns, and design work (website, UI/UX graphics, publications).            </p>
           </div>
         </div>
         <div className="flex-1 flex justify-center items-center md:p-0 p-10 self-center">
