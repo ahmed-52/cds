@@ -1,28 +1,29 @@
 import React from "react";
 
-import interviewData from '../../data/Interview.json';
+// import interviewData from '../../data/Interview.json';
 
 const Interview = () => {
   return (
     <div className="md:max-w-[1400px] mx-auto p-5 pt-10 pb-20 font-Domine">
       <h2 className="text-[35px] font-bold mb-10 text-textcl">Interview Preparation</h2>
       
-      <div className="grid grid-cols-1 md:grid-cols-1 gap-10">
-        {/* Strategy & Advisory */}
+      <div className="flex flex-col lg:flex-row gap-10">
+        <div className="flex-1">
+          <div className="grid grid-cols-1 gap-6">
+        {/* Strategy & Transformation */}
         <div className="relative">
           <div className="flex items-start mb-3">
             <div className="bg-blue-500 min-w-[40px] h-10 w-10 rounded-full flex items-center justify-center text-white font-bold mr-3">
-              SA
+              ST
             </div>
-            <h3 className="text-2xl font-bold text-textcl">Strategy & Advisory</h3>
+            <h3 className="text-2xl font-bold text-textcl">Strategy & Transformation</h3>
           </div>
           
-          <p className="text-sm text-gray-600 mb-4 ml-[52px]">
-            Learn more on the Strategy & Advisory division
+          <p className="text-sm text-gray-600 mb-2 ml-[52px]">
+            Learn more on the Strategy & Transformation division
           </p>
           
-          
-          <div className="mb-6 ml-[52px]">
+          <div className="mb-4 ml-[52px]">
             <h4 className="font-bold mb-1 text-textcl">How to prepare?</h4>
             <p className="text-sm text-gray-700">
               Practice case frameworks, brush up on market sizing questions, and review financial 
@@ -57,12 +58,11 @@ const Interview = () => {
             <h3 className="text-2xl font-bold text-textcl">Tech & Implementation</h3>
           </div>
           
-          <p className="text-sm text-gray-600 mb-4 ml-[52px]">
+          <p className="text-sm text-gray-600 mb-2 ml-[52px]">
             Learn more on the Technology & Implementation division
           </p>
           
-          
-          <div className="mb-6 ml-[52px]">
+          <div className="mb-4 ml-[52px]">
             <h4 className="font-bold mb-1 text-textcl">How to prepare?</h4>
             <p className="text-sm text-gray-700">
               Review algorithm fundamentals, practice system design questions, and strengthen your 
@@ -131,17 +131,16 @@ const Interview = () => {
         <div className="relative">
           <div className="flex items-start mb-3">
             <div className="bg-blue-500 min-w-[40px] h-10 w-10 rounded-full flex items-center justify-center text-white font-bold mr-3">
-              PI
+              BI
             </div>
             <h3 className="text-2xl font-bold text-textcl">Brand & Innovation</h3>
           </div>
           
-          <p className="text-sm text-gray-600 mb-4 ml-[52px]">
+          <p className="text-sm text-gray-600 mb-2 ml-[52px]">
             Learn more on the Brand & Innovation division
           </p>
           
-          
-          <div className="mb-6 ml-[52px]">
+          <div className="mb-4 ml-[52px]">
             <h4 className="font-bold mb-1 text-textcl">How to prepare?</h4>
             <p className="text-sm text-gray-700">
               Prepare to showcase your portfolio and discuss your design thinking process. 
@@ -166,6 +165,16 @@ const Interview = () => {
               ))}
             </div>
           </div> */}
+        </div>
+          </div>
+        </div>
+        
+        <div className="flex-1 flex items-center justify-center">
+          <img 
+            src="/media/interview.png" 
+            alt="Interview preparation session" 
+            className="w-full max-w-2xl h-auto rounded-lg shadow-lg object-cover"
+          />
         </div>
       </div>
     </div>
