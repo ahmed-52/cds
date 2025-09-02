@@ -30,7 +30,7 @@ const Team = () => {
                 <div className="my-10 h-[1px] bg-[#7f7f7f] md:w-2/3 w-full"></div>
 
                 {/* Engagement Managers */}
-                <div>
+                {/* <div>
                     <h2 className="text-3xl md:text-5xl font-gs mb-8 text-cas">Engagement Managers</h2>
                     <div id='managers' className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 gap-y-5">
                         {engagementManagers.map((member, index) => (
@@ -44,7 +44,7 @@ const Team = () => {
                     </div>
                 </div>
 
-                <div className="my-10 h-[1px] bg-[#7f7f7f] md:w-2/3 w-full"></div>
+                <div className="my-10 h-[1px] bg-[#7f7f7f] md:w-2/3 w-full"></div> */}
 
                 {/* Project Leads */}
                 <div>

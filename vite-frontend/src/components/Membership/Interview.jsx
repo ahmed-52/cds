@@ -7,7 +7,7 @@ const Interview = () => {
     <div className="md:max-w-[1400px] mx-auto p-5 pt-10 pb-20 font-Domine">
       <h2 className="text-[35px] font-bold mb-10 text-textcl">Interview Preparation</h2>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-1 gap-10">
         {/* Strategy & Advisory */}
         <div className="relative">
           <div className="flex items-start mb-3">
@@ -87,7 +87,7 @@ const Interview = () => {
         </div>
         
         {/* Business Development */}
-        <div className="relative">
+        {/* <div className="relative">
           <div className="flex items-start mb-3">
             <div className="bg-blue-500 min-w-[40px] h-10 w-10 rounded-full flex items-center justify-center text-white font-bold mr-3">
               BD
@@ -108,7 +108,7 @@ const Interview = () => {
               or partnership experiences.
             </p>
           </div>
-          
+           */}
           {/* <div className="ml-[52px]">
             <h4 className="font-bold mb-2 text-textcl">Example Interviews</h4>
             <div className="flex flex-col space-y-2">
@@ -125,19 +125,19 @@ const Interview = () => {
               ))}
             </div>
           </div> */}
-        </div>
+        {/* </div> */}
         
-        {/* Platform & Innovation */}
+        {/* Brand & Innovation */}
         <div className="relative">
           <div className="flex items-start mb-3">
             <div className="bg-blue-500 min-w-[40px] h-10 w-10 rounded-full flex items-center justify-center text-white font-bold mr-3">
               PI
             </div>
-            <h3 className="text-2xl font-bold text-textcl">Platform & Innovation</h3>
+            <h3 className="text-2xl font-bold text-textcl">Brand & Innovation</h3>
           </div>
           
           <p className="text-sm text-gray-600 mb-4 ml-[52px]">
-            Learn more on the Platform & Innovation division
+            Learn more on the Brand & Innovation division
           </p>
           
           

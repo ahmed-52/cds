@@ -16,6 +16,11 @@
         "title": "Director, Client Relations"
       },
       {
+        "image": "team/keira.png",
+        "name": "Keira Kim '28",
+        "title": "Director, Brand and Innovation"
+      },
+      {
         "image": "team/michael.png",
         "name": "Michael Raybetz '25",
         "title": "Director, Talent Strategy"
@@ -32,16 +37,6 @@
       }
     ],
     "engagementManagers": [
-      {
-        "image": "team/arianna.png",
-        "name": "Arianna Hsu '28",
-        "title": "Social Media Senior Associate"
-      },
-      {
-        "image": "team/keira.png",
-        "name": "Keira Kim '28",
-        "title": "Social Media Manager"
-      }
     ],
     "projectLeads": [
       {
@@ -68,34 +63,40 @@
         "image": "team/jibran.png",
         "name": "Jibran Khan '26",
         "title": "Strategy & Transformation"
+      },
+      {
+        "image": "team/sharvari.png",
+        "name": "Sharvari Vartak '28",
+        "title": "Strategy & Transformation"
+      },
+      {
+        "image": "team/sonja.png",
+        "name": "Sonja Wong '28",
+        "title": "Technology Implementation"
       }
     ],
     "seniorAssociates": [
       {
+        "image": "team/arianna.png",
+        "name": "Arianna Hsu '28",
+        "title": "Social Media"
+      },
+      {
         "image": "team/daniel.png",
         "name": "Daniel Khanin '28",
-        "title": "Strategy & Advisory"
+        "title": "Strategy & Transformation"
       },
       {
         "image": "team/darian.png",
         "name": "Darian Pan '28",
-        "title": "Strategy & Advisory"
+        "title": "Strategy & Transformation"
       },
       {
         "image": "team/saesha.png",
         "name": "Saesha Agarwal '28",
         "title": "Technology Implementation"
       },
-      {
-        "image": "team/sonja.png",
-        "name": "Sonja Wong '28",
-        "title": "Technology Implementation"
-      },
-      {
-        "image": "team/sharvari.png",
-        "name": "Sharvari Vartak '28",
-        "title": "Strategy & Advisory"
-      },
+
       {
         "image": "team/surabhi.png",
         "name": "Surabhi Bachhav '28",
