@@ -29,29 +29,42 @@
       "applicationLink": "https://docs.google.com/forms/d/e/1FAIpQLSceTQZWDOCguSu0uKlJB8CHwhPRkPeRb0PW3nVmiMiTVoAUsg/viewform?usp=header"
     },
     "fall": {
-      "title": "Recruitment FA",
+      "title": "Fall 2025 Recruitment",
       "events": [
         {
+          "date": "September 2nd & 4th",
+          "name": "Tabling",
+          "location": "Ho Plaza",
+          "time": "4:00pm – 5:00pm"
+        },
+        {
+          "date": "September 8th",
+          "name": "Resume Workshop",
+          "location": "Warren Hall B50",
+          "time": "5:00pm – 6:00pm"
+        },
+        {
           "date": "September 13th",
-          "name": "Club fest",
-          "location": "Barton Hall"
+          "name": "Club Fest",
+          "location": "Arts Quad",
+          "time": "12:00pm – 1:30pm"
         },
         {
-          "date": "September TBD",
-          "name": "Club Info Session",
-          "details": [
-            "Sept 4th: TBD",
-            "Sept 5th: TBD"
-          ]
+          "date": "September 15th",
+          "name": "Info Session",
+          "location": "Warren Hall B51",
+          "time": "5:00pm – 6:00pm"
         },
         {
-          "date": "September TBD",
-          "name": "Resume & Interview Workshop",
-          "location": "Location: TBD"
+          "date": "September 17th",
+          "name": "Case Interview Workshop",
+          "location": "Statler 351",
+          "time": "5:00pm – 6:00pm"
         },
         {
-          "date": "September TBD",
-          "name": "Application Due",
+          "date": "September 18th",
+          "name": "Applications CLOSE",
+          "time": "11:59pm",
           "highlight": true
         }
       ],

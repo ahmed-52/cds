@@ -4,6 +4,12 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import recruitmentData from "../data/Recruitment.json";
 import Interview from "../components/Membership/Interview";
+import Timeline from '@mui/lab/Timeline';
+import TimelineItem from '@mui/lab/TimelineItem';
+import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import TimelineConnector from '@mui/lab/TimelineConnector';
+import TimelineContent from '@mui/lab/TimelineContent';
+import TimelineDot from '@mui/lab/TimelineDot';
 
 import "../index.css";
 import CoffeeChat from "../components/Membership/CoffeeChat";
@@ -88,24 +94,40 @@ const Membership = () => {
       <div className="lg:w-1/2 bg-[#0B1C2B] text-white p-8">
         <h2 className="text-3xl font-bold mb-6">Recruitment Timeline</h2>
 
-        {/* Timeline Container (vertical line) */}
-        <div className="relative pl-8">
-          {/* Vertical line */}
-          <div className="absolute left-1.5 top-0 bottom-0 border-l border-2 border-white mb-7 mt-5" />
-
+                          {/* Material UI Timeline */}
+        <Timeline position="alternate-reverse">
           {events.map((event, index) => (
-            <div className="relative mb-10" key={index}>
-              {/* Circle (white or blue) */}
-              <div className={`absolute -left-[33px] top-1.5 ${event.highlight ? 'bg-blue-500 w-6 h-6 !-left-[35px]' : 'bg-white'} w-4 h-4 rounded-full`} />
-              <p className="text-sm mb-1">{event.date}</p>
-              <p className="text-lg font-semibold mb-0.5">{event.name}</p>
-              {event.location && <p className="text-sm">{event.location}</p>}
-              {event.details && event.details.map((detail, detailIndex) => (
-                <p className="text-sm mb-1" key={`detail-${index}-${detailIndex}`}>{detail}</p>
-              ))}
-            </div>
+            <TimelineItem key={index}>
+              <TimelineSeparator>
+                <TimelineDot
+                  sx={{
+                    backgroundColor: event.highlight ? '#3b82f6' : 'white',
+                    width: event.highlight ? '24px' : '16px',
+                    height: event.highlight ? '24px' : '16px',
+                    borderColor: 'white',
+                    borderWidth: '2px',
+                  }}
+                />
+                {index < events.length - 1 && <TimelineConnector />}
+              </TimelineSeparator>
+              <TimelineContent>
+                <div className="text-sm text-gray-300 mb-1">{event.date}</div>
+                <div className="text-lg font-semibold text-white mb-1">{event.name}</div>
+                {event.location && (
+                  <div className="text-sm text-gray-300">{event.location}</div>
+                )}
+                {event.time && (
+                  <div className="text-sm text-gray-300">{event.time}</div>
+                )}
+                {event.details && event.details.map((detail, detailIndex) => (
+                  <div key={detailIndex} className="text-sm text-gray-300 mt-1">
+                    {detail}
+                  </div>
+                ))}
+              </TimelineContent>
+            </TimelineItem>
           ))}
-        </div>
+        </Timeline>
       </div>
     );
   };
