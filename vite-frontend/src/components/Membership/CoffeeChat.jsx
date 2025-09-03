@@ -1,6 +1,6 @@
 const CoffeeChat = () => {
   const handleCoffeeChatClick = () => {
-    window.open('https://calendly.com/d/cswv-bvx-6v7/cornell-data-strategy-fall-25-coffee-chats?fbclid=PAZXh0bgNhZW0CMTEAAadOYM2Z5pH-F1y7_Y7H8BqVD1g8Zutwon6-vsH9Kj_JmZdS4L1MjABH3IxfZg_aem_dS6Mr_KUSlDJKcdPCDkedQ', '_blank');
+    window.open('https://docs.google.com/spreadsheets/d/1A4lWz2Mu8pz8XniwBQjW0kLVuGQpMHeXkv6C9PWtzDI/edit?gid=0#gid=0', '_blank');
   };
 
   return (
