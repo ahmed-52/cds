@@ -67,7 +67,7 @@ const HomeAbout2 = () => {
           <div className="flex flex-col justify-between items-start gap-4">
             <h2 className="text-textcl text-44 font-bold">Client Consultations</h2>
             <p className="text-18 max-w-[532px]">
-              Beyond strategic advisory, we engage directly with stakeholders to implement solutions that create measurable impact.
+            We don't stop at advice. Our teams work directly with client leadership to implement strategies, ensuring decisions translate into measurable outcomes.
             </p>
             
             <a href="/projects" className="hover:underline text-16 font-semibold flex items-center mt-4">
@@ -94,7 +94,7 @@ const HomeAbout2 = () => {
           <div className="flex flex-col justify-between items-start gap-4">
             <h2 className="text-textcl text-44 font-bold">Team Synergy</h2>
             <p className="text-18 max-w-[532px]">
-              Our passionate community supports each other through complex challenges, building lifelong connections while delivering exceptional client results.
+            Business and technical talent working side by side, solving problems faster and better together.
             </p>
             
             <a href="/about" className="hover:underline text-16 font-semibold flex items-center mt-4">
@@ -135,7 +135,7 @@ const HomeAbout2 = () => {
           <div className="flex flex-col justify-between items-start gap-4">
             <h2 className="text-textcl text-44 font-bold">Leadership in Action</h2>
             <p className="text-18 max-w-[532px]">
-              Our members take ownership of client projects, guiding teams through complex challenges while delivering data-driven solutions that create real business impact
+            Members lead projects end-to-end, managing teams and presenting directly to executives.
             </p>
             
             <a href="/contact" className="hover:underline text-16 font-semibold flex items-center mt-4">
