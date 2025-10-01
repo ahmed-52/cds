@@ -7,7 +7,7 @@ import OurServices from '../components/Home/OurServices';
 import HomeAbout2 from '../components/Home/HomeAbout2';
 import ProjectHighlights from '../components/Home/ProjectHighlights';
 import ScheduleCall from '../components/Home/ScheduleCall';
-import CoffeeChatNotification from '../components/UI/CoffeeChatNotification';
+
 
 
 const Home = () => {
@@ -15,7 +15,7 @@ const Home = () => {
     return (
         <>
         <main>
-            <CoffeeChatNotification/>
+            
             <Hero/>
             <HomeAbout/>
             <Excel/>

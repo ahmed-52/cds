@@ -12,7 +12,7 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 
 import "../index.css";
-import CoffeeChat from "../components/Membership/CoffeeChat";
+
 
 const Membership = () => {
   const [currentRecruitmentSeason, setCurrentRecruitmentSeason] = useState(null);
@@ -154,7 +154,7 @@ const Membership = () => {
         {/* Page Content */}
         <div className="">
          
-         <CoffeeChat/>
+    
 
           <h1 className="text-56 text-center my-5">{getRecruitmentTitle()}</h1>
 
