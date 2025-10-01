@@ -29,6 +29,11 @@
         "image": "team/sourabh.png",
         "name": "Sourabh Velaga '26",
         "title": "VP, Technology Implementation"
+      },
+            {
+        "image": "team/daniel.png",
+        "name": "Daniel Khanin '28",
+        "title": "VP, Client Relations"
       }
     ],
     "engagementManagers": [
@@ -75,11 +80,6 @@
         "image": "team/arianna.png",
         "name": "Arianna Hsu '28",
         "title": "Social Media"
-      },
-      {
-        "image": "team/daniel.png",
-        "name": "Daniel Khanin '28",
-        "title": "Strategy & Transformation"
       },
       {
         "image": "team/darian.png",
