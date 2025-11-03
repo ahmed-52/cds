@@ -16,9 +16,9 @@
         "title": "Director, Client Relations"
       },
       {
-        "image": "team/keira.png",
+        "image": "team/keira_kim.jpg",
         "name": "Keira Kim '28",
-        "title": "Director, Brand and Innovation"
+        "title": "Director, Brand & Innovation"
       },
       {
         "image": "team/farhan.png",
@@ -30,8 +30,8 @@
         "name": "Sourabh Velaga '26",
         "title": "VP, Technology Implementation"
       },
-            {
-        "image": "team/daniel.png",
+      {
+        "image": "team/daniel_khanin.jpg",
         "name": "Daniel Khanin '28",
         "title": "VP, Client Relations"
       }
@@ -45,23 +45,18 @@
         "title": "Technology Implementation"
       },
       {
+        "image": "team/jibran.png",
+        "name": "Jibran Khan '26",
+        "title": "Strategy & Transformation"
+      },
+      {
         "image": "team/carolyn.png",
         "name": "Carolyn Fu '28",
         "title": "Strategy & Transformation"
       },
       {
-        "image": "team/danielz.png",
-        "name": "Daniel Zlotnick '28",
-        "title": "Technology Implementation"
-      },
-      {
         "image": "team/dixon.png",
         "name": "Dixon Yang '28",
-        "title": "Strategy & Transformation"
-      },
-      {
-        "image": "team/jibran.png",
-        "name": "Jibran Khan '26",
         "title": "Strategy & Transformation"
       },
       {
@@ -70,30 +65,154 @@
         "title": "Strategy & Transformation"
       },
       {
-        "image": "team/sonja.png",
+        "image": "team/mihir_steingard.jpg",
+        "name": "Mihir Steingard '28",
+        "title": "Strategy & Transformation"
+      },
+      {
+        "image": "team/sonja_wong.jpg",
         "name": "Sonja Wong '28",
         "title": "Technology Implementation"
+      },
+      {
+        "image": "team/daniel_zlotnick.jpg",
+        "name": "Daniel Zlotnick '28",
+        "title": "Technology Implementation"
+      },
+      {
+        "image": "team/paul_chung.jpg",
+        "name": "Paul Chung '27",
+        "title": "Project Lead, Events & Financing"
       }
     ],
     "seniorAssociates": [
       {
-        "image": "team/arianna.png",
-        "name": "Arianna Hsu '28",
-        "title": "Social Media"
-      },
-      {
         "image": "team/saesha.png",
         "name": "Saesha Agarwal '28",
-        "title": "Technology Implementation"
+        "title": "Senior Associate, Strategy & Transformation"
       },
-
       {
-        "image": "team/surabhi.png",
-        "name": "Surabhi Bachhav '28",
-        "title": "Technology Implementation"
+        "image": "team/mashnoon_hasnat.jpg",
+        "name": "Mashnoon Hasnat '27",
+        "title": "Senior Associate, Events"
+      },
+      {
+        "image": "team/arianna.png",
+        "name": "Arianna Hsu '28",
+        "title": "Social Media Senior Associate"
+      },
+      {
+        "image": "team/yash_chatha.jpg",
+        "name": "Yash Chatha '27",
+        "title": "Senior Associate, Technology Implementation"
       }
     ],
     "associates": [
+      {
+        "image": "team/ruochen_zhang.jpg",
+        "name": "Ruochen Zhang '26",
+        "title": "Strategy & Transformation"
+      },
+      {
+        "image": "team/kiyam_merali.jpg",
+        "name": "Kiyam Merali '27",
+        "title": "Technology Implementation"
+      },
+      {
+        "image": "team/albert_li.jpg",
+        "name": "Albert Li '27",
+        "title": "Technology Implementation"
+      },
+      {
+        "image": "team/elise_carpenter.jpg",
+        "name": "Elise Carpenter '28",
+        "title": "Strategy & Transformation"
+      },
+      {
+        "image": "",
+        "name": "Ava Lehmann '28",
+        "title": "Strategy & Transformation"
+      },
+      {
+        "image": "team/ivy_liu.jpg",
+        "name": "Ivy Liu '28",
+        "title": "Strategy & Transformation"
+      },
+      {
+        "image": "",
+        "name": "Lucio Pallordet '28",
+        "title": "Technology Implementation"
+      },
+      {
+        "image": "team/meriem_farah.jpg",
+        "name": "Meriem Farah '29",
+        "title": "Strategy & Transformation"
+      },
+      {
+        "image": "",
+        "name": "Nandini Venkatesh '29",
+        "title": "Strategy & Transformation"
+      },
+      {
+        "image": "team/joyce_han.jpg",
+        "name": "Joyce Han '29",
+        "title": "Strategy & Transformation"
+      },
+      {
+        "image": "team/fiona_chandler.jpg",
+        "name": "Fiona Chandler '29",
+        "title": "Technology Implementation"
+      },
+      {
+        "image": "",
+        "name": "Smriti Kumar '29",
+        "title": "Technology Implementation"
+      },
+      {
+        "image": "",
+        "name": "Cassidy Takeuchi '29",
+        "title": "Technology Implementation"
+      },
+      {
+        "image": "team/jimmy_mulosmani.jpg",
+        "name": "Trashgim Mulosmani '29",
+        "title": "Technology Implementation"
+      },
+      {
+        "image": "team/saiakhil_chilaka.jpg",
+        "name": "Saiakhil Chilaka '29",
+        "title": "Technology Implementation"
+      },
+      {
+        "image": "",
+        "name": "Max Friedman '29",
+        "title": "Technology Implementation"
+      },
+      {
+        "image": "team/aashna_thadani.jpg",
+        "name": "Aashna Thadani '29",
+        "title": "Technology Implementation"
+      },
+      {
+        "image": "",
+        "name": "Isha Nagireddy '29",
+        "title": "Technology Implementation"
+      },
+      {
+        "image": "team/adi_prathapa.jpg",
+        "name": "Adi Prathapa '29",
+        "title": "Technology Implementation"
+      },
+      {
+        "image": "team/urja_saha.jpg",
+        "name": "Urja Saha '29",
+        "title": "Technology Implementation"
+      },
+      {
+        "image": "team/surabhi_bachhav.jpg",
+        "name": "Surabhi Bachhav '28",
+        "title": "Technology Implementation"
+      }
     ],
     "advisory": [
       {

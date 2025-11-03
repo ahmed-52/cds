@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
 
 const TeamMember = ({ image, name, title }) => {
+  if (!image) {
+    return null;
+  }
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }} 
@@ -19,7 +22,7 @@ const TeamMember = ({ image, name, title }) => {
               alt={name}
               className="w-full h-full object-cover object-top"
               style={{
-                objectPosition: "center 25%" // Position to favor the face/top of the image
+                objectPosition: "center 25%"
               }}
             />
           </div>
