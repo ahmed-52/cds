@@ -1,17 +1,17 @@
 {
     "directorsAndVPs": [
       {
-        "image": "team/chris.png",
+        "image": "team/chris.jpg",
         "name": "Chris Wang '26",
         "title": "Director, Strategy & Transformation"
       },
       {
-        "image": "team/ahmed.png",
+        "image": "team/ahmed.jpg",
         "name": "Ahmed Abdulla '27",
         "title": "Director, Technology Implementation"
       },
       {
-        "image": "team/dhruv.png",
+        "image": "team/dhruv.jpg",
         "name": "Dhruv Raina '26",
         "title": "Director, Client Relations"
       },
@@ -26,7 +26,7 @@
         "title": "VP, Technology Implementation"
       },
       {
-        "image": "team/sourabh.png",
+        "image": "team/sourabh.jpg",
         "name": "Sourabh Velaga '26",
         "title": "VP, Technology Implementation"
       },
@@ -60,7 +60,7 @@
         "title": "Strategy & Transformation"
       },
       {
-        "image": "team/sharvari.png",
+        "image": "team/sharvari.jpg",
         "name": "Sharvari Vartak '28",
         "title": "Strategy & Transformation"
       },
@@ -87,7 +87,7 @@
     ],
     "seniorAssociates": [
       {
-        "image": "team/saesha.png",
+        "image": "team/saesha.jpg",
         "name": "Saesha Agarwal '28",
         "title": "Senior Associate, Strategy & Transformation"
       },
@@ -97,7 +97,7 @@
         "title": "Senior Associate, Events"
       },
       {
-        "image": "team/arianna.png",
+        "image": "team/arianna.jpg",
         "name": "Arianna Hsu '28",
         "title": "Social Media Senior Associate"
       },
@@ -175,7 +175,7 @@
       },
       {
         "image": "team/jimmy_mulosmani.jpg",
-        "name": "Trashgim Mulosmani '29",
+        "name": "Jimmy Mulosmani '29",
         "title": "Technology Implementation"
       },
       {
