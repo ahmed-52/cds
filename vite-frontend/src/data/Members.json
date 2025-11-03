@@ -109,21 +109,6 @@
     ],
     "associates": [
       {
-        "image": "team/ruochen_zhang.jpg",
-        "name": "Ruochen Zhang '26",
-        "title": "Strategy & Transformation"
-      },
-      {
-        "image": "team/kiyam_merali.jpg",
-        "name": "Kiyam Merali '27",
-        "title": "Technology Implementation"
-      },
-      {
-        "image": "team/albert_li.jpg",
-        "name": "Albert Li '27",
-        "title": "Technology Implementation"
-      },
-      {
         "image": "team/elise_carpenter.jpg",
         "name": "Elise Carpenter '28",
         "title": "Strategy & Transformation"
@@ -147,6 +132,21 @@
         "image": "team/meriem_farah.jpg",
         "name": "Meriem Farah '29",
         "title": "Strategy & Transformation"
+      },
+      {
+        "image": "team/ruochen_zhang.jpg",
+        "name": "Ruochen Zhang '26",
+        "title": "Strategy & Transformation"
+      },
+      {
+        "image": "team/kiyam_merali.jpg",
+        "name": "Kiyam Merali '27",
+        "title": "Technology Implementation"
+      },
+      {
+        "image": "team/albert_li.jpg",
+        "name": "Albert Li '27",
+        "title": "Technology Implementation"
       },
       {
         "image": "",
