@@ -2,33 +2,52 @@ import Navbar from "../UI/Navbar";
 
 const Hero = () => {
   return (
-    <main className="hero">
+    <main className="hero w-full h-screen relative overflow-hidden"
+      style={{
+        backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('/images/groupphoto.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center"
+      }}
+    >
       <Navbar dark={false} />
-      <div className="w-full h-auto lmd:h-[480px] max-w-[1520px] mx-auto bg-hero bg-cover bg-center relative">
-        {/* Main container - centered with flex */}
-        <div className="flex flex-col lmd:flex-row justify-center lmd:items-center items-start h-full px-4 lmd:px-10 py-12 lmd:py-0">
-          {/* Text content */}
-          <div className="flex flex-col justify-start gap-4 items-start lmd:items-start text-center lmd:text-left mb-8 lmd:mb-0">
-            <h1 className="lmd:text-6xl text-5xl font-medium text-start text-white">
-              Transforming strategy,<br></br>
-              Delivering execution
-            </h1>
-            <p className="text-white text-start font-inter xl text-xl mt-5">
+      
+      {/* Main container */}
+      <div className="relative z-10 flex items-center justify-start h-[calc(100vh-80px)] px-6 lmd:px-12 xl:px-16">
+        {/* Content section - left aligned */}
+        <div className="flex flex-col gap-6 max-w-4xl text-left pb-24">
+          {/* Main headline */}
+          <h1 className="text-4xl lmd:text-5xl xl:text-6xl font-normal text-white leading-snug">
+            Transforming strategy,<br />
+            Delivering execution
+          </h1>
+
+          {/* Subheadline */}
+          <p className="text-base lmd:text-lg xl:text-xl text-white/95 font-light leading-relaxed max-w-2xl">
             Cornell's first consulting organization advising C-suites on growth, transformation, and execution
-            </p>
-            <a href="/contact" className="bg-white text-black font-medium font-inter text-lg px-5 py-2 mt-5 hover:cursor-pointer hover:bg-slate-300">
-              Get In Touch &rarr;
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex gap-4 mt-4">
+            <a
+              href="/contact"
+              className="inline-flex items-center justify-center bg-white text-black font-normal text-base px-8 py-3 hover:bg-white/90 transition-all duration-300"
+            >
+              Get In Touch
+              <span className="ml-2">→</span>
             </a>
           </div>
+        </div>
+      </div>
 
-          {/* Image */}
-          <div className="flex justify-center lmd:justify-end lmd:ml-auto">
-            <img
-              src="/media/arrows.svg"
-              className="lmd:w-[500px] w-[300px] h-auto"
-              alt="Hero Arrows"
-            />
-          </div>
+      {/* Bottom section with border line */}
+      <div className="absolute bottom-0 left-0 right-0 px-6 lmd:px-12 xl:px-16 pb-8 border-t border-white/20">
+        <div className="flex items-center justify-between pt-6">
+          <p className="text-xs lmd:text-sm text-white/70 font-light uppercase tracking-wider">
+            We combine boardroom strategy with execution power
+          </p>
+          <p className="text-xs lmd:text-sm text-white/70 font-light uppercase tracking-wider hidden lmd:block">
+            Scroll to explore
+          </p>
         </div>
       </div>
     </main>
