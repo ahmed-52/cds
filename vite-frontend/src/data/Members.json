@@ -26,9 +26,9 @@
         "title": "VP, Technology Implementation"
       },
       {
-        "image": "team/sourabh.jpg",
-        "name": "Sourabh Velaga '26",
-        "title": "VP, Technology Implementation"
+        "image": "team/arsh.png",
+        "name": "Arsh Singh '28",
+        "title": "Technology Implementation"
       },
       {
         "image": "team/daniel_khanin.jpg",
@@ -39,11 +39,6 @@
     "engagementManagers": [
     ],
     "projectLeads": [
-      {
-        "image": "team/arsh.png",
-        "name": "Arsh Singh '28",
-        "title": "Technology Implementation"
-      },
       {
         "image": "team/jibran.png",
         "name": "Jibran Khan '26",
@@ -82,7 +77,12 @@
       {
         "image": "team/paul_chung.jpg",
         "name": "Paul Chung '27",
-        "title": "Project Lead, Events & Financing"
+        "title": "Events & Financing"
+      },
+            {
+        "image": "team/sourabh.jpg",
+        "name": "Sourabh Velaga '26",
+        "title": "Technology Implementation"
       }
     ],
     "seniorAssociates": [
