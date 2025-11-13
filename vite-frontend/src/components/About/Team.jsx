@@ -7,7 +7,7 @@ const Team = () => {
 
     return (
         <main className='max-w-[1400px] mx-auto flex justify-center items-center'>
-            <section className="container px-10 my-12">
+            <section id="team-members" className="container px-10 my-12">
                 <h1 className="text-[40px] font-bold font-gs mt-20 text-center mb-3">
                     Minds Behind Cornell Data Strategy
                 </h1>

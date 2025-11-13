@@ -1,7 +1,7 @@
 const AboutHero = () => {
     return (
         <>
-        <section id="what-we-do">
+        <section id="about-top">
 
             <div className="relative overflow-hidden">
             <img

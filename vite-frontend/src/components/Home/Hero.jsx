@@ -4,9 +4,9 @@ const Hero = () => {
   return (
     <main className="hero w-full h-screen relative overflow-hidden"
       style={{
-        backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('/images/groupphoto.png')",
-        backgroundSize: "cover",
-        backgroundPosition: "center"
+        backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('/images/groupphoto.png')",
+        backgroundSize: "105%",
+        backgroundPosition: "50% 38%"
       }}
     >
       <Navbar dark={false} />

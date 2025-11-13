@@ -50,8 +50,8 @@ const Navbar = ({dark = true}) => {
             <NavLink href="/" active={activeLink === 'home'}>Home</NavLink>
             <NavLink href="/services" active={activeLink === 'services'}>Services</NavLink>
             <NavLink href="/projects" active={activeLink === 'projects'}>Projects</NavLink>
-            <NavLink href="/about" active={activeLink === 'about'}>About</NavLink>
-            <NavLink href="/membership" active={activeLink === 'membership'}>Membership</NavLink>
+            <AboutDropdown active={activeLink === 'about'} />
+            <NavLink href="/membership" active={activeLink === 'membership'}>Apply</NavLink>
             <NavLink href="/contact" active={activeLink === 'contact'}>Contact Us</NavLink>
             <a 
               href="/signin" 
@@ -155,6 +155,101 @@ const NavLink = ({ href, active, children }) => {
         }`}
       ></span>
     </a>
+  );
+};
+
+// About Dropdown Component
+const AboutDropdown = ({ active }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const scrollToElement = (elementId) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      const offset = 80; // Account for navbar height
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  const handleClubInfo = (e) => {
+    e.preventDefault();
+    if (window.location.pathname !== '/about') {
+      window.location.href = '/about#about-top';
+      // Scroll will happen after page loads via useEffect in About page
+    } else {
+      scrollToElement('about-top');
+    }
+  };
+
+  const handleTeamMembers = (e) => {
+    e.preventDefault();
+    if (window.location.pathname !== '/about') {
+      window.location.href = '/about#team-members';
+      // Scroll will happen after page loads via useEffect in About page
+    } else {
+      scrollToElement('team-members');
+    }
+  };
+
+  return (
+    <div 
+      className="relative"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <a 
+        href="/about" 
+        className={`relative px-1 py-2 text-[15px] transition-colors flex items-center gap-1 ${
+          active ? 'text-blue-300' : 'hover:text-blue-300'
+        }`}
+      >
+        About
+        <svg 
+          className={`w-4 h-4 transition-transform duration-200 ${isHovered ? 'rotate-180' : ''}`}
+          fill="none" 
+          stroke="currentColor" 
+          viewBox="0 0 24 24"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        </svg>
+        <span 
+          className={`absolute left-0 bottom-0 h-0.5 bg-blue-400 transition-all duration-300 ${
+            active ? 'w-full' : 'w-0'
+          }`}
+        ></span>
+      </a>
+      
+      <div 
+        className={`absolute top-full left-0 -mt-1 pt-1 min-w-[200px] z-50 transition-all duration-200 ${
+          isHovered 
+            ? 'opacity-100 translate-y-0 pointer-events-auto' 
+            : 'opacity-0 -translate-y-2 pointer-events-none'
+        }`}
+      >
+        <div className="bg-[#0f1521] border border-gray-700/50 rounded-lg shadow-2xl overflow-hidden mt-1">
+          <div className="py-1">
+            <a
+              href="/about"
+              onClick={handleClubInfo}
+              className="block px-5 py-3 text-[15px] text-white/90 hover:text-white hover:bg-blue-600/20 transition-all duration-150 border-l-2 border-transparent hover:border-blue-400"
+            >
+              Club Information
+            </a>
+            <a
+              href="/about"
+              onClick={handleTeamMembers}
+              className="block px-5 py-3 text-[15px] text-white/90 hover:text-white hover:bg-blue-600/20 transition-all duration-150 border-l-2 border-transparent hover:border-blue-400"
+            >
+              Team Members
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
