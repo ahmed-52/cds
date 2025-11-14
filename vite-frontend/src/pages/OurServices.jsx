@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import React from 'react';
 
 const StrategyIcon = () => (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -42,82 +40,85 @@ const StrategyIcon = () => (
   );
 
 
-const ServiceCard = ({ title, description, examples, deliverables, icon }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
+const ServiceCard = ({ title, description, examples, deliverables }) => {
   return (
-    <div id='services' className="bg-white rounded-lg shadow-md overflow-hidden mb-6 border border-gray-100">
-      <div 
-        className="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50 transition-colors"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        <div className="flex items-center">
-          <div className="mr-4 text-primary w-6 h-6">
-            {icon}
-          </div>
-          <h3 className="text-xl font-bold text-textcl">{title}</h3>
-        </div>
-        <div>
-          {isOpen ? (
-            <ChevronUp className="h-6 w-6 text-primary" />
-          ) : (
-            <ChevronDown className="h-6 w-6 text-primary" />
-          )}
-        </div>
+    <div id='services' className="mb-16 last:mb-0 group">
+      {/* Header with title and upward caret */}
+      <div className="flex items-center justify-between mb-5">
+        <h3 className="text-3xl md:text-4xl font-bold text-textcl">{title}</h3>
+        <span className="text-primary text-2xl opacity-60 group-hover:opacity-100 transition-opacity">▲</span>
       </div>
       
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div 
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="overflow-hidden"
-          >
-            <div className="p-6 pt-0 border-t border-gray-100">
-              <p className="text-gray-700 mb-4">{description}</p>
-              
-              <div className="mb-4">
-                <h4 className="font-semibold text-lg mb-2 text-textcl">What this could look like:</h4>
-                <ul className="list-disc pl-5 text-gray-700 space-y-1">
-                  {examples.map((example, index) => (
-                    <li key={index}>{example}</li>
-                  ))}
-                </ul>
-              </div>
-              
-              <div>
-                <h4 className="font-semibold text-lg mb-2 text-textcl">Deliverables:</h4>
-                <ul className="list-disc pl-5 text-gray-700 space-y-1">
-                  {deliverables.map((deliverable, index) => (
-                    <li key={index}>{deliverable}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {/* Blue divider line */}
+      <div className="h-1.5 bg-primary w-full mb-8 rounded-full"></div>
+      
+      {/* Description paragraph */}
+      <p className="text-18 text-gray-700 mb-10 leading-relaxed max-w-4xl">{description}</p>
+      
+      {/* Two-column content box - no gap, lighter blue */}
+      <div className="grid grid-cols-1 md:grid-cols-2 rounded-xl overflow-hidden shadow-lg border border-gray-200">
+        {/* Left Panel - Light Blue */}
+        <div className="bg-gradient-to-br from-[#E4F2FF] to-[#D0E5FF] p-10">
+          <h4 className="font-bold text-xl mb-6 text-textcl">What this could look like:</h4>
+          <ul className="list-none space-y-3">
+            {examples.map((example, index) => (
+              <li key={index} className="text-16 text-gray-700 flex items-start gap-3">
+                <span className="text-primary mt-1.5 flex-shrink-0">•</span>
+                <span>{example}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        
+        {/* Right Panel - Primary Blue (same as Contact Us button) */}
+        <div className="bg-gradient-to-br from-primary to-blue-700 p-10">
+          <h4 className="font-bold text-xl mb-6 text-white">Deliverables:</h4>
+          <ul className="list-none space-y-3">
+            {deliverables.map((deliverable, index) => (
+              <li key={index} className="text-16 text-white flex items-start gap-3" style={{ color: 'white' }}>
+                <span className="text-white/90 mt-1.5 flex-shrink-0">•</span>
+                <span>{deliverable}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </div>
   );
 };
 
-const StepCard = ({ number, title, description, icon }) => {
+const StepCard = ({ title, description, buttonText, buttonLink, isLast }) => {
   return (
-    <div className="relative flex flex-col items-center">
-      <div className="absolute h-full w-px bg-blue-200 left-1/2 transform -translate-x-1/2 -z-10" />
-      
-      <div className="rounded-full bg-primary w-14 h-14 flex items-center justify-center text-white text-2xl font-bold z-10">
-        {number}
+    <div className="relative flex items-start mb-10 last:mb-0">
+      {/* Vertical arrow line on the left */}
+      <div className="flex flex-col items-center mr-6">
+        <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mb-2">
+          <svg 
+            className="w-5 h-5 text-primary" 
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
+        {!isLast && (
+          <div className="w-0.5 bg-primary/30 min-h-[90px] rounded-full"></div>
+        )}
       </div>
       
-      <div className="mt-4 bg-white rounded-lg shadow-md p-6 w-full border border-gray-100">
-        <div className="flex items-center mb-3">
-          <div className="mr-3 text-primary">{icon}</div>
-          <h3 className="text-xl font-bold text-textcl">{title}</h3>
-        </div>
-        <p className="text-gray-700">{description}</p>
+      {/* Content aligned to the right */}
+      <div className="flex-1 pt-1">
+        <h3 className="text-2xl font-bold text-textcl mb-3">{title}</h3>
+        <p className="text-gray-700 mb-4 leading-relaxed">{description}</p>
+        {buttonText && (
+          <a
+            href={buttonLink}
+            className="inline-block bg-primary text-white px-6 py-3 rounded-lg text-sm font-semibold hover:bg-blue-700 transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+          >
+            {buttonText}
+          </a>
+        )}
       </div>
     </div>
   );
@@ -192,135 +193,136 @@ const OurServices = () => {
     }
   ];
 
-  // For the workflow steps, we should also create SVG icons instead of emojis,
-  // but I'll keep them as emojis for now since they weren't part of your request
   const steps = [
     {
       number: 1,
       title: "Get in Touch",
-      description: "Schedule an initial consultation where we'll discuss your business challenges and goals to understand how we can help.",
-      icon: ""
+      description: "We learn more about you, your business, and your goals.",
+      buttonText: "Contact Us",
+      buttonLink: "/contact"
     },
     {
       number: 2,
-      title: "Preliminary Research",
-      description: "We conduct a deep dive into your industry, competition, and business processes to identify opportunities for improvement.",
-      icon: ""
+      title: "Research",
+      description: "We conduct thorough research to create the best plan-of-action to achieve your goals.",
+      buttonText: null,
+      buttonLink: null
     },
     {
       number: 3,
-      title: "Strategy Planning",
-      description: "We present our findings and collaborate with you to determine the best approach, with regular check-ins to ensure alignment.",
-      icon: ""
+      title: "Implement Project",
+      description: "We choose the right project type for your needs and implement actionable solutions.",
+      buttonText: "View our Project Types",
+      buttonLink: "/services#services"
     },
     {
       number: 4,
-      title: "Implementation",
-      description: "Our team develops and implements data-driven solutions tailored to your specific needs, with ongoing feedback and adjustments.",
-      icon: ""
-    },
-    {
-      number: 5,
-      title: "Delivery & Support",
-      description: "We deliver the final product along with documentation and training, ensuring you have everything needed to maintain success.",
-      icon: ""
+      title: "Deliver Result",
+      description: "We deliver a polished project that produces real results for your business.",
+      buttonText: "Featured Projects",
+      buttonLink: "/projects"
     }
   ];
 
   return (
-    <div className="max-w-[1400px] mx-auto px-4 md:px-6 py-12">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-[#0B1C2B] to-[#2562F5] overflow-hidden shadow-lg mb-16">
-        <div className="p-8 md:p-12 text-white">
-          <h1 className="text-3xl md:text-5xl font-bold mb-6">Our Services</h1>
-          <p className="text-lg md:text-xl max-w-3xl opacity-90">
-            At Cornell Data Strategy, we help businesses put data to work.
-          </p>
-        </div>
-      </div>
-
-      {/* Introduction */}
+    <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 py-16 md:py-20">
+      {/* Header Section */}
       <div className="mb-16">
-        <p className="text-lg text-gray-700 leading-relaxed max-w-4xl">
-          At Cornell Data Strategy, we help businesses put data to work. We find inefficiencies, explore new market opportunities, and solve financial and operational challenges. Whether it's improving supply chains, adjusting pricing, or evaluating market expansion, we don't just give advice—we build tools, create models, and implement solutions that make a real difference.
+        <h1 className="text-44 md:text-5xl font-bold mb-10 text-textcl tracking-tight">Our Services</h1>
+        
+        {/* First paragraph */}
+        <p className="text-18 md:text-xl leading-relaxed mb-6 text-textcl max-w-4xl">
+          At Cornell Data Strategy, we help businesses put data to work. We find inefficiencies, explore new market opportunities, and solve financial and operational challenges.
+        </p>
+        
+        {/* Second paragraph */}
+        <p className="text-18 md:text-xl leading-relaxed mb-0 text-textcl max-w-4xl">
+          Whether it's improving supply chains, adjusting pricing, or evaluating market expansion, we don't just give advice - we build tools, create models, and implement solutions that make a real difference.
         </p>
       </div>
 
-      {/* Overview */}
-      <div className="mb-16">
-        <h2 className="text-3xl font-bold mb-6 text-textcl">Overview</h2>
-        <div className="bg-white p-8 rounded-lg shadow-md border border-gray-100">
-          <p className="text-gray-700 leading-relaxed mb-8">
-            At Cornell Data Strategy, our projects are designed to deliver results within a single semester (8-10 weeks) during the Spring or Fall. Each team is led by experienced directors and supported by a group of dedicated associates, ensuring close collaboration and focused execution. We offer regular touch-points, whether weekly or bi-weekly, and customize our approach to align with each client's unique needs and goals, ensuring every partnership is impactful and efficient.
-          </p>
-          
-          <div className="flex flex-col md:flex-row justify-between items-center text-center gap-2">
-            <div className="flex flex-col items-center mb-4 md:mb-0">
-              <div className="text-4xl mb-2">🔍</div>
-              <p className="font-semibold text-textcl">Discovery</p>
+      {/* Overview Sub-header */}
+      <div className="mb-24">
+        <h2 className="text-3xl md:text-4xl font-bold mb-5 text-textcl tracking-tight">Overview</h2>
+        <div className="h-1.5 bg-primary w-full rounded-full"></div>
+      </div>
+
+      {/* Two-Column Section with Shared Blue Gradient Background - Full Width */}
+      <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] pt-64 pb-16 mb-20" style={{ background: 'linear-gradient(to bottom, #0B1C2B, #4A90E2, white)' }}>
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-8 items-start">
+            {/* Left Panel - How it Works Card (floating on top of blue gradient) */}
+            <div className="bg-gradient-to-b from-[#E4F2FF] to-[#B8D9F5] p-10 rounded-2xl shadow-2xl border border-white/50 -mt-72 lg:-mt-80 max-w-lg backdrop-blur-sm">
+              <h2 className="text-3xl md:text-4xl font-bold mb-10 text-textcl tracking-tight">How it Works</h2>
+              
+              <div className="relative">
+                {steps.map((step, index) => (
+                  <StepCard
+                    key={index}
+                    number={step.number}
+                    title={step.title}
+                    description={step.description}
+                    buttonText={step.buttonText}
+                    buttonLink={step.buttonLink}
+                    isLast={index === steps.length - 1}
+                  />
+                ))}
+              </div>
             </div>
-            
-            <div className="hidden md:block text-primary">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </div>
-            
-            <div className="flex flex-col items-center mb-4 md:mb-0">
-              <div className="text-4xl mb-2">📊</div>
-              <p className="font-semibold text-textcl">Analysis</p>
-            </div>
-            
-            <div className="hidden md:block text-primary">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </div>
-            
-            <div className="flex flex-col items-center mb-4 md:mb-0">
-              <div className="text-4xl mb-2">🏗</div>
-              <p className="font-semibold text-textcl">Solution Development</p>
-            </div>
-            
-            <div className="hidden md:block text-primary">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </div>
-            
-            <div className="flex flex-col items-center">
-              <div className="text-4xl mb-2">🎯</div>
-              <p className="font-semibold text-textcl">Implementation & Handoff</p>
+
+            {/* Right Panel - Text directly on blue gradient */}
+            <div className="flex items-start pt-8 pb-12 -mt-20">
+              <div className="space-y-8 text-left w-full max-w-2xl">
+                {/* First paragraph with icon */}
+                <div className="flex items-start gap-5 group -mt-12">
+                  <div className="flex-shrink-0 mt-1.5 p-2 rounded-lg bg-white/10 group-hover:bg-white/20 transition-colors">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <p className="text-lg md:text-xl leading-relaxed pt-1" style={{ color: 'white' }}>
+                    At Cornell Data Strategy, our projects are designed to <span className="font-bold text-white">deliver results within a single semester (8-10 weeks)</span> during the Spring or Fall.
+                  </p>
+                </div>
+                
+                {/* Divider */}
+                <div className="h-px bg-white/30 w-full ml-16"></div>
+                
+                {/* Second paragraph with icon */}
+                <div className="flex items-start gap-5 group">
+                  <div className="flex-shrink-0 mt-1.5 p-2 rounded-lg bg-white/10 group-hover:bg-white/20 transition-colors">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                  </div>
+                  <p className="text-lg md:text-xl leading-relaxed pt-1" style={{ color: 'white' }}>
+                    Each team is led by <span className="font-bold text-white">experienced</span> directors and supported by a group of dedicated associates, ensuring close <span className="font-bold text-white">collaboration</span> and focused <span className="font-bold text-white">execution</span>.
+                  </p>
+                </div>
+                
+                {/* Divider */}
+                <div className="h-px bg-white/30 w-full ml-16"></div>
+                
+                {/* Third paragraph with icon */}
+                <div className="flex items-start gap-5 group">
+                  <div className="flex-shrink-0 mt-1.5 p-2 rounded-lg bg-white/10 group-hover:bg-white/20 transition-colors">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <p className="text-lg md:text-xl leading-relaxed pt-1" style={{ color: 'white' }}>
+                    We offer <span className="font-bold text-white">regular touch-points</span>, whether weekly or bi-weekly, and customize our approach to align with each client's unique needs and goals, ensuring <span className="font-bold text-white">every partnership is impactful and efficient</span>.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* How It Works */}
-      <div className="mb-16">
-        <h2 className="text-3xl font-bold mb-8 text-textcl">How It Works</h2>
-        
-        <div className="grid grid-cols-1 gap-10 relative">
-          {steps.map((step, index) => (
-            <StepCard
-              key={index}
-              number={step.number}
-              title={step.title}
-              description={step.description}
-              icon={step.icon}
-            />
-          ))}
-          
-          {/* Hide the last connector line */}
-          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-px h-14 bg-white z-10"></div>
-        </div>
-      </div>
-
       {/* Our Services */}
-      <div>
-        <h2 className="text-3xl font-bold mb-8 text-textcl">Our Services</h2>
-        
-        <div>
+      <div className="mt-20">
+        <div className="space-y-0">
           {services.map((service, index) => (
             <ServiceCard
               key={index}
@@ -334,18 +336,129 @@ const OurServices = () => {
         </div>
       </div>
 
-      {/* Call to Action */}
-      <div className="mt-16 text-center bg-gray-50 rounded-lg p-8 shadow-inner">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4 text-textcl">Ready to transform your business with data?</h2>
-        <p className="text-gray-700 mb-8 max-w-2xl mx-auto">
-          Let's discuss how our expert team can help you solve challenges and unlock new opportunities.
-        </p>
-        <a 
-          href="/contact" 
-          className="inline-block bg-primary text-white px-8 py-4 rounded-md font-bold hover:bg-blue-700 transition-colors"
-        >
-          Get Started
-        </a>
+      {/* Current Projects Section */}
+      <div className="mt-24 mb-16">
+        <div className="mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold mb-5 text-textcl tracking-tight">Current Projects</h2>
+          <div className="h-1.5 bg-primary w-full rounded-full"></div>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* REST Project */}
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow">
+            <div className="overflow-hidden">
+              <img 
+                className="w-full h-56 object-cover" 
+                src="/projects/rest.png" 
+                alt="REST Project" 
+              />
+            </div>
+            <div className="p-6">
+              <h3 className="text-2xl font-bold mb-3 text-textcl">REST</h3>
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                A hospitality provider needed a way to comb through guests' feedback for practical yet impactful operational changes. We're currently using web scraping and NLP to create personalized recommendations. The final product is a dashboard to monitor reviews.
+              </p>
+              <a 
+                href="/projects"
+                className="inline-block bg-primary text-white px-6 py-3 rounded-lg text-sm font-semibold hover:bg-blue-700 transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+              >
+                Get involved
+              </a>
+            </div>
+          </div>
+
+          {/* Vortex Project */}
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow">
+            <div className="overflow-hidden">
+              <img 
+                className="w-full h-56 object-cover" 
+                src="/projects/vortex.jpeg" 
+                alt="Vortex Project" 
+              />
+            </div>
+            <div className="p-6">
+              <h3 className="text-2xl font-bold mb-3 text-textcl">Vortex</h3>
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                A healthcare provider needed to better serve underserved demographics and improve payer negotiations. Our multilingual outreach initiatives and pricing framework increased patient engagement by 12% and payer reimbursements by 4.72%.
+              </p>
+              <a 
+                href="/projects"
+                className="inline-block bg-primary text-white px-6 py-3 rounded-lg text-sm font-semibold hover:bg-blue-700 transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+              >
+                Get involved
+              </a>
+            </div>
+          </div>
+
+          {/* Phoenix Project */}
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow">
+            <div className="overflow-hidden">
+              <img 
+                className="w-full h-56 object-cover" 
+                src="/projects/b2b.png" 
+                alt="Phoenix Project" 
+              />
+            </div>
+            <div className="p-6">
+              <h3 className="text-2xl font-bold mb-3 text-textcl">Phoenix</h3>
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                A B2B service provider struggled to expand its customer base, relying heavily on referrals. By optimizing their outreach and leveraging high-value trade events, we increased qualified leads by 15% and secured ~ $400,000 in new contracts within three months.
+              </p>
+              <a 
+                href="/projects"
+                className="inline-block bg-primary text-white px-6 py-3 rounded-lg text-sm font-semibold hover:bg-blue-700 transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+              >
+                Get involved
+              </a>
+            </div>
+          </div>
+
+          {/* Nexus Project */}
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow">
+            <div className="overflow-hidden">
+              <img 
+                className="w-full h-56 object-cover" 
+                src="/projects/nexus.jpg" 
+                alt="Nexus Project" 
+              />
+            </div>
+            <div className="p-6">
+              <h3 className="text-2xl font-bold mb-3 text-textcl">Nexus</h3>
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                A restaurant needed a way to comb through guests' feedback for practical yet impactful operational changes. We're currently using web scraping and NLP to create personalized recommendations. The final product is a dashboard to monitor reviews.
+              </p>
+              <a 
+                href="/projects"
+                className="inline-block bg-primary text-white px-6 py-3 rounded-lg text-sm font-semibold hover:bg-blue-700 transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+              >
+                Get involved
+              </a>
+            </div>
+          </div>
+
+          {/* Quantum Project */}
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow">
+            <div className="overflow-hidden">
+              <img 
+                className="w-full h-56 object-cover" 
+                src="/projects/payerstrat.png" 
+                alt="Quantum Project" 
+              />
+            </div>
+            <div className="p-6">
+              <h3 className="text-2xl font-bold mb-3 text-textcl">Quantum</h3>
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                A healthcare provider needed to better serve underserved demographics and improve payer negotiations. Our multilingual outreach initiatives and pricing framework increased patient engagement by 12% and payer reimbursements by 4.72%.
+              </p>
+              <a 
+                href="/projects"
+                className="inline-block bg-primary text-white px-6 py-3 rounded-lg text-sm font-semibold hover:bg-blue-700 transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+              >
+                Get involved
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

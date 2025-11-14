@@ -237,14 +237,14 @@ const AboutDropdown = ({ active }) => {
               onClick={handleClubInfo}
               className="block px-5 py-3 text-[15px] text-white/90 hover:text-white hover:bg-blue-600/20 transition-all duration-150 border-l-2 border-transparent hover:border-blue-400"
             >
-              Club Information
+              About Club
             </a>
             <a
               href="/about"
               onClick={handleTeamMembers}
               className="block px-5 py-3 text-[15px] text-white/90 hover:text-white hover:bg-blue-600/20 transition-all duration-150 border-l-2 border-transparent hover:border-blue-400"
             >
-              Team Members
+              Members
             </a>
           </div>
         </div>
