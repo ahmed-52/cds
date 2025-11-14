@@ -58,7 +58,7 @@ const HomeAbout2 = () => {
         >
           <div className="2xl:max-w-[675px] max-w-[550px] w-full">
             <img
-              src="/media/nexus.png"
+              src="/images/zs1.png"
               className="object-cover h-full w-full"
               alt="Client Consultation"
             />
@@ -111,7 +111,7 @@ const HomeAbout2 = () => {
 
           <div className="2xl:max-w-[675px] max-w-[550px] w-full">
             <img
-              src="/media/team.png"
+              src="/images/groupg.jpg"
               className="object-cover h-full w-full"
               alt="Team Synergy"
             />
@@ -124,9 +124,9 @@ const HomeAbout2 = () => {
           data-bgcolor="#E4F2FF" 
           data-textcolor="#252526"
         >
-          <div className="2xl:max-w-[575px] max-w-[375px] w-full">
+          <div className="2xl:max-w-[675px] max-w-[575px] w-full">
             <img
-              src="/media/group.png"
+              src="/images/afd.jpg"
               className="object-cover h-full w-full"
               alt="Leadership in Action"
             />
