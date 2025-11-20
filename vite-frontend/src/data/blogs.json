@@ -1,0 +1,13 @@
+[
+  {
+    "id": "1",
+    "title": "Introducing Our First Blog",
+    "slug": "introducing-our-first-blog",
+    "date": "2025-11-16",
+    "excerpt": "We're excited to launch our blog to share updates, insights, and member stories.",
+    "content": "This is the full content of the blog. You can expand this field in the JSON file with HTML or markdown as needed. For now it's simple text to demonstrate the feature.",
+    "image": "/media/projects.png",
+    "tags": ["announcement", "community"],
+    "author": "Cornell Data Strategy"
+  }
+]
