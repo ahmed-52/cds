@@ -125,8 +125,14 @@ const Navbar = ({dark = true}) => {
               <MobileNavLink href="/" active={activeLink === 'home'} onClick={toggleMenu}>Home</MobileNavLink>
               <MobileNavLink href="/services" active={activeLink === 'services'} onClick={toggleMenu}>Services</MobileNavLink>
               <MobileNavLink href="/projects" active={activeLink === 'projects'} onClick={toggleMenu}>Projects</MobileNavLink>
-              <MobileNavLink href="/about" active={activeLink === 'about'} onClick={toggleMenu}>About</MobileNavLink>
-              <MobileNavLink href="/membership" active={activeLink === 'membership'} onClick={toggleMenu}>Membership</MobileNavLink>
+              
+              {/* Mobile About Dropdown */}
+              <MobileAboutDropdown 
+                active={activeLink === 'about'} 
+                onClick={toggleMenu}
+              />
+              
+              <MobileNavLink href="/membership" active={activeLink === 'membership'} onClick={toggleMenu}>Apply</MobileNavLink>
               <MobileNavLink href="/gatsby-event" active={activeLink === 'event'} onClick={toggleMenu}>Event</MobileNavLink>
               <MobileNavLink href="/contact" active={activeLink === 'contact'} onClick={toggleMenu}>Contact Us</MobileNavLink>
               <a 
@@ -270,6 +276,69 @@ const MobileNavLink = ({ href, active, onClick, children }) => {
     >
       {children}
     </a>
+  );
+};
+
+// Mobile About Dropdown Component
+const MobileAboutDropdown = ({ active, onClick }) => {
+  const scrollToElement = (elementId) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      const offset = 80; // Account for navbar height
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  const handleClubInfo = (e) => {
+    e.preventDefault();
+    onClick();
+    if (window.location.pathname !== '/about') {
+      window.location.href = '/about#about-top';
+    } else {
+      scrollToElement('about-top');
+    }
+  };
+
+  const handleTeamMembers = (e) => {
+    e.preventDefault();
+    onClick();
+    if (window.location.pathname !== '/about') {
+      window.location.href = '/about#team-members';
+    } else {
+      scrollToElement('team-members');
+    }
+  };
+
+  return (
+    <div className="border-b border-gray-700">
+      <div className={`text-xl font-medium py-2 ${
+        active ? 'text-blue-300' : ''
+      }`}>
+        About
+      </div>
+      
+      <div className="pl-4 pt-2 pb-2 space-y-2">
+        <a
+          href="/about"
+          onClick={handleClubInfo}
+          className="block text-lg text-white/80 hover:text-blue-300 py-1 transition-colors"
+        >
+          About Club
+        </a>
+        <a
+          href="/about"
+          onClick={handleTeamMembers}
+          className="block text-lg text-white/80 hover:text-blue-300 py-1 transition-colors"
+        >
+          Team
+        </a>
+      </div>
+    </div>
   );
 };
 

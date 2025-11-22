@@ -87,7 +87,7 @@ const ImpactStories = () => {
               </div>
 
               {/* Image Side - Strictly Rectangular */}
-              <div className={`relative overflow-hidden h-[400px] lg:h-auto ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
+              <div className={`relative overflow-hidden aspect-[4/3] lg:h-full lg:min-h-[500px] ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
                  <motion.div 
                    className="w-full h-full"
                    whileHover={{ scale: 1.05 }}
@@ -96,7 +96,7 @@ const ImpactStories = () => {
                     <img 
                         src={story.image} 
                         alt={story.title}
-                        className="w-full h-full object-cove  transition-all duration-700 ease-in-out"
+                        className="w-full h-full object-cover transition-all duration-700 ease-in-out"
                     />
                  </motion.div>
                  {/* Flash of blue on hover */}
