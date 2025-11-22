@@ -43,7 +43,7 @@ const WhoWeAre = () => {
             "/images/adilucio.jpg",
             "/images/collab.jpg",
             "/images/jimmy.jpg",
-            "/images/paul.jpg"
+            "/images/chrismihir.jpg"
           ].map((src, idx) => (
             <div key={idx} className="aspect-[4/5] relative group overflow-hidden border-r border-b lg:border-b-0 border-[#051C2C]/10 last:border-r-0">
                <img 
