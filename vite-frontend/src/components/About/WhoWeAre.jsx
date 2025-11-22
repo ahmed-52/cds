@@ -2,57 +2,62 @@ import React from 'react';
 
 const WhoWeAre = () => {
   return (
-    <main className='max-w-[1400px] mx-auto'>
-    <section className="flex flex-col lmd:flex-row items-center justify-between md:items-start p-6 md:p-20">
-      <div className="lmd:max-w-[750px] max-w-[500px] lmd:self-auto self-start">
-        <h1 className="text-44 font-bold mb-4">Who we are</h1>
-        <p className="text-18">
-          At Cornell Data Strategy, we're a diverse collective of analytical problem-solvers who transform complex data into actionable business strategies. We bring together technical expertise and business acumen to uncover the narratives hidden within numbers. United by curiosity and Teamorative spirit, we forge partnerships that deliver work that matters—not just executing projects, but fundamentally changing how organizations leverage their data to achieve meaningful results.
-        </p>
-      </div>
-      <div id='who-we-are' className="max-w-[429px] w-auto mt-6 lmd:ml-12  self-start">
-        <img src="/images/group2.png" alt="Team" className="w-full h-auto" />
-      </div>
-    </section>
+    <main className='max-w-[1600px] mx-auto bg-white'>
+      
+      {/* SECTION 1: IDENTITY */}
+      <section className="grid lg:grid-cols-2 border-b border-[#051C2C]/10">
+        {/* Text Side */}
+        <div className="p-8 lg:p-20 flex flex-col justify-center border-r border-[#051C2C]/10">
+          <div className="flex items-center gap-4 mb-8">
+             <div className="h-px w-8 bg-[#051C2C]"></div>
+             <span className="text-xs font-bold uppercase tracking-widest text-slate-400">Identity</span>
+          </div>
+          
+          <h1 className="text-4xl lg:text-5xl font-serif text-[#051C2C] mb-8 leading-tight">
+            Who we are
+          </h1>
+          <p className="text-lg text-slate-600 font-light leading-relaxed">
+            At Cornell Data Strategy, we're a diverse collective of analytical problem-solvers who transform complex data into actionable business strategies. We bring together technical expertise and business acumen to uncover the narratives hidden within numbers. United by curiosity and collaborative spirit, we forge partnerships that deliver work that matters—not just executing projects, but fundamentally changing how organizations leverage their data.
+          </p>
+        </div>
 
-    <section className="p-6 md:px-20 md:pb-10">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Non-stop Collaborative Culture</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="mx-auto">
-            <img src="/media/collab5.png" alt="Collaboration 1" className="md:max-w-[270px] max-w-[350px] w-full h-auto" />
-          </div>
-          <div className="mx-auto">
-            <img src="/images/Team2.png" alt="Collaboration 2" className="md:max-w-[300px] max-w-[350px] w-full h-auto" />
-          </div>
-          <div className="mx-auto">
-            <img src="/images/Team3.png" alt="Collaboration 3" className="md:max-w-[300px] max-w-[350px] w-full h-auto" />
-          </div>
-          <div className="mx-auto">
-            <img src="/images/Team4.png" alt="Collaboration 4" className="md:max-w-[270px] max-w-[350px] w-full h-auto" />
-          </div>
+        {/* Image Side */}
+        <div id='who-we-are' className="relative h-full min-h-[400px]">
+          <img 
+            src="/images/groupphoto.png" 
+            alt="Cornell Data Strategy Team" 
+            className="absolute inset-0 w-full h-full object-cover transition-all duration-700" 
+          />
         </div>
       </section>
 
-
-      <section className="flex flex-col md:flex-row items-center justify-between md:items-start p-6 md:px-20 md:pt-20">
-        <div className="self-start max-w-[300px] w-auto mt-6 md:mt-0 md:mr-12 mb-8">
-          <img src="/media/group.png" alt="Journey" className="w-full h-auto min-w-[300px]" />
-        </div>
-        <div className="max-w-[700px]">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Journey</h2>
-          <p className="text-18 mb-3">
-          Our organization has grown to include members from diverse academic backgrounds. We partner with small-to-medium businesses, startups, and Cornell organizations to tackle their most pressing data challenges, delivering solutions that create measurable value while providing our members with invaluable hands-on experience in the rapidly evolving field of data analytics.
-          </p>
-          <div className="flex flex-row justify-end items-center w-full mb-10">
-          <div className="h-8 w-[30%] bg-blue-600">
-                      <div className="h-full bg-blue-600"></div>
-            </div>
-            </div>
+      {/* SECTION 2: CULTURE (Grid Layout) */}
+      <section className="border-b border-[#051C2C]/10">
+        <div className="p-8 lg:p-12 text-center border-b border-[#051C2C]/10">
+           <h2 className="text-3xl md:text-4xl font-serif text-[#051C2C]">Non-stop Collaborative Culture</h2>
         </div>
         
+        {/* Strict 4-column Grid with borders */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+          {[
+            "/images/adilucio.jpg",
+            "/images/collab.jpg",
+            "/images/jimmy.jpg",
+            "/images/paul.jpg"
+          ].map((src, idx) => (
+            <div key={idx} className="aspect-[4/5] relative group overflow-hidden border-r border-b lg:border-b-0 border-[#051C2C]/10 last:border-r-0">
+               <img 
+                 src={src} 
+                 alt={`Culture ${idx}`} 
+                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+               />
+               <div className="absolute inset-0 bg-[#051C2C]/20 group-hover:bg-transparent transition-colors duration-500"></div>
+            </div>
+          ))}
+        </div>
       </section>
 
-
+      {/* SECTION 3: JOURNEY */}
 
     </main>
   );

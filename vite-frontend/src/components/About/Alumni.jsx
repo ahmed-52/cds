@@ -34,23 +34,33 @@ const Alumni = () => {
   ];
 
   return (
-    <section className="p-6 md:p-20 bg-gray-200">
-      <h2 className="text-44 font-bold mb-18 text-center">Alumni Placings</h2>
+    <section className="py-20 bg-white border-b border-[#051C2C]/10 overflow-hidden">
+      <div className="max-w-[1600px] mx-auto px-6 mb-12 flex items-end justify-between">
+          <div>
+            <span className="text-xs font-bold uppercase tracking-widest text-[#155cfc] block mb-2">Network</span>
+            <h2 className="text-4xl font-serif text-[#051C2C]">Alumni Placements</h2>
+          </div>
+          <div className="hidden md:block h-px w-full max-w-md bg-[#051C2C]/10 mb-4"></div>
+      </div>
       
-      <div className="logo-carousel">
+      <div className="logo-carousel relative">
+        {/* Fade gradients to mask the edges of the marquee */}
+        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10"></div>
+        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-10"></div>
+
         <div className="logo-track" ref={trackRef}>
           <div className="logo-container">
             {logos.map((logo, index) => (
-              <div className="logo-item" key={index}>
+              <div className="logo-item opacity-60 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0" key={index}>
                 <img src={logo.src} alt={logo.alt} />
               </div>
             ))}
           </div>
           
-          {/* Second copy for seamless loop - a third will be added by JS */}
+          {/* Second copy for seamless loop */}
           <div className="logo-container">
             {logos.map((logo, index) => (
-              <div className="logo-item" key={`second-${index}`}>
+              <div className="logo-item opacity-60 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0" key={`second-${index}`}>
                 <img src={logo.src} alt={logo.alt} />
               </div>
             ))}
@@ -78,8 +88,8 @@ const Alumni = () => {
         
         .logo-item {
           flex: 0 0 180px;
-          height: 70px;
-          margin: 0 25px;
+          height: 60px;
+          margin: 0 40px;
           display: flex;
           align-items: center;
           justify-content: center;
