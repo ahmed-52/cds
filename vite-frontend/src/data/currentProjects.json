@@ -9,7 +9,7 @@
   {
     "id": 2,
     "title": "Tariff Risk Simulation for a Multi-Channel Retailer",
-    "body": "Developed an enterprise tariff model for a $100M+ retailer, running 15+ trade scenarios to quantify exposure and protect 11–14% of at-risk margin across sourcing, logistics, and pricing.",
+    "body": "Developed an enterprise tariff model for a national retailer, running 15+ trade scenarios to quantify exposure and protect 11–14% of at-risk margin across sourcing, logistics, and pricing.",
     "image": "/projects/flx.jpeg",
     "link": "/projects"
   },
@@ -25,6 +25,20 @@
     "title": "Digital Transformation Blueprint for a Banking Institution",
     "body": "Mapped 120+ processes for a multi-billion-asset bank to identify high-ROI CRM and automation opportunities projected to reduce operational inefficiencies by 15–25%.",
     "image": "/projects/bank.jpeg",
+    "link": "/projects"
+  },
+  {
+    "id": 5,
+    "title": "Exhibition Logistics Optimization for a National Cultural Institution",
+    "body": "Built a optimization model for a museum network managing over 100 traveling exhibitions annually, reducing forecast error by 28% and identifying 12–18% savings in routing and resource allocation.",
+    "image": "/projects/musem.jpeg",
+    "link": "/projects"
+  },
+  {
+    "id": 6,
+    "title": "Enterprise Modernization for a Beverage Producer",
+    "body": "We supported a $200M+ beverage producer in moving to an integrated CRM–ERP system, reducing reconciliation time by 35–45% and shaping the launch strategy for a new RTD product line.",
+    "image": "/projects/bottle.jpeg",
     "link": "/projects"
   }
 ]

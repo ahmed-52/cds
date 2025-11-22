@@ -15,7 +15,6 @@ const Alumni = () => {
   }, []);
 
   const logos = [
-    { src: "/alumni/cbre.svg", alt: "CBRE Group" },
     { src: "/alumni/bcg.svg", alt: "BCG" },
     { src: "/alumni/CME 1.svg", alt: "CME" },
     { src: "/alumni/g.webp", alt: "Google" },

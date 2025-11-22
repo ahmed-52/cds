@@ -113,7 +113,7 @@ const Navbar = () => {
 
           <NavLink href="/corporate-partnerships" text="Corporate" isTransparent={isTransparentMode} />
           <NavLink href="/membership" text="Apply" isTransparent={isTransparentMode} />
-          <NavLink href="/gatsby-event" text="Event" isTransparent={isTransparentMode} />
+              <NavLink href="/blogs" text="Blogs" isTransparent={isTransparentMode} />
           
           <div className={`h-4 w-px mx-2 opacity-20 ${isTransparentMode ? 'bg-white' : 'bg-[#051C2C]'}`}></div>
           
@@ -153,6 +153,13 @@ const Navbar = () => {
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
+        <button
+          className="absolute top-8 right-6 text-[#051C2C]"
+          onClick={() => setIsMenuOpen(false)}
+          aria-label="Close menu"
+        >
+          <X size={28} />
+        </button>
         <div className="flex flex-col gap-6">
             <MobileLink href="/" text="Home" />
             <MobileLink href="/services" text="Services" />
@@ -166,7 +173,7 @@ const Navbar = () => {
 
             <MobileLink href="/corporate-partnerships" text="Corporate" />
             <MobileLink href="/membership" text="Apply" />
-            <MobileLink href="/gatsby-event" text="Event" />
+            <MobileLink href="/blogs" text="Blogs" />
             <MobileLink href="/contact" text="Contact" />
             
             <a 
