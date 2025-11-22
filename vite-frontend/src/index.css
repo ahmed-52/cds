@@ -103,6 +103,21 @@ body {
   color: #252526;
 }
 
+/* Generic hero animations for components that were using Tailwind-like classes */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
+.animate-fade-up {
+  opacity: 0;
+  animation: fadeUp 0.8s ease-out forwards;
+}
 
 /* about  */

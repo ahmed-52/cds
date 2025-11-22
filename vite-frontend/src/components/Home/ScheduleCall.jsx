@@ -1,49 +1,50 @@
 import React from 'react';
+import { ArrowRight } from 'lucide-react';
 
 const ScheduleCall = () => {
   return (
-    <section className="relative bg-gray-100 py-36 px-8 overflow-hidden">
-      {/* Background SVG Pattern - Positioned to the right side */}
-      <div className="absolute top-0 right-0 h-full w-3/4 z-0 pointer-events-none">
-
-        <img 
-          src="/waves.svg" 
-          alt=""
-          className="object-cover h-full w-full opacity-20"
-          style={{
-            objectPosition: 'right center',
-            mixBlendMode: 'multiply' // This helps blend the SVG with the background
-          }}
-        />
+    <section className="relative bg-[#F2F2F2] py-24 lg:py-36 px-6 lg:px-12 overflow-hidden">
+      
+      {/* Background Texture (Dot Pattern) */}
+      <div className="absolute inset-0 opacity-[0.05]" 
+           style={{backgroundImage: 'radial-gradient(#051C2C 1px, transparent 1px)', backgroundSize: '32px 32px'}}>
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto">
-        <div className="max-w-lg">
-          <h2 className="text-44 font-bold text-black mb-4">Schedule a call today</h2>
-          <p className="text-18 text-gray-700 mb-8">
-            Contact us for a free consultation and discover how our expertise translates to value for your business.
-          </p>
-          <a 
-            href="/contact" 
-            className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded transition-colors"
-          >
-            Contact us
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              className="h-5 w-5 ml-2" 
-              viewBox="0 0 20 20" 
-              fill="currentColor"
-            >
-              <path 
-                fillRule="evenodd" 
-                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" 
-                clipRule="evenodd" 
-              />
-            </svg>
-          </a>
+      {/* Content Container */}
+      <div className="relative z-10 max-w-[1600px] mx-auto">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-end">
+          
+          {/* Headline */}
+          <div className="lg:col-span-7">
+             <p className="text-cornell-red font-bold uppercase tracking-widest text-xs mb-6">
+                Ready to transform?
+             </p>
+             <h2 className="text-5xl md:text-7xl font-serif text-[#051C2C] leading-[1.1] tracking-tight">
+               Let's discuss how we can drive <span className="italic text-[#155cfc]">value</span> for your business.
+             </h2>
+          </div>
+
+          {/* Action & Desc */}
+          <div className="lg:col-span-5 pb-2">
+            <p className="text-lg text-slate-600 font-light leading-relaxed mb-10">
+              Contact us for a consultation to discover how our blend of strategy and execution translates to measurable ROI.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="/contact"
+                  className="group inline-flex items-center justify-center bg-[#051C2C] text-white font-sans font-bold text-xs uppercase tracking-widest px-10 py-5 hover:bg-[#155cfc] transition-all duration-300 shadow-xl"
+                >
+                  Schedule A Call
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </a>
+            </div>
+          </div>
         </div>
       </div>
+      
+      {/* Bottom Decor */}
+      <div className="absolute bottom-0 left-0 w-full h-2 bg-[#051C2C]"></div>
     </section>
   );
 };

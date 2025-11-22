@@ -1,154 +1,115 @@
-import React, { useEffect } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { ArrowUpRight } from 'lucide-react';
 
-const HomeAbout2 = () => {
-  useEffect(() => {
-    // Register GSAP plugins
-    gsap.registerPlugin(ScrollTrigger);
-    
-    // Set initial body background to white to prevent flashing
-    gsap.set("body", { backgroundColor: "#FFFFFF" });
-    
-    // Short delay to ensure everything is properly loaded and rendered
-    setTimeout(() => {
-      // Set up color changing sections - using simpler implementation
-      const scrollColorElems = document.querySelectorAll("[data-bgcolor]");
-      
-      scrollColorElems.forEach((colorSection, i) => {
-        const prevBg = i === 0 ? "#FFFFFF" : scrollColorElems[i - 1].dataset.bgcolor;
-        
-        ScrollTrigger.create({
-          trigger: colorSection,
-          start: i === 0 ? "top 90%" : "top 60%", // First section triggers sooner
-          end: "bottom 40%",
-          markers: false, // Set to true for debugging
-          onEnter: () => {
-            gsap.to("body", {
-              backgroundColor: colorSection.dataset.bgcolor,
-              duration: 0.8,
-              ease: "power2.inOut"
-            });
-          },
-          onLeaveBack: () => {
-            gsap.to("body", {
-              backgroundColor: prevBg,
-              duration: 0.8,
-              ease: "power2.inOut"
-            });
-          }
-        });
-      });
-    }, 100); // Small delay for stability
-    
-    // Clean up on component unmount
-    return () => {
-      ScrollTrigger.getAll().forEach(st => st.kill());
-    };
-  }, []);
-  
+const ImpactStories = () => {
+  const stories = [
+    {
+      id: "01",
+      category: "Consultation",
+      title: "Client-First Engagement",
+      description: "We don't stop at advice. Our teams work directly with client leadership to implement strategies, ensuring decisions translate into measurable outcomes.",
+      image: "/images/zs1.png",
+      link: "/projects",
+      linkText: "See Past Projects"
+    },
+    {
+      id: "02",
+      category: "Synergy",
+      title: "Cross-Functional Power",
+      description: "Business and technical talent working side by side. We bridge the gap between MBA strategy and engineering execution to solve problems faster.",
+      image: "/images/groupg.jpg",
+      link: "/about",
+      linkText: "Meet Our Members"
+    },
+    {
+      id: "03",
+      category: "Leadership",
+      title: "Executive Ownership",
+      description: "Members lead projects end-to-end, managing teams and presenting directly to executives. It is real-world pressure, preparing us for real-world success.",
+      image: "/images/afd.jpg",
+      link: "/contact",
+      linkText: "Get in Touch"
+    }
+  ];
+
   return (
-    <main className="overflow-hidden">
-      <div className="max-w-[2000px] mx-auto">
-        {/* Client Consultations Section - White background */}
-        <div 
-          className="flex lmd:flex-row flex-col justify-around items-center mt-20 gap-12 py-5 px-5"
-          data-bgcolor="#FFFFFF" 
-          data-textcolor="#252526"
-        >
-          <div className="2xl:max-w-[675px] max-w-[550px] w-full">
-            <img
-              src="/images/zs1.png"
-              className="object-cover h-full w-full"
-              alt="Client Consultation"
-            />
-          </div>
-
-          <div className="flex flex-col justify-between items-start gap-4">
-            <h2 className="text-textcl text-44 font-bold">Client Consultations</h2>
-            <p className="text-18 max-w-[532px]">
-            We don't stop at advice. Our teams work directly with client leadership to implement strategies, ensuring decisions translate into measurable outcomes.
-            </p>
-            
-            <a href="/projects" className="hover:underline text-16 font-semibold flex items-center mt-4">
-              See Past Projects 
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="ml-1">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <div className="flex flex-row justify-end items-center w-full">
-          <div className="h-8 w-[30%] bg-blue-600">
-            <div className="h-full bg-blue-600"></div>
-          </div>
-        </div>
-
-        {/* Team Synergy Section - Light blue background */}
-        <div 
-          className="flex lmd:flex-row flex-col-reverse justify-around items-center mt-20 gap-12 px-5"
-          data-bgcolor="#F0EBFF" 
-          data-textcolor="#252526"
-        >
-          <div className="flex flex-col justify-between items-start gap-4">
-            <h2 className="text-textcl text-44 font-bold">Team Synergy</h2>
-            <p className="text-18 max-w-[532px]">
-            Business and technical talent working side by side, solving problems faster and better together.
-            </p>
-            
-            <a href="/about" className="hover:underline text-16 font-semibold flex items-center mt-4">
-              Meet Our Members
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="ml-1">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
-            
-            <div className="relative h-8 w-48 bg-blue-600 my-4">
-              <div className="absolute h-full bg-blue-600 right-full w-screen"></div>
+    <section className="bg-white text-[#051C2C] relative">
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-12 xl:px-16">
+        
+        {/* Section Header */}
+        <div className="pb-10 lg:pb-32 border-b border-[#051C2C]/10">
+          <div className="grid lg:grid-cols-2 gap-12 items-end">
+            <div>
+              <div className="flex items-center gap-4 mb-6">
+                <div className="h-px w-12 bg-[#155cfc]"></div>
+                <span className="text-xs font-bold uppercase tracking-widest text-[#155cfc]">Our Impact Model</span>
+              </div>
+              <h2 className="text-5xl lg:text-7xl font-serif leading-[1.05]">
+                Built for <span className="italic text-gray-400">results.</span>
+              </h2>
             </div>
-          </div>
-
-          <div className="2xl:max-w-[675px] max-w-[550px] w-full">
-            <img
-              src="/images/groupg.jpg"
-              className="object-cover h-full w-full"
-              alt="Team Synergy"
-            />
-          </div>
-        </div>
-
-        {/* Leadership in Action Section - Light gray background */}
-        <div 
-          className="flex lmd:flex-row flex-col justify-around items-center mt-20 gap-12 relative pt-5 pb-20 px-5"
-          data-bgcolor="#E4F2FF" 
-          data-textcolor="#252526"
-        >
-          <div className="2xl:max-w-[675px] max-w-[575px] w-full">
-            <img
-              src="/images/afd.jpg"
-              className="object-cover h-full w-full"
-              alt="Leadership in Action"
-            />
-          </div>
-
-          <div className="flex flex-col justify-between items-start gap-4">
-            <h2 className="text-textcl text-44 font-bold">Leadership in Action</h2>
-            <p className="text-18 max-w-[532px]">
-            Members lead projects end-to-end, managing teams and presenting directly to executives.
+            <p className="text-lg text-slate-600 font-light leading-relaxed max-w-xl lg:ml-auto">
+              We operate differently than a standard student club. We model ourselves after the firms we aspire to join, prioritizing client impact and professional rigor above all else.
             </p>
-            
-            <a href="/contact" className="hover:underline text-16 font-semibold flex items-center mt-4">
-              Get in Touch
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="ml-1">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
           </div>
         </div>
+
+        {/* The Grid Layout - Strict Lines, No Shadows */}
+        <div>
+          {stories.map((story, index) => (
+            <div key={index} className="group relative border-b border-[#051C2C]/10 grid lg:grid-cols-2">
+              
+              {/* Content Side */}
+              <div className={`relative flex flex-col justify-center py-16 lg:py-24 pr-8 lg:pr-24 ${index % 2 === 1 ? 'lg:order-2 lg:pl-24 lg:pr-0 lg:border-l border-[#051C2C]/10' : 'lg:border-r border-[#051C2C]/10'}`}>
+                
+                {/* Numbering background decoration */}
+                <span className="absolute top-8 left-0 lg:left-8 text-[120px] font-serif leading-none text-[#051C2C]/[0.03] select-none pointer-events-none">
+                  {story.id}
+                </span>
+
+                <div className="relative z-10">
+                    <span className="block text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">
+                        {story.category}
+                    </span>
+                    <h3 className="text-3xl lg:text-5xl font-serif mb-6 group-hover:text-[#155cfc] transition-colors duration-300">
+                        {story.title}
+                    </h3>
+                    <p className="text-lg text-slate-600 font-light leading-relaxed mb-10">
+                        {story.description}
+                    </p>
+                    
+                    <a href={story.link} className="inline-flex items-center text-xs font-bold uppercase tracking-widest border-b border-[#051C2C] pb-1 hover:text-[#155cfc] hover:border-[#155cfc] transition-colors">
+                        {story.linkText}
+                        <ArrowUpRight className="ml-2 w-4 h-4" />
+                    </a>
+                </div>
+              </div>
+
+              {/* Image Side - Strictly Rectangular */}
+              <div className={`relative overflow-hidden h-[400px] lg:h-auto ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
+                 <motion.div 
+                   className="w-full h-full"
+                   whileHover={{ scale: 1.05 }}
+                   transition={{ duration: 0.7, ease: "easeOut" }}
+                 >
+                    <img 
+                        src={story.image} 
+                        alt={story.title}
+                        className="w-full h-full object-cove  transition-all duration-700 ease-in-out"
+                    />
+                 </motion.div>
+                 {/* Flash of blue on hover */}
+                 <div className="absolute inset-0 bg-[#155cfc]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none mix-blend-multiply"></div>
+              </div>
+
+            </div>
+          ))}
+        </div>
+
       </div>
-    </main>
+    </section>
   );
 };
 
-export default HomeAbout2;
+export default ImpactStories;
