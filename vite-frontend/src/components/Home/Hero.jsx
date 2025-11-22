@@ -23,7 +23,7 @@ const Hero = () => {
       </div>
 
       {/* Main container */}
-      <div className="relative z-10 flex flex-col justify-center h-full px-6 lmd:px-12 xl:px-16 max-w-[1600px] mx-auto pt-20 pb-28 md:pb-0">
+      <div className="relative z-10 flex flex-col justify-center h-full px-6 lmd:px-12 xl:px-16 max-w-[1600px] mx-auto pt-30 pb-28 md:pb-0">
         
         {/* Content section - left aligned with fade-up animations */}
         <div className="flex flex-col gap-8 max-w-4xl text-left p-2">

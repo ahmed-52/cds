@@ -33,5 +33,33 @@
     "body": "Helped a retailer address a 15% decline in customer experience by implementing an integrated digital journey, improving satisfaction by 22% within six months.",
     "image": "/projects/retail.jpeg",
     "link": "/projects"
+  },
+    {
+    "id": 1,
+    "title": "New Market Entry for a Real Estate Firm",
+    "body": "Evaluating expansion opportunities by analyzing demographics, competitor presence, and commercial activity across secondary markets to prioritize regions with long-term investment potential and strategic alignment.",
+    "image": "/projects/keystone.jpg",
+    "link": "/projects"
+  },
+  {
+    "id": 2,
+    "title": "Growth Strategy for a B2B Service Provider",
+    "body": "Developing a growth strategy by assessing the current client base, identifying underserved segments, and modeling potential revenue uplift from expanded offerings and new verticals.",
+    "image": "/projects/vortex.jpeg",
+    "link": "/projects"
+  },
+  {
+    "id": 3,
+    "title": "Customer Sentiment Engine for the Hospitality Sector",
+    "body": "Deploying an analytics tool that leverages NLP to extract sentiment from customer reviews and survey data, helping operators understand guest experience drivers and tailor offerings at scale.",
+    "image": "/projects/rest.png",
+    "link": "/projects/"
+  },
+  {
+    "id": 4,
+    "title": "Predictive Routing Tool for the Logistics Industry",
+    "body": "Piloting a routing optimization solution that combines GPS data, delivery logs, and incident reports to reduce inefficiencies and predict accident risk based on historical patterns.",
+    "image": "/projects/nexus.jpg",
+    "link": "/projects"
   }
 ]

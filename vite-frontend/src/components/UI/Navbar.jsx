@@ -1,345 +1,219 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { Menu, X, ChevronDown } from 'lucide-react';
 
-const Navbar = ({dark = true}) => {
+const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState('home');
-  const [currentRoute, setCurrentRoute] = useState('/');
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const [activeHover, setActiveHover] = useState(null);
 
-  // Set active link based on URL path
+  // --- LOGO CONFIGURATION ---
+  // Update these paths to match your actual files
+  const LOGO_WHITE = "/logo2.svg"; // Your existing white logo
+  const LOGO_DARK = "/logo2dark.svg";   // Your black/dark logo (Check this filename!)
+
+  // Handle Scroll Effect
   useEffect(() => {
-    setCurrentRoute(location.pathname) 
-    
-    const path = window.location.pathname;
-    if (path === '/') setActiveLink('home');
-    else if (path.includes('services')) setActiveLink('services');
-    else if (path.includes('projects')) setActiveLink('projects');
-    else if (path.includes('about')) setActiveLink('about');
-    else if (path.includes('membership')) setActiveLink('membership');
-    else if (path.includes('gatsby-event')) setActiveLink('event');
-    else if (path.includes('contact')) setActiveLink('contact');
-    else if (path.includes('signin')) setActiveLink('signin');
-  }, [location]);
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-    // Prevent scrolling when menu is open
-    if (!isMenuOpen) {
+  // Route Logic
+  const isHome = location.pathname === '/';
+  const isEventPage = location.pathname.includes('gatsby-event');
+  
+  // Determine Theme
+  const isTransparentMode = (isHome || isEventPage) && !isScrolled;
+  
+  const textColorClass = isTransparentMode ? 'text-white' : 'text-[#051C2C]';
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'auto';
     }
+  }, [isMenuOpen]);
+
+  const handleScrollTo = (elementId) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      const offset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+    }
   };
 
-
-  const handleHome = () => {
-    window.location.href = "/";
-  }
-
-  const isEventPage = currentRoute.includes('gatsby-event');
-  
   return (
-    <nav className={`text-white ${currentRoute === '/' ? 'p-4 pt-5' : 'py-4' } px-6 md:px-12 ${isEventPage ? 'bg-transparent' : (dark ? 'bg-[#0f1521]' : '')}`} style={isEventPage ? { position: 'absolute', top: 0, left: 0, right: 0, zIndex: 50 } : {}}>
-      <div className="max-w-[1720px] mx-auto">
-        <div className="flex justify-between items-center">
+    <header 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b ${
+        isTransparentMode 
+          ? 'bg-transparent border-transparent py-6' 
+          : 'bg-white border-[#051C2C]/10 py-4 shadow-sm'
+      }`}
+    >
+      <div className="max-w-[1600px] mx-auto px-6 md:px-12 flex justify-between items-center">
+        
+        {/* --- LOGO SECTION FIXED --- */}
+        <a href="/" className="relative z-50 flex items-center">
+           <img 
+             src={isTransparentMode ? LOGO_WHITE : LOGO_DARK} 
+             alt="Cornell Data Strategy" 
+             className="h-10 md:h-12 transition-all duration-300"
+             // Optional: If you don't have a dark logo file yet, uncomment the line below 
+             // and use logo2.svg for both. It will mathematically invert the white logo to black.
+             // style={{ filter: isTransparentMode ? 'none' : 'invert(1) brightness(0)' }}
+           />
+        </a>
 
-          <div onClick={handleHome} className="flex items-center pt-2">
-            <img src="/logo2.svg" alt="Cornell Data Strategy Logo" className={`${currentRoute == '/' ? 'h-12' : "h-12"}`} />
-          </div>
-
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-6">
-            <NavLink href="/" active={activeLink === 'home'}>Home</NavLink>
-            <NavLink href="/services" active={activeLink === 'services'}>Services</NavLink>
-            <NavLink href="/projects" active={activeLink === 'projects'}>Projects</NavLink>
-            <AboutDropdown active={activeLink === 'about'} />
-            <NavLink href="/membership" active={activeLink === 'membership'}>Apply</NavLink>
-            <NavLink href="/gatsby-event" active={activeLink === 'event'}>Event</NavLink>
-            <NavLink href="/contact" active={activeLink === 'contact'}>Contact Us</NavLink>
-            <a 
-              href="/signin" 
-              className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-sm transition-colors text-[15px] ml-4"
-            >
-              Sign In
-            </a>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button 
-            className="md:hidden focus:outline-none" 
-            onClick={toggleMenu}
-            aria-label="Toggle menu"
+        {/* Desktop Navigation */}
+        <nav className="hidden lg:flex items-center gap-8">
+          <NavLink href="/" text="Home" isTransparent={isTransparentMode} />
+          <NavLink href="/services" text="Services" isTransparent={isTransparentMode} />
+          <NavLink href="/projects" text="Projects" isTransparent={isTransparentMode} />
+          
+          {/* Dropdown */}
+          <div 
+            className="relative group h-full flex items-center"
+            onMouseEnter={() => setActiveHover('about')}
+            onMouseLeave={() => setActiveHover(null)}
           >
-            <svg 
-              className="w-6 h-6" 
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24" 
-              xmlns="http://www.w3.org/2000/svg"
+            <a 
+                href="/about" 
+                className={`flex items-center gap-1 text-xs font-bold uppercase tracking-widest transition-colors py-2 ${
+                    isTransparentMode ? 'text-white/90 hover:text-white' : 'text-slate-500 hover:text-[#155cfc]'
+                }`}
             >
-              {isMenuOpen ? (
-                <path 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  strokeWidth={2} 
-                  d="M6 18L18 6M6 6l12 12" 
-                />
-              ) : (
-                <path 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  strokeWidth={2} 
-                  d="M4 6h16M4 12h16M4 18h16" 
-                />
-              )}
-            </svg>
-          </button>
-        </div>
-
-        {/* Mobile Menu Overlay */}
-        {isMenuOpen && (
-          <div className="md:hidden fixed inset-0 bg-[#0f1521] z-50 flex flex-col pt-20 px-6">
-            <button 
-              className="absolute top-5 right-6 focus:outline-none" 
-              onClick={toggleMenu}
-              aria-label="Close menu"
-            >
-              <svg 
-                className="w-6 h-6" 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24" 
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  strokeWidth={2} 
-                  d="M6 18L18 6M6 6l12 12" 
-                />
-              </svg>
-            </button>
+              About
+              <ChevronDown size={12} />
+            </a>
             
-            <div className="flex flex-col space-y-6">
-              <MobileNavLink href="/" active={activeLink === 'home'} onClick={toggleMenu}>Home</MobileNavLink>
-              <MobileNavLink href="/services" active={activeLink === 'services'} onClick={toggleMenu}>Services</MobileNavLink>
-              <MobileNavLink href="/projects" active={activeLink === 'projects'} onClick={toggleMenu}>Projects</MobileNavLink>
-              
-              {/* Mobile About Dropdown */}
-              <MobileAboutDropdown 
-                active={activeLink === 'about'} 
-                onClick={toggleMenu}
-              />
-              
-              <MobileNavLink href="/membership" active={activeLink === 'membership'} onClick={toggleMenu}>Apply</MobileNavLink>
-              <MobileNavLink href="/gatsby-event" active={activeLink === 'event'} onClick={toggleMenu}>Event</MobileNavLink>
-              <MobileNavLink href="/contact" active={activeLink === 'contact'} onClick={toggleMenu}>Contact Us</MobileNavLink>
-              <a 
-                href="/signin" 
-                className="bg-blue-600 hover:bg-blue-700 px-4 py-3 rounded-sm transition-colors text-[15px] text-center mt-4"
-                onClick={toggleMenu}
-              >
-                Sign In
-              </a>
+            {/* Dropdown Content */}
+            <div className={`absolute top-full left-1/2 -translate-x-1/2 pt-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200`}>
+                <div className="bg-white border border-[#051C2C]/10 w-48 flex flex-col shadow-xl">
+                    <DropdownLink 
+                        href="/about#about-top" 
+                        onClick={() => handleScrollTo('about-top')} 
+                        text="Our Story" 
+                    />
+                    <DropdownLink 
+                        href="/about#team-members" 
+                        onClick={() => handleScrollTo('team-members')} 
+                        text="Our Team" 
+                    />
+                </div>
             </div>
           </div>
-        )}
-      </div>
-    </nav>
-  );
-};
 
-// Desktop Navigation Link Component
-const NavLink = ({ href, active, children }) => {
-  return (
-    <a 
-      href={href} 
-      className={`relative px-1 py-2 text-[15px] transition-colors ${
-        active ? 'text-blue-300' : 'hover:text-blue-300'
-      }`}
-    >
-      {children}
-      <span 
-        className={`absolute left-0 bottom-0 h-0.5 bg-blue-400 transition-all duration-300 ${
-          active ? 'w-full' : 'w-0 group-hover:w-full'
-        }`}
-      ></span>
-    </a>
-  );
-};
+          <NavLink href="/membership" text="Apply" isTransparent={isTransparentMode} />
+          <NavLink href="/gatsby-event" text="Event" isTransparent={isTransparentMode} />
+          
+          <div className={`h-4 w-px mx-2 opacity-20 ${isTransparentMode ? 'bg-white' : 'bg-[#051C2C]'}`}></div>
+          
+          <a 
+            href="/contact" 
+            className={`text-xs font-bold uppercase tracking-widest transition-colors ${
+               isTransparentMode ? 'text-white hover:text-white/80' : 'text-[#051C2C] hover:text-[#155cfc]'
+            }`}
+          >
+            Contact
+          </a>
 
-// About Dropdown Component
-const AboutDropdown = ({ active }) => {
-  const [isHovered, setIsHovered] = useState(false);
+          <a 
+            href="/signin" 
+            className={`px-6 py-3 text-xs font-bold uppercase tracking-widest transition-all border ${
+                isTransparentMode 
+                ? 'bg-white text-[#051C2C] border-white hover:bg-transparent hover:text-white' 
+                : 'bg-[#051C2C] text-white border-[#051C2C] hover:bg-[#155cfc] hover:border-[#155cfc]'
+            }`}
+          >
+            Sign In
+          </a>
+        </nav>
 
-  const scrollToElement = (elementId) => {
-    const element = document.getElementById(elementId);
-    if (element) {
-      const offset = 80; // Account for navbar height
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }
-  };
-
-  const handleClubInfo = (e) => {
-    e.preventDefault();
-    if (window.location.pathname !== '/about') {
-      window.location.href = '/about#about-top';
-      // Scroll will happen after page loads via useEffect in About page
-    } else {
-      scrollToElement('about-top');
-    }
-  };
-
-  const handleTeamMembers = (e) => {
-    e.preventDefault();
-    if (window.location.pathname !== '/about') {
-      window.location.href = '/about#team-members';
-      // Scroll will happen after page loads via useEffect in About page
-    } else {
-      scrollToElement('team-members');
-    }
-  };
-
-  return (
-    <div 
-      className="relative"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <a 
-        href="/about" 
-        className={`relative px-1 py-2 text-[15px] transition-colors flex items-center gap-1 ${
-          active ? 'text-blue-300' : 'hover:text-blue-300'
-        }`}
-      >
-        About
-        <svg 
-          className={`w-4 h-4 transition-transform duration-200 ${isHovered ? 'rotate-180' : ''}`}
-          fill="none" 
-          stroke="currentColor" 
-          viewBox="0 0 24 24"
+        {/* Mobile Menu Toggle */}
+        <button 
+          className={`lg:hidden focus:outline-none ${textColorClass}`}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-        </svg>
-        <span 
-          className={`absolute left-0 bottom-0 h-0.5 bg-blue-400 transition-all duration-300 ${
-            active ? 'w-full' : 'w-0'
-          }`}
-        ></span>
-      </a>
-      
+           {isMenuOpen ? <X size={28} className="text-[#051C2C]" /> : <Menu size={28} />}
+        </button>
+      </div>
+
+      {/* Mobile Menu Overlay */}
       <div 
-        className={`absolute top-full left-0 -mt-1 pt-1 min-w-[200px] z-50 transition-all duration-200 ${
-          isHovered 
-            ? 'opacity-100 translate-y-0 pointer-events-auto' 
-            : 'opacity-0 -translate-y-2 pointer-events-none'
+        className={`fixed inset-0 bg-white z-40 pt-32 px-6 transform transition-transform duration-500 ease-in-out lg:hidden flex flex-col ${
+          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        <div className="bg-[#0f1521] border border-gray-700/50 rounded-lg shadow-2xl overflow-hidden mt-1">
-          <div className="py-1">
-            <a
-              href="/about"
-              onClick={handleClubInfo}
-              className="block px-5 py-3 text-[15px] text-white/90 hover:text-white hover:bg-blue-600/20 transition-all duration-150 border-l-2 border-transparent hover:border-blue-400"
+        <div className="flex flex-col gap-6">
+            <MobileLink href="/" text="Home" />
+            <MobileLink href="/services" text="Services" />
+            <MobileLink href="/projects" text="Projects" />
+            
+            <div className="border-l-2 border-[#051C2C]/10 pl-6 flex flex-col gap-4 py-2">
+                <p className="text-xs font-bold uppercase tracking-widest text-slate-400">About Us</p>
+                <MobileLink href="/about" text="Our Story" />
+                <MobileLink href="/about#team-members" text="Our Team" />
+            </div>
+
+            <MobileLink href="/membership" text="Apply" />
+            <MobileLink href="/gatsby-event" text="Event" />
+            <MobileLink href="/contact" text="Contact" />
+            
+            <a 
+              href="/signin" 
+              className="mt-4 w-full text-center bg-[#051C2C] text-white py-4 text-xs font-bold uppercase tracking-widest hover:bg-[#155cfc]"
             >
-              About Club
+                Sign In
             </a>
-            <a
-              href="/about"
-              onClick={handleTeamMembers}
-              className="block px-5 py-3 text-[15px] text-white/90 hover:text-white hover:bg-blue-600/20 transition-all duration-150 border-l-2 border-transparent hover:border-blue-400"
-            >
-              Members
-            </a>
-          </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 
-// Mobile Navigation Link Component
-const MobileNavLink = ({ href, active, onClick, children }) => {
-  return (
+// --- Sub-Components ---
+
+const NavLink = ({ href, text, isTransparent }) => (
+  <a 
+    href={href} 
+    className={`relative group py-2 text-xs font-bold uppercase tracking-widest transition-colors ${
+       isTransparent 
+        ? 'text-white/90 hover:text-white' 
+        : 'text-slate-500 hover:text-[#155cfc]'
+    }`}
+  >
+    {text}
+    <span className={`absolute bottom-0 left-0 w-0 h-px transition-all duration-300 group-hover:w-full ${
+        isTransparent ? 'bg-white' : 'bg-[#155cfc]'
+    }`}></span>
+  </a>
+);
+
+const DropdownLink = ({ href, text, onClick }) => (
     <a 
       href={href} 
-      className={`text-xl font-medium py-2 border-b border-gray-700 ${
-        active ? 'text-blue-300' : ''
-      }`}
       onClick={onClick}
+      className="block px-6 py-4 text-sm text-[#051C2C] hover:bg-gray-50 hover:text-[#155cfc] transition-colors border-b border-[#051C2C]/5 last:border-none font-serif"
     >
-      {children}
+        {text}
     </a>
-  );
-};
+);
 
-// Mobile About Dropdown Component
-const MobileAboutDropdown = ({ active, onClick }) => {
-  const scrollToElement = (elementId) => {
-    const element = document.getElementById(elementId);
-    if (element) {
-      const offset = 80; // Account for navbar height
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }
-  };
-
-  const handleClubInfo = (e) => {
-    e.preventDefault();
-    onClick();
-    if (window.location.pathname !== '/about') {
-      window.location.href = '/about#about-top';
-    } else {
-      scrollToElement('about-top');
-    }
-  };
-
-  const handleTeamMembers = (e) => {
-    e.preventDefault();
-    onClick();
-    if (window.location.pathname !== '/about') {
-      window.location.href = '/about#team-members';
-    } else {
-      scrollToElement('team-members');
-    }
-  };
-
-  return (
-    <div className="border-b border-gray-700">
-      <div className={`text-xl font-medium py-2 ${
-        active ? 'text-blue-300' : ''
-      }`}>
-        About
-      </div>
-      
-      <div className="pl-4 pt-2 pb-2 space-y-2">
-        <a
-          href="/about"
-          onClick={handleClubInfo}
-          className="block text-lg text-white/80 hover:text-blue-300 py-1 transition-colors"
-        >
-          About Club
-        </a>
-        <a
-          href="/about"
-          onClick={handleTeamMembers}
-          className="block text-lg text-white/80 hover:text-blue-300 py-1 transition-colors"
-        >
-          Team
-        </a>
-      </div>
-    </div>
-  );
-};
+const MobileLink = ({ href, text }) => (
+    <a 
+        href={href} 
+        className="text-2xl font-serif text-[#051C2C]"
+    >
+        {text}
+    </a>
+);
 
 export default Navbar;
