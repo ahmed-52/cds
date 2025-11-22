@@ -362,7 +362,7 @@ const GatsbyEvent = () => {
                   textTransform: 'uppercase'
                 }}
               >
-                Ticket Price: 500 Chips
+                Ticket Price: 300 Chips
               </p>
               <div className="fading-line max-w-md mx-auto"></div>
             </div>
