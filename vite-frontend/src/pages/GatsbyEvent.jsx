@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import Spline from '@splinetool/react-spline';
 
 const GatsbyEvent = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [splineLoaded, setSplineLoaded] = useState(false);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -14,6 +14,35 @@ const GatsbyEvent = () => {
     window.addEventListener('resize', checkMobile);
     
     return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  useEffect(() => {
+    // Load the Spline viewer script
+    const script = document.createElement('script');
+    script.type = 'module';
+    script.src = 'https://unpkg.com/@splinetool/viewer@1.10.19/build/spline-viewer.js';
+    script.onload = () => {
+      console.log('Spline viewer script loaded');
+      setSplineLoaded(true);
+    };
+    script.onerror = () => {
+      console.error('Failed to load Spline viewer script');
+    };
+    
+    // Only add script if not already present
+    if (!document.querySelector('script[src*="@splinetool/viewer@1.10.19"]')) {
+      document.head.appendChild(script);
+    } else {
+      setSplineLoaded(true);
+    }
+    
+    return () => {
+      // Cleanup: remove script when component unmounts
+      const existingScript = document.querySelector('script[src*="@splinetool/viewer@1.10.19"]');
+      if (existingScript && existingScript.parentNode) {
+        existingScript.parentNode.removeChild(existingScript);
+      }
+    };
   }, []);
 
   useEffect(() => {
@@ -166,16 +195,29 @@ const GatsbyEvent = () => {
 
       {/* Hero Section */}
       <div className="relative w-full" style={{ height: '100vh', zIndex: 2 }}>
-        {isMobile ? (
-          <Spline
-            scene="https://prod.spline.design/x6d4J-NPhzoA-sKp/scene.splinecode"
-            className="w-full h-full"
-          />
+        {splineLoaded ? (
+          isMobile ? (
+            // @ts-expect-error Spline viewer is a custom element not recognized by TypeScript
+            <spline-viewer 
+              url="https://prod.spline.design/x6d4J-NPhzoA-sKp/scene.splinecode" 
+              style={{ width: '100%', height: '100%', background: '#000000' }}
+              className="w-full h-full"
+            />
+          ) : (
+            // @ts-expect-error Spline viewer is a custom element not recognized by TypeScript
+            <spline-viewer 
+              url="https://prod.spline.design/xpuiLeKRLjt5giCW/scene.splinecode" 
+              style={{ width: '100%', height: '100%', background: '#000000' }}
+              className="w-full h-full"
+            />
+          )
         ) : (
-          <Spline
-            scene="https://prod.spline.design/xpuiLeKRLjt5giCW/scene.splinecode"
-            className="w-full h-full"
-          />
+          <div className="absolute inset-0 flex items-center justify-center" style={{ backgroundColor: '#000000' }}>
+            <div className="text-center">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div>
+              <p className="text-white font-medium">Loading...</p>
+            </div>
+          </div>
         )}
       </div>
 
