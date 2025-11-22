@@ -7,6 +7,7 @@ import OurServices from '../components/Home/OurServices';
 import HomeAbout2 from '../components/Home/HomeAbout2';
 import ProjectHighlights from '../components/Home/ProjectHighlights';
 import ScheduleCall from '../components/Home/ScheduleCall';
+import Alumni from '../components/About/Alumni';
 
 
 
@@ -22,6 +23,7 @@ const Home = () => {
             <Impact/>
             <OurServices/>
             <HomeAbout2/>
+                 <Alumni/>
             <ProjectHighlights/>
             <ScheduleCall/>
 

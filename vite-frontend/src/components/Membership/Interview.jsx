@@ -1,183 +1,115 @@
 import React from "react";
+import { CheckCircle2 } from "lucide-react";
 
-// import interviewData from '../../data/Interview.json';
+const PrepCard = ({ title, code, desc, points }) => (
+  <div className="group p-8 border border-[#051C2C]/10 bg-white hover:border-[#155cfc]/30 hover:shadow-lg transition-all duration-300">
+    <div className="flex justify-between items-start mb-6">
+       <h3 className="text-xl font-serif text-[#051C2C] group-hover:text-[#155cfc] transition-colors">{title}</h3>
+       <span className="text-xs font-bold bg-gray-100 text-gray-500 px-2 py-1 uppercase tracking-widest group-hover:bg-[#155cfc] group-hover:text-white transition-colors">
+         {code}
+       </span>
+    </div>
+    
+    <p className="text-sm text-slate-600 font-light leading-relaxed mb-6">
+      {desc}
+    </p>
+    
+    <div className="pt-6 border-t border-gray-100">
+       <h4 className="text-xs font-bold uppercase tracking-widest text-[#051C2C] mb-3">Focus Areas</h4>
+       <ul className="space-y-2">
+          {points.map((point, i) => (
+             <li key={i} className="flex items-start gap-2 text-sm text-slate-500">
+                <CheckCircle2 size={14} className="mt-0.5 text-[#155cfc] shrink-0" />
+                <span>{point}</span>
+             </li>
+          ))}
+       </ul>
+    </div>
+  </div>
+);
 
 const Interview = () => {
   return (
-    <div className="md:max-w-[1400px] mx-auto p-5 pt-10 pb-20 font-Domine">
-      <h2 className="text-[35px] font-bold mb-10 text-textcl">Interview Preparation</h2>
-      
-      <div className="flex flex-col lg:flex-row gap-10">
-        <div className="flex-1">
-          <div className="grid grid-cols-1 gap-6">
-        {/* Strategy & Transformation */}
-        <div className="relative">
-          <div className="flex items-start mb-3">
-            <div className="bg-blue-500 min-w-[40px] h-10 w-10 rounded-full flex items-center justify-center text-white font-bold mr-3">
-              ST
-            </div>
-            <h3 className="text-2xl font-bold text-textcl">Strategy & Transformation</h3>
-          </div>
-          
-          <p className="text-sm text-gray-600 mb-2 ml-[52px]">
-            Learn more on the Strategy & Transformation division
-          </p>
-          
-          <div className="mb-4 ml-[52px]">
-            <h4 className="font-bold mb-1 text-textcl">How to prepare?</h4>
-            <p className="text-sm text-gray-700">
-              Practice case frameworks, brush up on market sizing questions, and review financial 
-              analysis concepts. Be prepared to structure your thinking and present clear recommendations.
-            </p>
-          </div>
-          
-          {/* <div className="ml-[52px]"> */}
-            {/* <h4 className="font-bold mb-2 text-textcl">Example Interviews</h4>
-            <div className="flex flex-col space-y-2">
-              {interviewData.strategy.examples.map((item, index) => (
-                <a 
-                  key={`strategy-example-${index}`}
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 hover:underline font-bold"
-                >
-                  {item.title}
-                </a>
-              ))}
-            </div>
-          </div> */}
-        </div>
+    <section className="bg-[#FAFAFA] py-24 lg:py-32 border-y border-[#051C2C]/10">
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-12 xl:px-16">
         
-        {/* Tech & Implementation */}
-        <div className="relative">
-          <div className="flex items-start mb-3">
-            <div className="bg-blue-500 min-w-[40px] h-10 w-10 rounded-full flex items-center justify-center text-white font-bold mr-3">
-              TI
-            </div>
-            <h3 className="text-2xl font-bold text-textcl">Tech & Implementation</h3>
-          </div>
-          
-          <p className="text-sm text-gray-600 mb-2 ml-[52px]">
-            Learn more on the Technology & Implementation division
-          </p>
-          
-          <div className="mb-4 ml-[52px]">
-            <h4 className="font-bold mb-1 text-textcl">How to prepare?</h4>
-            <p className="text-sm text-gray-700">
-              Review algorithm fundamentals, practice system design questions, and strengthen your 
-              understanding of data structures. Be ready to demonstrate problem-solving approaches 
-              to technical challenges similar to those you might encounter in software engineering interviews.
-            </p>
-          </div>
-          
-          {/* <div className="ml-[52px]">
-            {interviewData.tech.examples.map((item, index) => (
-              <a 
-                key={`tech-example-${index}`}
-                href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-blue-600 hover:underline font-bold mb-2"
-              >
-                {item.title}
-              </a>
-            ))}
-          </div> */}
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-24">
+           
+           {/* Text Content */}
+           <div className="lg:col-span-4">
+              <div className="sticky top-32">
+                <div className="flex items-center gap-4 mb-6">
+                   <div className="h-px w-12 bg-[#155cfc]"></div>
+                   <span className="text-xs font-bold uppercase tracking-widest text-[#155cfc]">Preparation</span>
+                </div>
+                <h2 className="text-4xl lg:text-5xl font-serif text-[#051C2C] mb-6">Interview Guide</h2>
+                <p className="text-lg text-slate-600 font-light leading-relaxed mb-8">
+                  Success in our interviews requires more than just technical knowledge. We look for structured thinking, clarity of communication, and the ability to apply concepts to real-world scenarios.
+                </p>
+                <div className="hidden lg:block h-64 w-full bg-[#051C2C]/5 mt-8 relative overflow-hidden">
+                   {/* Abstract decor */}
+                   <div className="absolute -right-10 -bottom-10 w-32 h-32 bg-[#051C2C]/10 rounded-full"></div>
+                </div>
+              </div>
+           </div>
+
+           {/* Grid of Cards */}
+           <div className="lg:col-span-8">
+              <div className="grid md:grid-cols-2 gap-6">
+                 
+                 <PrepCard 
+                   title="Strategy & Transformation"
+                   code="ST"
+                   desc="Focuses on frameworks and financial logic. We want to see how you break down ambiguous problems."
+                   points={[
+                     "Market sizing & estimation",
+                     "Profitability frameworks",
+                     "Financial statement analysis",
+                     "Clear recommendation delivery"
+                   ]}
+                 />
+
+                 <PrepCard 
+                   title="Tech & Implementation"
+                   code="TI"
+                   desc="Focuses on technical problem solving. Similar to a SWE interview but with a business context."
+                   points={[
+                     "Data structures & algorithms",
+                     "System design basics",
+                     "Python/SQL proficiency",
+                     "Automating business workflows"
+                   ]}
+                 />
+
+                 <PrepCard 
+                   title="Brand & Innovation"
+                   code="BI"
+                   desc="Focuses on design thinking and execution. Show us how you build and position products."
+                   points={[
+                     "Portfolio review (UI/UX)",
+                     "Marketing strategy",
+                     "User-centric design thinking",
+                     "Brand positioning"
+                   ]}
+                 />
+                 
+                 {/* Placeholder or General Tips Card to fill grid */}
+                 <div className="p-8 bg-[#051C2C] text-white flex flex-col justify-center">
+                    <h3 className="text-2xl font-serif mb-4">General Tips</h3>
+                    <ul className="space-y-4 text-sm text-gray-300 font-light">
+                       <li className="border-b border-white/10 pb-2">Research the club's recent projects.</li>
+                       <li className="border-b border-white/10 pb-2">Be ready to discuss your resume in depth.</li>
+                       <li className="border-b border-white/10 pb-2">Ask thoughtful questions at the end.</li>
+                    </ul>
+                 </div>
+
+              </div>
+           </div>
+
         </div>
-        
-        {/* Business Development */}
-        {/* <div className="relative">
-          <div className="flex items-start mb-3">
-            <div className="bg-blue-500 min-w-[40px] h-10 w-10 rounded-full flex items-center justify-center text-white font-bold mr-3">
-              BD
-            </div>
-            <h3 className="text-2xl font-bold text-textcl">Business Development</h3>
-          </div>
-          
-          <p className="text-sm text-gray-600 mb-4 ml-[52px]">
-            Learn more on the Business Development division
-          </p>
-          
-          
-          <div className="mb-6 ml-[52px]">
-            <h4 className="font-bold mb-1 text-textcl">How to prepare?</h4>
-            <p className="text-sm text-gray-700">
-              Study sales methodologies, negotiation strategies, and client relationship management. 
-              Review business development strategies and prepare examples of your past outreach 
-              or partnership experiences.
-            </p>
-          </div>
-           */}
-          {/* <div className="ml-[52px]">
-            <h4 className="font-bold mb-2 text-textcl">Example Interviews</h4>
-            <div className="flex flex-col space-y-2">
-              {interviewData.business.examples.map((item, index) => (
-                <a 
-                  key={`business-example-${index}`}
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 hover:underline font-bold"
-                >
-                  {item.title}
-                </a>
-              ))}
-            </div>
-          </div> */}
-        {/* </div> */}
-        
-        {/* Brand & Innovation */}
-        <div className="relative">
-          <div className="flex items-start mb-3">
-            <div className="bg-blue-500 min-w-[40px] h-10 w-10 rounded-full flex items-center justify-center text-white font-bold mr-3">
-              BI
-            </div>
-            <h3 className="text-2xl font-bold text-textcl">Brand & Innovation</h3>
-          </div>
-          
-          <p className="text-sm text-gray-600 mb-2 ml-[52px]">
-            Learn more on the Brand & Innovation division
-          </p>
-          
-          <div className="mb-4 ml-[52px]">
-            <h4 className="font-bold mb-1 text-textcl">How to prepare?</h4>
-            <p className="text-sm text-gray-700">
-              Prepare to showcase your portfolio and discuss your design thinking process. 
-              Be ready to talk about your experiences with UI/UX design, marketing strategy, 
-              or operational improvements that demonstrate your innovative approach.
-            </p>
-          </div>
-          
-          {/* <div className="ml-[52px]">
-            <h4 className="font-bold mb-2 text-textcl">Example Interviews</h4>
-            <div className="flex flex-col space-y-2">
-              {interviewData.platform.examples.map((item, index) => (
-                <a 
-                  key={`platform-example-${index}`}
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 hover:underline font-bold"
-                >
-                  {item.title}
-                </a>
-              ))}
-            </div>
-          </div> */}
-        </div>
-          </div>
-        </div>
-        
-        <div className="flex-1 flex items-center justify-center">
-          <img 
-            src="/media/interview.png" 
-            alt="Interview preparation session" 
-            className="w-full max-w-2xl h-auto rounded-lg shadow-lg object-cover"
-          />
-        </div>
+
       </div>
-    </div>
+    </section>
   );
 };
 

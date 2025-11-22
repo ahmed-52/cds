@@ -111,6 +111,7 @@ const Navbar = () => {
             </div>
           </div>
 
+          <NavLink href="/corporate-partnerships" text="Corporate" isTransparent={isTransparentMode} />
           <NavLink href="/membership" text="Apply" isTransparent={isTransparentMode} />
           <NavLink href="/gatsby-event" text="Event" isTransparent={isTransparentMode} />
           
@@ -163,6 +164,7 @@ const Navbar = () => {
                 <MobileLink href="/about#team-members" text="Our Team" />
             </div>
 
+            <MobileLink href="/corporate-partnerships" text="Corporate" />
             <MobileLink href="/membership" text="Apply" />
             <MobileLink href="/gatsby-event" text="Event" />
             <MobileLink href="/contact" text="Contact" />

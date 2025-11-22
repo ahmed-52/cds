@@ -141,7 +141,7 @@ const Projects = () => {
       </section>
 
       {/* --- 6. CTA SECTION (High End) --- */}
-      <section className="bg-[#051C2C] py-24 md:py-32 px-6 text-center relative overflow-hidden">
+<section className="bg-[#051C2C] py-24 md:py-32 px-6 text-center relative overflow-hidden">
          {/* Decorative circle */}
          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-white/5 rounded-full pointer-events-none"></div>
          
@@ -149,8 +149,8 @@ const Projects = () => {
             <h2 className="text-4xl md:text-5xl font-serif text-white mb-6">
               Ready to start a project?
             </h2>
-            <p className="text-gray-400 text-lg mb-10 leading-relaxed">
-              As a student-led initiative, we provide these services at no cost, ensuring our focus remains strictly on delivering impartial solutions and practical expertise.
+            <p className="text-gray-400 text-lg mb-10 leading-relaxed font-light">
+              As a student-run organization, we operate on a <span className="text-white font-medium">flexible engagement model</span> tailored to the scope of each mandate. Our fees are determined by project complexity and timeline, with proceeds reinvested directly into member development and organizational growth.
             </p>
             <a 
               href="/contact" 

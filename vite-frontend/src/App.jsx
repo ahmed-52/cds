@@ -10,6 +10,7 @@ import Projects from './pages/Projects'
 import OurServices from './pages/OurServices'
 import Signin from './pages/Signin'
 import GatsbyEvent from './pages/GatsbyEvent'
+import CorporatePartnerships from './pages/CorporatePartnerships'
 
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom'
 
@@ -34,6 +35,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/signin" element={<Signin />} />
         <Route path="/gatsby-event" element={<GatsbyEvent />} />
+        <Route path="/corporate-partnerships" element={<CorporatePartnerships />} />
       </Routes>
       <Footer />
     </>
