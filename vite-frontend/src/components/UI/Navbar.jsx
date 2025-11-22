@@ -17,6 +17,7 @@ const Navbar = ({dark = true}) => {
     else if (path.includes('projects')) setActiveLink('projects');
     else if (path.includes('about')) setActiveLink('about');
     else if (path.includes('membership')) setActiveLink('membership');
+    else if (path.includes('gatsby-event')) setActiveLink('event');
     else if (path.includes('contact')) setActiveLink('contact');
     else if (path.includes('signin')) setActiveLink('signin');
   }, [location]);
@@ -36,8 +37,10 @@ const Navbar = ({dark = true}) => {
     window.location.href = "/";
   }
 
+  const isEventPage = currentRoute.includes('gatsby-event');
+  
   return (
-    <nav className={`text-white ${currentRoute === '/' ? 'p-4 pt-5' : 'py-4' } px-6 md:px-12 ${dark ? 'bg-[#0f1521]' : ''}`}>
+    <nav className={`text-white ${currentRoute === '/' ? 'p-4 pt-5' : 'py-4' } px-6 md:px-12 ${isEventPage ? 'bg-transparent' : (dark ? 'bg-[#0f1521]' : '')}`} style={isEventPage ? { position: 'absolute', top: 0, left: 0, right: 0, zIndex: 50 } : {}}>
       <div className="max-w-[1720px] mx-auto">
         <div className="flex justify-between items-center">
 
@@ -52,6 +55,7 @@ const Navbar = ({dark = true}) => {
             <NavLink href="/projects" active={activeLink === 'projects'}>Projects</NavLink>
             <AboutDropdown active={activeLink === 'about'} />
             <NavLink href="/membership" active={activeLink === 'membership'}>Apply</NavLink>
+            <NavLink href="/gatsby-event" active={activeLink === 'event'}>Event</NavLink>
             <NavLink href="/contact" active={activeLink === 'contact'}>Contact Us</NavLink>
             <a 
               href="/signin" 
@@ -123,6 +127,7 @@ const Navbar = ({dark = true}) => {
               <MobileNavLink href="/projects" active={activeLink === 'projects'} onClick={toggleMenu}>Projects</MobileNavLink>
               <MobileNavLink href="/about" active={activeLink === 'about'} onClick={toggleMenu}>About</MobileNavLink>
               <MobileNavLink href="/membership" active={activeLink === 'membership'} onClick={toggleMenu}>Membership</MobileNavLink>
+              <MobileNavLink href="/gatsby-event" active={activeLink === 'event'} onClick={toggleMenu}>Event</MobileNavLink>
               <MobileNavLink href="/contact" active={activeLink === 'contact'} onClick={toggleMenu}>Contact Us</MobileNavLink>
               <a 
                 href="/signin" 

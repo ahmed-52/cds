@@ -1,0 +1,424 @@
+import React, { useState, useEffect } from 'react';
+import Spline from '@splinetool/react-spline';
+
+const GatsbyEvent = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight - windowHeight;
+      const scrollTop = window.pageYOffset;
+      const progress = Math.min(scrollTop / documentHeight, 1);
+      setScrollProgress(progress);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Calculate background color based on scroll
+  const getBackgroundColor = () => {
+    const r = Math.floor(5 + (scrollProgress * 200)); // 5 to 205
+    const g = Math.floor(4 + (scrollProgress * 100)); // 4 to 104
+    const b = Math.floor(4 + (scrollProgress * 50));  // 4 to 54
+    return `rgb(${r}, ${g}, ${b})`;
+  };
+
+  return (
+    <div 
+      className="global-background"
+      style={{ 
+        background: `linear-gradient(to bottom, #050404 0%, ${getBackgroundColor()} 100%)`
+      }}
+    >
+      
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:wght@300;400;500;600;700&family=Great+Vibes&display=swap');
+        
+        :root {
+          --black: #050404;
+          --gold-primary: #CBA45A;
+          --gold-soft: #B99745;
+          --white-warm: #F6F2E8;
+          --gold-glow: rgba(255,210,140,0.25);
+          --panel-bg: rgba(0,0,0,0.25);
+        }
+        
+        .global-background {
+          position: relative;
+          min-height: 100vh;
+        }
+        
+        .section-title {
+          font-family: 'Cormorant Garamond', serif;
+          font-weight: 700;
+          color: var(--gold-primary);
+          text-shadow: 0 0 12px var(--gold-glow);
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          text-align: center;
+        }
+        
+        .section-subtitle {
+          font-family: 'Cormorant Garamond', serif;
+          font-variant: small-caps;
+          color: var(--gold-primary);
+          letter-spacing: 0.1em;
+        }
+        
+        .body-text {
+          font-family: 'Cormorant Garamond', serif;
+          color: var(--white-warm);
+          font-weight: 400;
+          letter-spacing: 0.02em;
+        }
+        
+        .deco-panel {
+          background: transparent;
+          position: relative;
+        }
+        
+        .deco-divider {
+          height: 1px;
+          background: linear-gradient(to right, transparent, var(--gold-primary) 20%, var(--gold-primary) 80%, transparent);
+          margin: 24px 0;
+        }
+        
+        .deco-divider-double {
+          height: 2px;
+          background: 
+            linear-gradient(to right, transparent, var(--gold-primary) 15%, var(--gold-primary) 50%, var(--gold-primary) 85%, transparent),
+            linear-gradient(to right, transparent, var(--gold-primary) 15%, var(--gold-primary) 50%, var(--gold-primary) 85%, transparent);
+          background-size: 100% 1px;
+          background-position: top, bottom;
+          background-repeat: no-repeat;
+          margin: 24px 0;
+        }
+        
+        .fading-line {
+          height: 1px;
+          background: linear-gradient(to right, transparent, var(--gold-primary) 30%, var(--gold-primary) 70%, transparent);
+          margin: 16px 0;
+        }
+        
+        .timeline-spine {
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          width: 2px;
+          background: linear-gradient(to bottom, var(--gold-primary), rgba(203, 164, 90, 0.8), var(--gold-primary));
+          box-shadow: 0 0 8px rgba(203, 164, 90, 0.4);
+        }
+        
+        .timeline-node {
+          position: absolute;
+          left: 0;
+          width: 12px;
+          height: 12px;
+          background: var(--gold-primary);
+          transform: translateX(-50%) rotate(45deg);
+          box-shadow: 0 0 12px rgba(203, 164, 90, 0.6);
+        }
+        
+        .menu-plaque {
+          background: transparent;
+          position: relative;
+        }
+        
+        .mini-deco-card {
+          background: transparent;
+        }
+        
+        .cta-button {
+          display: inline-block;
+          padding: 12px 32px;
+          border: 1.2px solid var(--gold-primary);
+          background: transparent;
+          color: var(--gold-primary);
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 500;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          transition: all 0.3s ease;
+          cursor: pointer;
+          text-decoration: none;
+        }
+        
+        .cta-button:hover {
+          box-shadow: 0 0 20px rgba(203, 164, 90, 0.4);
+          background: rgba(203, 164, 90, 0.1);
+        }
+      `}</style>
+
+      {/* Hero Section */}
+      <div className="relative w-full" style={{ height: '100vh', zIndex: 2 }}>
+        {isMobile ? (
+          <Spline
+            scene="https://prod.spline.design/x6d4J-NPhzoA-sKp/scene.splinecode"
+            className="w-full h-full"
+          />
+        ) : (
+          <Spline
+            scene="https://prod.spline.design/xpuiLeKRLjt5giCW/scene.splinecode"
+            className="w-full h-full"
+          />
+        )}
+      </div>
+
+      {/* About the Host Section */}
+      <section className="relative py-32 z-10" style={{ padding: '120px 0' }}>
+        <div className="max-w-5xl mx-auto px-6 relative z-10">
+          <h2 className="section-title text-5xl md:text-7xl mb-12">
+            About the Host
+          </h2>
+          <div className="deco-divider max-w-2xl mx-auto mb-16"></div>
+          
+          <div className="text-center">
+            <div className="fading-line max-w-4xl mx-auto mb-12"></div>
+            <p className="body-text text-lg md:text-xl leading-relaxed mb-10 max-w-4xl mx-auto">
+              Cornell Data Strategy is a student-led analytics and consulting organization committed to transforming data into meaningful impact. Our teams partner with real-world clients, student groups, and campus initiatives to solve complex challenges through data-driven insights, thoughtful design, and innovative technology.
+            </p>
+            <a href="/" className="cta-button">
+              Visit Our Homepage
+            </a>
+            <div className="fading-line max-w-4xl mx-auto mt-12"></div>
+          </div>
+        </div>
+      </section>
+
+      {/* Evening Timeline Section */}
+      <section className="relative py-32 z-10" style={{ padding: '60px 0 120px 0' }}>
+        <div className="max-w-5xl mx-auto px-6 relative z-10">
+          <h2 className="section-title text-5xl md:text-7xl mb-12">
+            Evening Timeline
+          </h2>
+          <div className="deco-divider max-w-2xl mx-auto mb-20"></div>
+          
+          <div className="relative pl-12 md:pl-16">
+            <div className="timeline-spine"></div>
+            
+            <div className="space-y-16">
+              {[
+                { time: '7:00 PM', title: 'Doors Open', desc: 'Welcome to the Great Gatsby Social' },
+                { time: '7:00 PM', title: 'Poker Begins', desc: 'Join the poker tables and start playing' },
+                { time: '7:30 PM – 8:30 PM', title: 'Live Jazz Music', desc: 'Enjoy smooth rhythms from our live jazz group' },
+                { time: '7:30 PM', title: 'Food Service Opens', desc: 'Indulge in our curated selection of small bites and treats' },
+                { time: '8:30 PM', title: 'Poker Ends', desc: 'Final hands and chip collection' },
+                { time: '8:45 PM', title: 'Winners Announced', desc: 'Join us for the grand prize announcements' },
+                { time: '9:00 PM', title: 'Event Concludes', desc: 'Thank you for joining us at the Great Gatsby Social' }
+              ].map((item, idx) => (
+                <div key={idx} className="relative flex flex-col md:flex-row items-start gap-6 md:gap-8 pl-8">
+                  <div className="timeline-node" style={{ top: '0.5rem' }}></div>
+                  
+                  <div className="flex-shrink-0 w-40">
+                    <p className="section-subtitle text-lg md:text-xl font-semibold">
+                      {item.time}
+                    </p>
+                  </div>
+                  
+                  <div className="flex-1">
+                    <h3 
+                      className="text-2xl md:text-3xl font-bold mb-3"
+                      style={{ 
+                        fontFamily: "'Cormorant Garamond', serif",
+                        color: 'var(--gold-primary)',
+                        textShadow: '0 0 12px var(--gold-glow)',
+                        letterSpacing: '0.12em',
+                        textTransform: 'uppercase'
+                      }}
+                    >
+                      {item.title}
+                    </h3>
+                    <p className="body-text text-base md:text-lg leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Tonight's Menu Section */}
+      <section className="relative py-32 z-10" style={{ padding: '60px 0 120px 0' }}>
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <h2 className="section-title text-5xl md:text-7xl mb-12">
+            Tonight's Menu
+          </h2>
+          <div className="deco-divider max-w-2xl mx-auto mb-20"></div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+            {[
+              { title: 'Mocktail Bar', items: ['Pineapple Smash Mocktail', 'Elderflower Lemonade Mocktail'] },
+              { title: 'Small Bites', items: ['Mushroom Arancini', 'Chicken Skewers', 'Mini Beef Wellington', 'Spanakopita', 'Wild Mushroom Tart'] },
+              { title: 'Sweet Treats', items: ['Petite Cheesecakes', 'Dessert Bars'] }
+            ].map((category, idx) => (
+              <div key={idx} className="menu-plaque p-10 text-center">
+                <h3 
+                  className="text-2xl md:text-3xl font-bold mb-6"
+                  style={{ 
+                    fontFamily: "'Cormorant Garamond', serif",
+                    color: 'var(--gold-primary)',
+                    textShadow: '0 0 12px var(--gold-glow)',
+                    letterSpacing: '0.12em',
+                    textTransform: 'uppercase'
+                  }}
+                >
+                  {category.title}
+                </h3>
+                
+                <div className="fading-line mb-6"></div>
+                
+                <ul className="space-y-4 text-lg">
+                  {category.items.map((item, itemIdx) => (
+                    <li key={itemIdx} className="body-text" style={{ letterSpacing: '0.03em' }}>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Raffle / Poker & Chips System Section */}
+      <section className="relative py-32 z-10" style={{ padding: '60px 0 120px 0' }}>
+        <div className="max-w-5xl mx-auto px-6 relative z-10">
+          <h2 className="section-title text-5xl md:text-7xl mb-12">
+            Poker & Chips System
+          </h2>
+          <div className="deco-divider max-w-2xl mx-auto mb-20"></div>
+          
+          <div className="p-12 md:p-16">
+            <div className="fading-line mb-12"></div>
+            
+            {/* Ticket Price */}
+            <div className="text-center mb-16">
+              <p 
+                className="text-3xl md:text-4xl font-bold mb-8"
+                style={{ 
+                  fontFamily: "'Cormorant Garamond', serif",
+                  color: 'var(--gold-primary)',
+                  textShadow: '0 0 12px var(--gold-glow)',
+                  letterSpacing: '0.2em',
+                  textTransform: 'uppercase'
+                }}
+              >
+                Ticket Price: 500 Chips
+              </p>
+              <div className="fading-line max-w-md mx-auto"></div>
+            </div>
+            
+            <div className="space-y-12">
+              {/* How It Works */}
+              <div>
+                <div className="fading-line mb-6"></div>
+                <h3 
+                  className="text-2xl md:text-3xl font-bold mb-6"
+                  style={{ 
+                    fontFamily: "'Cormorant Garamond', serif",
+                    color: 'var(--gold-primary)',
+                    textShadow: '0 0 12px var(--gold-glow)',
+                    letterSpacing: '0.12em',
+                    textTransform: 'uppercase'
+                  }}
+                >
+                  How It Works
+                </h3>
+                <p className="body-text text-lg leading-relaxed mb-6">
+                  Upon entry, you will be given <strong style={{ color: 'var(--gold-primary)' }}>2 raffle tickets</strong>. One ticket can be traded to get <strong style={{ color: 'var(--gold-primary)' }}>500 chips</strong> (one poker buy-in). You can either choose to keep your tickets or use one to buy-in to a poker game.
+                </p>
+                <p className="body-text text-lg leading-relaxed">
+                  <strong style={{ color: 'var(--gold-primary)' }}>Every 30 minutes</strong>, we will be giving out one raffle ticket to each person, so make sure to get yours!
+                </p>
+              </div>
+            </div>
+            
+            <div className="fading-line mt-12"></div>
+          </div>
+        </div>
+      </section>
+
+      {/* Raffle Prizes Section */}
+      <section className="relative py-32 z-10" style={{ padding: '0 0 120px 0' }}>
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <h2 className="section-title text-5xl md:text-7xl mb-20">
+            Raffle Prizes
+          </h2>
+          
+          <div className="relative">
+            {/* Vertical columns only on desktop */}
+            <div 
+              className="hidden md:block absolute left-1/3 top-0 bottom-0 w-0.5"
+              style={{ 
+                background: 'linear-gradient(to bottom, transparent, var(--gold-primary), transparent)',
+                transform: 'translateX(-50%)'
+              }}
+            ></div>
+            <div 
+              className="hidden md:block absolute right-1/3 top-0 bottom-0 w-0.5"
+              style={{ 
+                background: 'linear-gradient(to bottom, transparent, var(--gold-primary), transparent)',
+                transform: 'translateX(50%)'
+              }}
+            ></div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+              {[
+                { title: 'Poker Set', desc: '500 Piece Set' },
+                { title: 'NYC Skyline', desc: 'Lego Set' },
+                { title: 'Gatsby Surprise', desc: 'Mystery Prize' }
+              ].map((prize, idx) => (
+                <div key={idx} className="text-center relative">
+                  <div className="fading-line mb-8"></div>
+                  
+                  <h3 
+                    className="text-2xl md:text-3xl font-bold mb-4"
+                    style={{ 
+                      fontFamily: "'Cormorant Garamond', serif",
+                      color: '#000000',
+                      letterSpacing: '0.12em',
+                      textTransform: 'uppercase'
+                    }}
+                  >
+                    {prize.title}
+                  </h3>
+                  <p 
+                    className="text-lg"
+                    style={{ 
+                      fontFamily: "'Cormorant Garamond', serif",
+                      color: '#000000',
+                      letterSpacing: '0.05em'
+                    }}
+                  >
+                    {prize.desc}
+                  </p>
+                  
+                  <div className="fading-line mt-8"></div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default GatsbyEvent;
