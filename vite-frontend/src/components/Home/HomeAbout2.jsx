@@ -17,7 +17,7 @@ const ImpactStories = () => {
       id: "02",
       category: "Synergy",
       title: "Cross-Functional Power",
-      description: "Business and technical talent working side by side. We bridge the gap between MBA strategy and engineering execution to solve problems faster.",
+      description: "Business and technical talent working side by side. We bridge the gap between strategy and engineering execution to solve problems faster.",
       image: "/images/groupg.jpg",
       link: "/about",
       linkText: "Meet Our Members"
