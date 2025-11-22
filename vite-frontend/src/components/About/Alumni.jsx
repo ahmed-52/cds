@@ -17,19 +17,16 @@ const Alumni = () => {
   const logos = [
     { src: "/alumni/cbre.svg", alt: "CBRE Group" },
     { src: "/alumni/bcg.svg", alt: "BCG" },
-    { src: "/alumni/buildgroup.svg", alt: "Build Group" },
     { src: "/alumni/CME 1.svg", alt: "CME" },
-    { src: "/alumni/efcg.svg", alt: "EFCG" },
-    { src: "/alumni/unitednations.svg", alt: "United Nations" },
     { src: "/alumni/g.webp", alt: "Google" },
-    { src: "/alumni/nomura.png", alt: "Nomura" },
-    { src: "/alumni/mckinsey.svg", alt: "" },
-    { src: "/alumni/justice.svg", alt: "Justice" },
-    { src: "/alumni/kpmg.svg", alt: "KPMG" },
+    { src: "/alumni/mckinsey.svg", alt: "McKinsey" },
+    {src: "/alumni/david.svg", alt: "David Polk" },
+    { src: "/alumni/meta.svg", alt: "Meta" },
+    { src: "/alumni/microsoft.svg", alt: "Microsoft" },
+    { src: "/alumni/datadog.svg", alt: "Datadog" },
+    { src: "/alumni/morganstan.svg", alt: "Morgan Stanley" },
     { src: "/alumni/mel.svg", alt: "Mel" },
     { src: "/alumni/susquehanna.svg", alt: "Susquehanna" },
-    { src: "/alumni/Pfizer.svg", alt: "Pfizer" },
-    { src: "/alumni/royalCaribbean.svg", alt: "Royal Caribbean" },
     { src: "/alumni/zs.svg", alt: "ZS Associates" }
   ];
 

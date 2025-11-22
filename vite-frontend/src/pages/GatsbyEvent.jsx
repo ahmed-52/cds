@@ -459,7 +459,188 @@ const GatsbyEvent = () => {
           </div>
         </div>
       </section>
+
+      <GatsbyQuiz />
     </div>
+  );
+};
+
+
+const GatsbyQuiz = () => {
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [completed, setCompleted] = useState(false);
+  const [selectedOption, setSelectedOption] = useState(null);
+  const [isWrong, setIsWrong] = useState(false);
+
+  const questions = [
+    {
+      question: "What color is the light at the end of Daisy's dock?",
+      options: ["Gold", "Green", "Red", "Blue"],
+      answer: 1
+    },
+    {
+      question: "What does Gatsby call everyone?",
+      options: ["Old Sport", "Chap", "Pal", "Brother"],
+      answer: 0
+    },
+    {
+      question: "Who narrates The Great Gatsby?",
+      options: ["Jay Gatsby", "Tom Buchanan", "Nick Carraway", "Daisy Buchanan"],
+      answer: 2
+    },
+    {
+      question: "In which era does the story take place?",
+      options: ["The Gilded Age", "The Roaring Twenties", "The Great Depression", "The Victorian Era"],
+      answer: 1
+    },
+    {
+      question: "Who is the author of The Great Gatsby?",
+      options: ["Ernest Hemingway", "William Faulkner", "F. Scott Fitzgerald", "John Steinbeck"],
+      answer: 2
+    },
+    {
+      question: "What is the area where the Wilsons live called?",
+      options: ["The Valley of Ashes", "East Egg", "West Egg", "Queens"],
+      answer: 0
+    },
+    {
+      question: "What symbolism is associated with the 'Eyes of Dr. T.J. Eckleburg'?",
+      options: ["Wealth", "God staring down", "Love", "Jealousy"],
+      answer: 1
+    }
+  ];
+
+  const handleOptionClick = (index) => {
+    setSelectedOption(index);
+    setIsWrong(false);
+    
+    if (index === questions[currentQuestion].answer) {
+      // Correct answer
+      setTimeout(() => {
+        if (currentQuestion < questions.length - 1) {
+          setCurrentQuestion(curr => curr + 1);
+          setSelectedOption(null);
+        } else {
+          setCompleted(true);
+        }
+      }, 600);
+    } else {
+      // Wrong answer animation
+      setIsWrong(true);
+    }
+  };
+
+  if (completed) {
+    return (
+      <section className="relative py-20 z-10 px-6">
+        <div className="max-w-md mx-auto p-1" style={{ background: 'linear-gradient(45deg, #CBA45A, #F6F2E8, #CBA45A)' }}>
+          <div className="bg-black p-8 md:p-12 text-center border border-[#CBA45A] h-full flex flex-col items-center justify-center">
+            
+            {/* Green Check Animation */}
+            <div className="mb-8 relative">
+              <div className="w-24 h-24 rounded-full border-4 border-[#00ff88] flex items-center justify-center shadow-[0_0_20px_rgba(0,255,136,0.4)]">
+                <svg className="w-12 h-12 text-[#00ff88]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+            </div>
+
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#00ff88]" 
+                style={{ fontFamily: "'Cinzel Decorative', serif", letterSpacing: '0.1em' }}>
+              ACCESS GRANTED
+            </h2>
+            
+            <div className="h-px w-full bg-[#CBA45A] mb-6 opacity-50"></div>
+            
+            <p className="text-[#F6F2E8] text-xl mb-2 font-serif">
+              You have passed the test.
+            </p>
+            <p className="text-[#CBA45A] text-lg font-bold uppercase tracking-widest animate-pulse">
+              Show this screen to staff<br/>to redeem your ticket.
+            </p>
+
+            <div className="mt-8 text-xs text-gray-500 uppercase tracking-[0.2em]">
+              Cornell Data Strategy
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  return (
+    <section className="relative py-32 z-10 px-6" id="quiz">
+      <div className="max-w-3xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl mb-4" 
+              style={{ fontFamily: "'Cormorant Garamond', serif", color: '#CBA45A' }}>
+            The Gatsby Trivia
+          </h2>
+          <p className="text-[#F6F2E8] italic font-serif">Question {currentQuestion + 1} of {questions.length}</p>
+        </div>
+
+        {/* Quiz Card */}
+        <div className="relative p-1" style={{ background: 'linear-gradient(180deg, rgba(203, 164, 90, 0.3) 0%, rgba(0,0,0,0) 100%)' }}>
+          <div className="bg-black/80 backdrop-blur-sm border border-[#CBA45A]/30 p-8 md:p-12">
+            
+            <h3 className="text-2xl md:text-3xl text-center mb-10 text-[#F6F2E8]" 
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+              {questions[currentQuestion].question}
+            </h3>
+
+            <div className="grid grid-cols-1 gap-4">
+              {questions[currentQuestion].options.map((option, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleOptionClick(index)}
+                  className={`
+                    relative p-4 border transition-all duration-300 text-lg font-serif tracking-wide
+                    ${selectedOption === index 
+                      ? (index === questions[currentQuestion].answer 
+                          ? 'bg-[#CBA45A] text-black border-[#CBA45A]' 
+                          : 'bg-red-900/30 text-red-200 border-red-500 shake')
+                      : 'bg-transparent text-[#CBA45A] border-[#CBA45A]/40 hover:bg-[#CBA45A]/10 hover:border-[#CBA45A]'}
+                  `}
+                >
+                  {option}
+                  
+                  {/* Art Deco Corners for buttons */}
+                  <div className="absolute top-0 left-0 w-1 h-1 border-t border-l border-current opacity-50"></div>
+                  <div className="absolute top-0 right-0 w-1 h-1 border-t border-r border-current opacity-50"></div>
+                  <div className="absolute bottom-0 left-0 w-1 h-1 border-b border-l border-current opacity-50"></div>
+                  <div className="absolute bottom-0 right-0 w-1 h-1 border-b border-r border-current opacity-50"></div>
+                </button>
+              ))}
+            </div>
+
+            {isWrong && (
+              <p className="text-red-400 text-center mt-6 font-serif italic animate-bounce">
+                Incorrect, Old Sport. Try again.
+              </p>
+            )}
+
+          </div>
+          
+          {/* Decorative corners for main card */}
+          <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-[#CBA45A]"></div>
+          <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-[#CBA45A]"></div>
+          <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-[#CBA45A]"></div>
+          <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-[#CBA45A]"></div>
+        </div>
+      </div>
+      
+      <style>{`
+        .shake {
+          animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+        }
+        @keyframes shake {
+          10%, 90% { transform: translate3d(-1px, 0, 0); }
+          20%, 80% { transform: translate3d(2px, 0, 0); }
+          30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+          40%, 60% { transform: translate3d(4px, 0, 0); }
+        }
+      `}</style>
+    </section>
   );
 };
 

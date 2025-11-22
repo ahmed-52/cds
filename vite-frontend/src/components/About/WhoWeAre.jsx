@@ -5,8 +5,8 @@ const WhoWeAre = () => {
     <main className='max-w-[1600px] mx-auto bg-white'>
       
       {/* SECTION 1: IDENTITY */}
-      <section className="grid lg:grid-cols-2 border-b border-[#051C2C]/10">
-        {/* Text Side */}
+      {/* <section className="grid lg:grid-cols-2 border-b border-[#051C2C]/10">
+
         <div className="p-8 lg:p-20 flex flex-col justify-center border-r border-[#051C2C]/10">
           <div className="flex items-center gap-4 mb-8">
              <div className="h-px w-8 bg-[#051C2C]"></div>
@@ -21,7 +21,7 @@ const WhoWeAre = () => {
           </p>
         </div>
 
-        {/* Image Side */}
+ 
         <div id='who-we-are' className="relative h-full min-h-[400px]">
           <img 
             src="/images/groupphoto.png" 
@@ -29,7 +29,7 @@ const WhoWeAre = () => {
             className="absolute inset-0 w-full h-full object-cover transition-all duration-700" 
           />
         </div>
-      </section>
+      </section> */}
 
       {/* SECTION 2: CULTURE (Grid Layout) */}
       <section className="border-b border-[#051C2C]/10">
