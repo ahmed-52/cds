@@ -35,21 +35,21 @@ const ImpactStories = () => {
 
   return (
     <section className="bg-white text-[#051C2C] relative">
-      <div className="max-w-[1600px] mx-auto px-6 lg:px-12 xl:px-16">
+      <div className="max-w-[1600px] mx-auto px-6 min-[1100px]:px-12 xl:px-16">
         
         {/* Section Header */}
-        <div className="pb-10 lg:pb-32 border-b border-[#051C2C]/10">
-          <div className="grid lg:grid-cols-2 gap-12 items-end">
+        <div className="pb-10 min-[1100px]:pb-32 border-b border-[#051C2C]/10">
+          <div className="grid min-[1100px]:grid-cols-2 gap-12 items-end">
             <div>
               <div className="flex items-center gap-4 mb-6">
                 <div className="h-px w-12 bg-[#155cfc]"></div>
                 <span className="text-xs font-bold uppercase tracking-widest text-[#155cfc]">Our Impact Model</span>
               </div>
-              <h2 className="text-5xl lg:text-7xl font-serif leading-[1.05]">
+              <h2 className="text-5xl min-[1100px]:text-7xl font-serif leading-[1.05]">
                 Built for <span className="italic text-gray-400">results.</span>
               </h2>
             </div>
-            <p className="text-lg text-slate-600 font-light leading-relaxed max-w-xl lg:ml-auto">
+            <p className="text-lg text-slate-600 font-light leading-relaxed max-w-xl min-[1100px]:ml-auto">
               We operate differently than a standard student club. We model ourselves after the firms we aspire to join, prioritizing client impact and professional rigor above all else.
             </p>
           </div>
@@ -58,13 +58,13 @@ const ImpactStories = () => {
         {/* The Grid Layout - Strict Lines, No Shadows */}
         <div>
           {stories.map((story, index) => (
-            <div key={index} className="group relative border-b border-[#051C2C]/10 grid lg:grid-cols-2">
+            <div key={index} className="group relative border-b border-[#051C2C]/10 grid min-[1100px]:grid-cols-2">
               
               {/* Content Side */}
-              <div className={`relative flex flex-col justify-center py-16 lg:py-24 pr-8 lg:pr-24 ${index % 2 === 1 ? 'lg:order-2 lg:pl-24 lg:pr-0 lg:border-l border-[#051C2C]/10' : 'lg:border-r border-[#051C2C]/10'}`}>
+              <div className={`relative flex flex-col justify-center py-16 min-[1100px]:py-24 pr-8 min-[1100px]:pr-24 ${index % 2 === 1 ? 'min-[1100px]:order-2 min-[1100px]:pl-24 min-[1100px]:pr-0 min-[1100px]:border-l border-[#051C2C]/10' : 'min-[1100px]:border-r border-[#051C2C]/10'}`}>
                 
                 {/* Numbering background decoration */}
-                <span className="absolute top-8 left-0 lg:left-8 text-[120px] font-serif leading-none text-[#051C2C]/[0.03] select-none pointer-events-none">
+                <span className="absolute top-8 left-0 min-[1100px]:left-8 text-[120px] font-serif leading-none text-[#051C2C]/[0.03] select-none pointer-events-none">
                   {story.id}
                 </span>
 
@@ -72,7 +72,7 @@ const ImpactStories = () => {
                     <span className="block text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">
                         {story.category}
                     </span>
-                    <h3 className="text-3xl lg:text-5xl font-serif mb-6 group-hover:text-[#155cfc] transition-colors duration-300">
+                    <h3 className="text-3xl min-[1100px]:text-5xl font-serif mb-6 group-hover:text-[#155cfc] transition-colors duration-300">
                         {story.title}
                     </h3>
                     <p className="text-lg text-slate-600 font-light leading-relaxed mb-10">
@@ -87,7 +87,7 @@ const ImpactStories = () => {
               </div>
 
               {/* Image Side - Strictly Rectangular */}
-              <div className={`relative overflow-hidden aspect-[4/3] lg:h-full lg:min-h-[500px] ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
+              <div className={`relative overflow-hidden aspect-[4/3] min-[1100px]:h-full ${index === 1 ? 'min-[1100px]:aspect-[16/9] min-[1100px]:min-h-[360px]' : 'min-[1100px]:min-h-[500px]'} ${index % 2 === 1 ? 'min-[1100px]:order-1' : ''}`}>
                  <motion.div 
                    className="w-full h-full"
                    whileHover={{ scale: 1.05 }}

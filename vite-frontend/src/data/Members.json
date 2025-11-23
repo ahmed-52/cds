@@ -10,30 +10,37 @@
         "name": "Ahmed Abdulla '27",
         "title": "Director, Technology Implementation"
       },
-      {
-        "image": "team/dhruv.jpg",
-        "name": "Dhruv Raina '26",
-        "title": "Director, Client Relations"
-      },
+      
+
       {
         "image": "team/keira_kim.jpg",
         "name": "Keira Kim '28",
         "title": "Director, Brand & Innovation"
+      },
+                {
+        "image": "team/paul_chung.jpg",
+        "name": "Paul Chung '27",
+        "title": "Director, Events & Financing"
       },
       {
         "image": "team/farhan.png",
         "name": "Farhan Mashrur '27",
         "title": "VP, Technology Implementation"
       },
+            {
+        "image": "team/joyce_han.jpg",
+        "name": "Joyce Han '29",
+        "title": "VP, Internal Operations"
+      },
+            {
+        "image": "team/jibran.png",
+        "name": "Jibran Khan '26",
+        "title": "VP, Strategy & Transformation"
+      },
       {
         "image": "team/arsh.png",
         "name": "Arsh Singh '28",
         "title": "VP, Technology Implementation"
-      },
-          {
-        "image": "team/paul_chung.jpg",
-        "name": "Paul Chung '27",
-        "title": "Director, Events & Financing"
       }
     ],
     "engagementManagers": [
@@ -42,11 +49,6 @@
             {
         "image": "team/mihir_steingard.jpg",
         "name": "Mihir Steingard '28",
-        "title": "Strategy & Transformation"
-      },
-      {
-        "image": "team/jibran.png",
-        "name": "Jibran Khan '26",
         "title": "Strategy & Transformation"
       },
       {
@@ -79,17 +81,22 @@
       {
         "image": "team/mashnoon_hasnat.jpg",
         "name": "Mashnoon Hasnat '27",
-        "title": "Senior Associate, Events"
+        "title": "Events & Financing"
       },
       {
         "image": "team/arianna.jpg",
         "name": "Arianna Hsu '28",
-        "title": "Social Media Senior Associate"
+        "title": "Social Media"
       },
       {
         "image": "team/yash_chatha.jpg",
         "name": "Yash Chatha '27",
-        "title": "Senior Associate, Technology Implementation"
+        "title": "Technology Implementation"
+      },
+            {
+        "image": "team/dhruv.jpg",
+        "name": "Dhruv Raina '26",
+        "title": "Client Relations"
       }
     ],
     "associates": [
@@ -122,11 +129,6 @@
         "image": "team/albert_li.jpg",
         "name": "Albert Li '27",
         "title": "Technology Implementation"
-      },
-      {
-        "image": "team/joyce_han.jpg",
-        "name": "Joyce Han '29",
-        "title": "Strategy & Transformation"
       },
       {
         "image": "team/fiona_chandler.jpg",

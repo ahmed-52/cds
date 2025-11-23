@@ -15,7 +15,7 @@ const ProjectGridItem = ({ title, body, image, link }) => (
       <img 
         src={image} 
         alt={title} 
-        className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+        className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
       />
       {/* Blue Flash Overlay */}
       <div className="absolute inset-0 bg-[#155cfc]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 mix-blend-multiply"></div>
