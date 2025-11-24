@@ -57,54 +57,62 @@ const ImpactStories = () => {
 
         {/* The Grid Layout - Strict Lines, No Shadows */}
         <div>
-          {stories.map((story, index) => (
-            <div key={index} className="group relative border-b border-[#051C2C]/10 grid min-[1100px]:grid-cols-2">
-              
-              {/* Content Side */}
-              <div className={`relative flex flex-col justify-center py-16 min-[1100px]:py-24 pr-8 min-[1100px]:pr-24 ${index % 2 === 1 ? 'min-[1100px]:order-2 min-[1100px]:pl-24 min-[1100px]:pr-0 min-[1100px]:border-l border-[#051C2C]/10' : 'min-[1100px]:border-r border-[#051C2C]/10'}`}>
+          {stories.map((story, index) => {
+            const isReversed = index % 2 === 1;
+            return (
+              <div
+                key={story.id}
+                className={`group relative border-b border-[#051C2C]/10 flex flex-col min-[1100px]:flex-row min-[1100px]:items-stretch ${isReversed ? 'min-[1100px]:flex-row-reverse' : ''}`}
+              >
                 
-                {/* Numbering background decoration */}
-                <span className="absolute top-8 left-0 min-[1100px]:left-8 text-[120px] font-serif leading-none text-[#051C2C]/[0.03] select-none pointer-events-none">
-                  {story.id}
-                </span>
+                {/* Content Side */}
+                <div
+                  className={`relative flex flex-col justify-center py-16 min-[1100px]:py-24 pr-8 min-[1100px]:pr-16 min-[1100px]:basis-[55%] min-[1100px]:grow ${isReversed ? 'min-[1100px]:pl-16 min-[1100px]:pr-0 min-[1100px]:border-l' : 'min-[1100px]:pl-0 min-[1100px]:border-r'} border-[#051C2C]/10`}
+                >
+                  
+                  {/* Numbering background decoration */}
+                  <span className="absolute top-8 left-0 min-[1100px]:left-8 text-[120px] font-serif leading-none text-[#051C2C]/[0.03] select-none pointer-events-none">
+                    {story.id}
+                  </span>
 
-                <div className="relative z-10">
-                    <span className="block text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">
-                        {story.category}
-                    </span>
-                    <h3 className="text-3xl min-[1100px]:text-5xl font-serif mb-6 group-hover:text-[#155cfc] transition-colors duration-300">
-                        {story.title}
-                    </h3>
-                    <p className="text-lg text-slate-600 font-light leading-relaxed mb-10">
-                        {story.description}
-                    </p>
-                    
-                    <a href={story.link} className="inline-flex items-center text-xs font-bold uppercase tracking-widest border-b border-[#051C2C] pb-1 hover:text-[#155cfc] hover:border-[#155cfc] transition-colors">
-                        {story.linkText}
-                        <ArrowUpRight className="ml-2 w-4 h-4" />
-                    </a>
+                  <div className="relative z-10">
+                      <span className="block text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">
+                          {story.category}
+                      </span>
+                      <h3 className="text-3xl min-[1100px]:text-5xl font-serif mb-6 group-hover:text-[#155cfc] transition-colors duration-300">
+                          {story.title}
+                      </h3>
+                      <p className="text-lg text-slate-600 font-light leading-relaxed mb-10">
+                          {story.description}
+                      </p>
+                      
+                      <a href={story.link} className="inline-flex items-center text-xs font-bold uppercase tracking-widest border-b border-[#051C2C] pb-1 hover:text-[#155cfc] hover:border-[#155cfc] transition-colors">
+                          {story.linkText}
+                          <ArrowUpRight className="ml-2 w-4 h-4" />
+                      </a>
+                  </div>
                 </div>
-              </div>
 
-              {/* Image Side - Strictly Rectangular */}
-              <div className={`relative overflow-hidden aspect-[4/3] min-[1100px]:h-full ${index === 1 ? 'min-[1100px]:aspect-[16/9] min-[1100px]:min-h-[360px]' : 'min-[1100px]:min-h-[500px]'} ${index % 2 === 1 ? 'min-[1100px]:order-1' : ''}`}>
-                 <motion.div 
-                   className="w-full h-full"
-                   whileHover={{ scale: 1.05 }}
-                   transition={{ duration: 0.7, ease: "easeOut" }}
-                 >
-                    <img 
-                        src={story.image} 
-                        alt={story.title}
-                        className="w-full h-full object-cover transition-all duration-700 ease-in-out"
-                    />
-                 </motion.div>
-                 {/* Flash of blue on hover */}
-                 <div className="absolute inset-0 bg-[#155cfc]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none mix-blend-multiply"></div>
-              </div>
+                {/* Image Side - Strictly Rectangular */}
+                <div className={`relative overflow-hidden aspect-[4/3] min-[1100px]:h-full min-[1100px]:basis-[45%] ${index === 1 ? 'min-[1100px]:min-h-[420px]' : 'min-[1100px]:min-h-[500px]'}`}>
+                   <motion.div 
+                     className="w-full h-full"
+                     whileHover={{ scale: 1.05 }}
+                     transition={{ duration: 0.7, ease: "easeOut" }}
+                   >
+                      <img 
+                          src={story.image} 
+                          alt={story.title}
+                          className="w-full h-full object-cover transition-all duration-700 ease-in-out"
+                      />
+                   </motion.div>
+                   {/* Flash of blue on hover */}
+                   <div className="absolute inset-0 bg-[#155cfc]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none mix-blend-multiply"></div>
+                </div>
 
-            </div>
-          ))}
+              </div>
+            );
+          })}
         </div>
 
       </div>

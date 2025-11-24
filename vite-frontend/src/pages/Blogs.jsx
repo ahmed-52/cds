@@ -8,7 +8,7 @@ const BlogCard = ({ slug, category, date, title, subtitle, author, readTime, ima
     className="group flex flex-col h-full border-b border-[#051C2C]/10 md:border-r border-r-[#051C2C]/10 bg-white hover:bg-gray-50 transition-colors duration-500"
   >
     {/* Image container */}
-    <div className="aspect-[16/9] w-full overflow-hidden relative grayscale group-hover:grayscale-0 transition-all duration-700">
+    <div className="aspect-[16/9] w-full overflow-hidden relative transition-all duration-700">
        <img src={image} alt={title} className="w-full h-full object-cover" />
        <div className="absolute inset-0 bg-[#155cfc]/10 opacity-0 group-hover:opacity-100 transition-opacity mix-blend-multiply"></div>
     </div>
