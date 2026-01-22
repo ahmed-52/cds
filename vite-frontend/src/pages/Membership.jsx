@@ -70,11 +70,15 @@ const Membership = () => {
             </div>
             <h2 className="text-3xl lg:text-4xl font-serif mb-12 text-white">Recruitment Timeline</h2>
             
-            <div className="space-y-8 relative border-l border-white/10 ml-3 pl-8">
+            <div className="space-y-8 relative ml-3 pl-8">
                 {events.map((event, index) => (
                     <div key={index} className="relative group">
                         {/* Dot */}
-                        <div className={`absolute -left-[37px] top-1.5 w-4 h-4 rounded-full border-2 border-[#0B1C2B] ${event.highlight ? 'bg-[#155cfc]' : 'bg-white'}`}></div>
+                        <div className={`absolute -left-[40px] top-1.5 w-4 h-4 rounded-full border-2 border-[#051C2C] ${event.highlight ? 'bg-[#155cfc]' : 'bg-white'}`}></div>
+                        {/* Connector line to next dot */}
+                        {index < events.length - 1 && (
+                            <div className="absolute -left-[32px] top-[22px] -bottom-[38px] w-px bg-white/20"></div>
+                        )}
                         
                         <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-1">{event.date}</p>
                         <h3 className="text-xl font-serif text-white mb-2">{event.name}</h3>
