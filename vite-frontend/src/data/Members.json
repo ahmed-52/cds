@@ -3,49 +3,47 @@
       {
         "image": "team/ahmed.jpg",
         "name": "Ahmed Abdulla '27",
-        "title": "Director, Technology Implementation"
+        "title": "President, Director of Tech"
       },
-      
-
+      {
+        "image": "team/mihir_steingard.jpg",
+        "name": "Mihir Steingard '28",
+        "title": "Director of Strategy"
+      },
       {
         "image": "team/keira_kim.jpg",
         "name": "Keira Kim '28",
-        "title": "Director, Brand & Innovation"
-      },
-                {
-        "image": "team/paul_chung.jpg",
-        "name": "Paul Chung '27",
-        "title": "Director, Events & Financing"
+        "title": "Director of B&I"
       },
       {
         "image": "team/farhan.png",
         "name": "Farhan Mashrur '27",
-        "title": "VP, Technology Implementation"
+        "title": "Executive VP"
       },
-            {
-        "image": "team/joyce.jpeg",
-        "name": "Joyce Han '29",
-        "title": "VP, Internal Operations"
-      },
-            {
-        "image": "team/jibran.png",
-        "name": "Jibran Khan '26",
-        "title": "VP, Strategy & Transformation"
+      {
+        "image": "team/sharvari.jpg",
+        "name": "Sharvari Vartak '28",
+        "title": "VP, Strategy"
       },
       {
         "image": "team/arsh.png",
         "name": "Arsh Singh '28",
-        "title": "VP, Technology Implementation"
+        "title": "VP, Tech"
+      },
+      {
+        "image": "team/joyce.jpeg",
+        "name": "Joyce Han '29",
+        "title": "Internal Operations"
+      },
+      {
+        "image": "team/paul_chung.jpg",
+        "name": "Paul Chung '27",
+        "title": "Events & Finance"
       }
     ],
     "engagementManagers": [
     ],
     "projectLeads": [
-            {
-        "image": "team/mihir_steingard.jpg",
-        "name": "Mihir Steingard '28",
-        "title": "Strategy & Transformation"
-      },
       {
         "image": "team/carolyn.png",
         "name": "Carolyn Fu '28",
@@ -56,15 +54,10 @@
         "name": "Dixon Yang '28",
         "title": "Strategy & Transformation"
       },
-              {
+      {
         "image": "team/daniel_khanin.jpg",
         "name": "Daniel Khanin '28",
         "title": "Client Relations"
-      },
-      {
-        "image": "team/sharvari.jpg",
-        "name": "Sharvari Vartak '28",
-        "title": "Strategy & Transformation"
       },
       {
         "image": "team/daniel_zlotnick.jpg",
