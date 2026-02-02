@@ -1,11 +1,6 @@
 {
     "directorsAndVPs": [
       {
-        "image": "team/chris.jpg",
-        "name": "Chris Wang '26",
-        "title": "Director, Strategy & Transformation"
-      },
-      {
         "image": "team/ahmed.jpg",
         "name": "Ahmed Abdulla '27",
         "title": "Director, Technology Implementation"
@@ -173,6 +168,11 @@
       }
     ],
     "advisory": [
+      {
+        "image": "team/chris.jpg",
+        "name": "Chris Wang '26",
+        "title": "Director, Strategy & Transformation"
+      },
       {
         "image": "team/DasSreyoshi.jpg",
         "name": "Das Sreyoshi",
