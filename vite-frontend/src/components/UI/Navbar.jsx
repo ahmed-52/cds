@@ -115,7 +115,7 @@ const Navbar = () => {
           <NavLink href="/membership" text="Apply" isTransparent={isTransparentMode} />
               <NavLink href="/blogs" text="Blogs" isTransparent={isTransparentMode} />
           
-          <div className={`h-4 w-px mx-2 opacity-20 ${isTransparentMode ? 'bg-white' : 'bg-[#051C2C]'}`}></div>
+          <ydiv className="h-6 w-px mx-2 bg-gray-300"></ydiv>
           
           <a 
             href="/contact" 
