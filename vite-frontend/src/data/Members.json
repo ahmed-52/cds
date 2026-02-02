@@ -12,11 +12,13 @@
       },
       {
         "image": "team/IMG_0123.JPG",
+        "imagePosition": "center 20%",
         "name": "Keira Kim '28",
         "title": "Director of B&I"
       },
       {
-        "image": "team/IMG_0098.jpg",
+        "image": "team/IMG_0098.JPG",
+        "imagePosition": "center 20%",
         "name": "Farhan Mashrur '27",
         "title": "Executive VP"
       },
@@ -31,7 +33,7 @@
         "title": "VP, Tech"
       },
       {
-        "image": "team/IMG_0067.jpg",
+        "image": "team/joyce.jpeg",
         "name": "Joyce Han '29",
         "title": "Internal Operations"
       },
