@@ -2,14 +2,14 @@ import React from 'react';
 import membersData from '../../data/Members.json';
 
 // Local helper component to ensure strict grid styling
-const MemberCard = ({ image, name, title, imagePosition }) => (
+const MemberCard = ({ image, name, title, imagePosition, imageScale }) => (
   <div className="group relative border-r border-b border-[#051C2C]/10 bg-white hover:bg-gray-50 transition-colors duration-300">
     <div className="aspect-[3/4] overflow-hidden relative  transition-all duration-500">
       <img
         src={image}
         alt={name}
         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-        style={{ objectPosition: imagePosition || 'top' }}
+        style={{ objectPosition: imagePosition || 'top', transform: imageScale ? `scale(${imageScale})` : undefined }}
       />
       {/* Blue overlay flash on hover */}
       <div className="absolute inset-0 bg-[#155cfc]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 mix-blend-multiply pointer-events-none"></div>
