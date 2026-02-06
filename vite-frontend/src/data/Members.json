@@ -14,14 +14,14 @@
         "image": "team/IMG_0123.JPG",
         "imagePosition": "center 20%",
         "name": "Keira Kim '28",
-        "title": "Director of B&I"
+        "title": "VP, Brand & Innovation"
       },
       {
         "image": "team/IMG_0098.JPG",
         "imagePosition": "center 40%",
         "imageScale": 1.15,
         "name": "Farhan Mashrur '27",
-        "title": "Executive VP"
+        "title": "VP, Tech"
       },
       {
         "image": "team/sharvari.jpg",
@@ -36,12 +36,12 @@
       {
         "image": "team/joyce.jpeg",
         "name": "Joyce Han '29",
-        "title": "Internal Operations"
+        "title": "VP, Internal Operations"
       },
       {
         "image": "team/IMG_0136.JPG",
         "name": "Paul Chung '27",
-        "title": "Events & Finance"
+        "title": "VP, Events & Finance"
       }
     ],
     "engagementManagers": [
@@ -88,6 +88,16 @@
         "image": "team/dhruv.jpg",
         "name": "Dhruv Raina '26",
         "title": "Client Relations"
+      },
+      {
+        "image": "team/jimmy_mulosmani.jpg",
+        "name": "Jimmy Mulosmani '29",
+        "title": "Technology Implementation"
+      },
+      {
+        "image": "team/surabhi_bachhav.jpg",
+        "name": "Surabhi Bachhav '28",
+        "title": "Technology Implementation"
       }
     ],
     "associates": [
@@ -133,11 +143,6 @@
         "title": "Technology Implementation"
       },
       {
-        "image": "team/jimmy_mulosmani.jpg",
-        "name": "Jimmy Mulosmani '29",
-        "title": "Technology Implementation"
-      },
-      {
         "image": "team/saiakhil_chilaka.jpg",
         "name": "Saiakhil Chilaka '29",
         "title": "Technology Implementation"
@@ -155,11 +160,6 @@
       {
         "image": "team/urja_saha.jpg",
         "name": "Urja Saha '29",
-        "title": "Technology Implementation"
-      },
-      {
-        "image": "team/surabhi_bachhav.jpg",
-        "name": "Surabhi Bachhav '28",
         "title": "Technology Implementation"
       }
     ],
