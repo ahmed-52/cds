@@ -79,7 +79,7 @@ const Excel = () => {
              <motion.div style={{ y: y1 }} className="relative z-10">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-sm shadow-2xl border border-white/10 bg-slate-800">
                    <img 
-                      src="/images/arsh.jpg" 
+                      src="/team/IMG_0217.JPG" 
                       alt="Leadership" 
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-[1.5s]"
                    />
