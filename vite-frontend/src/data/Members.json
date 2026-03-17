@@ -1,178 +1,48 @@
 {
     "directorsAndVPs": [
-      {
-        "image": "team/ahmed.jpg",
-        "name": "Ahmed Abdulla '27",
-        "title": "President, Director of Tech"
-      },
-      {
-        "image": "team/IMG_0258.JPG",
-        "name": "Mihir Steingard '28",
-        "title": "Director of Strategy"
-      },
-      {
-        "image": "team/IMG_0123.JPG",
-        "imagePosition": "center 20%",
-        "name": "Keira Kim '28",
-        "title": "VP, Brand & Innovation"
-      },
-      {
-        "image": "team/IMG_0098.JPG",
-        "imagePosition": "center 40%",
-        "imageScale": 1.15,
-        "name": "Farhan Mashrur '27",
-        "title": "VP, Tech"
-      },
-      {
-        "image": "team/sharvari.jpg",
-        "name": "Sharvari Vartak '28",
-        "title": "VP, Strategy"
-      },
-      {
-        "image": "team/arsh.jpg",
-        "name": "Arsh Singh '28",
-        "title": "VP, Tech"
-      },
-      {
-        "image": "team/joyce.jpeg",
-        "name": "Joyce Han '29",
-        "title": "VP, Internal Operations"
-      },
-      {
-        "image": "team/IMG_0136.JPG",
-        "name": "Paul Chung '27",
-        "title": "VP, Events & Finance"
-      }
+        { "name": "Ahmed Abdulla", "title": "Director", "image": "/team/ahmed_abdulla.jpg" },
+        { "name": "Chris Wang", "title": "Director", "image": "/team/chris_wang.jpg" },
+        { "name": "Keira Kim", "title": "Director", "image": "/team/keira_kim.jpg" },
+        { "name": "Paul Chung", "title": "VP", "image": "/team/paul_chung.jpg" },
+        { "name": "Arsh Singh", "title": "VP", "image": "/team/arsh_singh.jpg" },
+        { "name": "Daniel Khanin", "title": "VP", "image": "/team/daniel_khanin.jpg" },
+        { "name": "Farhan Mashrur", "title": "VP", "image": "/team/farhan_mashrur.jpg" },
+        { "name": "Joyce Han", "title": "VP", "image": "/team/joyce_han.jpg" }
     ],
-    "engagementManagers": [
-    ],
+    "engagementManagers": [],
     "projectLeads": [
-      {
-        "image": "team/carolyn.png",
-        "name": "Carolyn Fu '28",
-        "title": "Strategy & Transformation"
-      },
-      {
-        "image": "team/dixon.png",
-        "name": "Dixon Yang '28",
-        "title": "Strategy & Transformation"
-      },
-      {
-        "image": "team/daniel_khanin.jpg",
-        "name": "Daniel Khanin '28",
-        "title": "Client Relations"
-      },
-      {
-        "image": "team/daniel_zlotnick.jpg",
-        "name": "Daniel Zlotnick '28",
-        "title": "Technology Implementation"
-      }
+        { "name": "Carolyn Fu", "title": "PL", "image": "/team/carolyn_fu.jpg" },
+        { "name": "Daniel Zlotnick", "title": "PL", "image": "/team/daniel_zlotnick.jpg" },
+        { "name": "Dixon Yang", "title": "PL", "image": "/team/dixon_yang.jpg" },
+        { "name": "Mihir Steingard", "title": "PL", "image": "/team/mihir_steingard.jpg" },
+        { "name": "Sharvari Vartak", "title": "PL", "image": "/team/sharvari_vartak.jpg" }
     ],
     "seniorAssociates": [
-      {
-        "image": "team/mashnoon_hasnat.jpg",
-        "name": "Mashnoon Hasnat '27",
-        "title": "Events & Financing"
-      },
-      {
-        "image": "team/arianna.jpg",
-        "name": "Arianna Hsu '28",
-        "title": "Social Media"
-      },
-      {
-        "image": "team/yash_chatha.jpg",
-        "name": "Yash Chatha '27",
-        "title": "Technology Implementation"
-      },
-            {
-        "image": "team/dhruv.jpg",
-        "name": "Dhruv Raina '26",
-        "title": "Client Relations"
-      },
-      {
-        "image": "team/jimmy_mulosmani.jpg",
-        "name": "Jimmy Mulosmani '29",
-        "title": "Technology Implementation"
-      },
-      {
-        "image": "team/surabhi_bachhav.jpg",
-        "name": "Surabhi Bachhav '28",
-        "title": "Technology Implementation"
-      }
+        { "name": "Kiyam Merali", "title": "Senior Associate", "image": "/team/kiyam_merali.jpg" },
+        { "name": "Mashnoon Hasnat", "title": "Senior Associate", "image": "/team/mashnoon_hasnat.jpg" },
+        { "name": "Jimmy Mulosmani", "title": "Senior Associate", "image": "/team/jimmy_mulosmani.jpg" }
     ],
     "associates": [
-      {
-        "image": "team/elise_carpenter.jpg",
-        "name": "Elise Carpenter '28",
-        "title": "Strategy & Transformation"
-      },
-      {
-        "image": "team/ivy_liu.jpg",
-        "name": "Ivy Liu '28",
-        "title": "Strategy & Transformation"
-      },
-      {
-        "image": "team/meriem_farah.jpg",
-        "name": "Meriem Farah '29",
-        "title": "Strategy & Transformation"
-      },
-      {
-        "image": "team/ruochen_zhang.jpg",
-        "name": "Ruochen Zhang '26",
-        "title": "Strategy & Transformation"
-      },
-      {
-        "image": "team/kiyam_merali.jpg",
-        "name": "Kiyam Merali '27",
-        "title": "Technology Implementation"
-      },
-      {
-        "image": "team/albert_li.jpg",
-        "name": "Albert Li '27",
-        "title": "Technology Implementation"
-      },
-      {
-        "image": "team/fiona_chandler.jpg",
-        "name": "Fiona Chandler '29",
-        "title": "Technology Implementation"
-      },
-
-      {
-        "image": "team/cassidy_takeuchi.jpg",
-        "name": "Cassidy Takeuchi '29",
-        "title": "Technology Implementation"
-      },
-      {
-        "image": "team/saiakhil_chilaka.jpg",
-        "name": "Saiakhil Chilaka '29",
-        "title": "Technology Implementation"
-      },
-      {
-        "image": "team/aashna_thadani.jpg",
-        "name": "Aashna Thadani '29",
-        "title": "Technology Implementation"
-      },
-      {
-        "image": "team/adi_prathapa.jpg",
-        "name": "Adi Prathapa '29",
-        "title": "Technology Implementation"
-      },
-      {
-        "image": "team/urja_saha.jpg",
-        "name": "Urja Saha '29",
-        "title": "Technology Implementation"
-      }
+        { "name": "Aashna Thadani", "title": "Associate", "image": "/team/aashna_thadani.jpg" },
+        { "name": "Adi Prathapa", "title": "Associate", "image": "/team/adi_prathapa.jpg" },
+        { "name": "Ava Lehmann", "title": "Associate", "image": "/team/ava_lehmann.JPG" },
+        { "name": "Cassidy Takeuchi", "title": "Associate", "image": "/team/cassidy_takeuchi.jpg" },
+        { "name": "Elise Carpenter", "title": "Associate", "image": "/team/elise_carpenter.jpg" },
+        { "name": "Fiona Chandler", "title": "Associate", "image": "/team/fiona_chandler.jpg" },
+        { "name": "Ivy Liu", "title": "Associate", "image": "/team/ivy_liu.jpg" },
+        { "name": "Max Friedman", "title": "Associate", "image": "/team/max_friedman.JPG" },
+        { "name": "Melody Qian", "title": "Associate", "image": "/team/melody_qian.JPG" },
+        { "name": "Meriem Farah", "title": "Associate", "image": "/team/meriem_farah.jpg" },
+        { "name": "Nandini Venkatesh", "title": "Associate", "image": "/team/nandini_venkatesh.JPG" },
+        { "name": "Saiakhil Chilaka", "title": "Associate", "image": "/team/saiakhil_chilaka.jpg" },
+        { "name": "Smriti Kumar", "title": "Associate", "image": "/team/smriti_kumar.JPG" },
+        { "name": "Surabhi Bachhav", "title": "Associate", "image": "/team/surabhi_bachhav.jpg" },
+        { "name": "Urja Saha", "title": "Associate", "image": "/team/urja_saha.jpg" },
+        { "name": "Eric Shen", "title": "Associate", "image": "/team/eric_shen.JPG" },
+        { "name": "Audrey Chen", "title": "Associate", "image": "/team/audrey_chen.JPG" },
+        { "name": "Bryan Shao", "title": "Associate", "image": "/team/bryan_shao.JPG" },
+        { "name": "Arvin Mou", "title": "Associate", "image": "/team/arvin_mou.jpg" },
+        { "name": "Jayden Lim", "title": "Associate", "image": "/team/jayden_lim.jpg" }
     ],
-    "advisory": [
-      {
-        "image": "team/chris.jpg",
-        "name": "Chris Wang '26",
-        "title": "Strategy & Management Consulting"
-      },
-      {
-        "image": "team/DasSreyoshi.jpg",
-        "name": "Das Sreyoshi",
-        "title": "Economics, Finance & Data Science"
-      }
-    ]
-  }
+    "advisory": []
+}
