@@ -1,99 +1,95 @@
 {
     "directorsAndVPs": [
       {
-        "image": "team/ahmed.jpg",
+        "image": "/team/ahmed.jpg",
         "name": "Ahmed Abdulla '27",
         "title": "President, Director of Tech"
       },
       {
-        "image": "team/IMG_0258.JPG",
-        "name": "Mihir Steingard '28",
-        "title": "Director of Strategy"
+        "image": "/team/chris.jpg",
+        "name": "Chris Wang '26",
+        "title": "Director, Strategy & Transformation"
       },
       {
-        "image": "team/IMG_0123.JPG",
+        "image": "/team/IMG_0123.JPG",
         "imagePosition": "center 20%",
         "name": "Keira Kim '28",
         "title": "Director, Brand & Innovation"
       },
       {
-        "image": "team/IMG_0098.JPG",
+        "image": "/team/IMG_0098.JPG",
         "imagePosition": "center 40%",
         "imageScale": 1.15,
         "name": "Farhan Mashrur '27",
-        "title": "VP, Tech"
+        "title": "Vice President, Tech"
       },
       {
-        "image": "team/sharvari.jpg",
-        "name": "Sharvari Vartak '28",
-        "title": "VP, Strategy"
+        "image": "/team/daniel_khanin.jpg",
+        "name": "Daniel Khanin '28",
+        "title": "Vice President, Tech"
       },
       {
-        "image": "team/arsh.jpg",
+        "image": "/team/arsh.jpg",
         "name": "Arsh Singh '28",
-        "title": "VP, Tech"
+        "title": "Vice President, Tech"
       },
       {
-        "image": "team/joyce.jpeg",
+        "image": "/team/joyce.jpeg",
         "name": "Joyce Han '29",
-        "title": "VP, Internal Operations"
+        "title": "Vice President, Internal Operations"
       },
       {
-        "image": "team/IMG_0136.JPG",
-        "name": "Paul Chung '27",
-        "title": "VP, Events & Finance"
+        "image": "/team/IMG_0136.JPG",
+        "name": "Paul Chung '28",
+        "title": "Vice President, Events & Finance"
       }
     ],
     "engagementManagers": [],
     "projectLeads": [
-        { "name": "Carolyn Fu", "title": "PL", "image": "/team/carolyn_fu.jpg" },
-        { "name": "Daniel Zlotnick", "title": "PL", "image": "/team/daniel_zlotnick.jpg" },
-        { "name": "Dixon Yang", "title": "PL", "image": "/team/dixon_yang.jpg" },
-        { "name": "Mihir Steingard", "title": "PL", "image": "/team/mihir_steingard.jpg" },
-        { "name": "Sharvari Vartak", "title": "PL", "image": "/team/sharvari_vartak.jpg" }
+        { "name": "Carolyn Fu '28", "title": "Project Lead", "image": "/team/carolyn.png" },
+        { "name": "Daniel Zlotnick '28", "title": "Project Lead", "image": "/team/daniel_zlotnick.jpg" },
+        { "name": "Dixon Yang '28", "title": "Project Lead", "image": "/team/dixon.png" },
+        { "name": "Mihir Steingard '28", "title": "Project Lead", "image": "/team/mihir_steingard.jpg" },
+        { "name": "Sharvari Vartak '28", "title": "Project Lead", "image": "/team/sharvari.jpg" }
     ],
     "seniorAssociates": [
       {
-        "image": "team/mashnoon_hasnat.jpg",
+        "image": "/team/kiyam_merali.jpg",
+        "name": "Kiyam Merali '27",
+        "title": "Technology Implementation"
+      },
+      {
+        "image": "/team/mashnoon_hasnat.jpg",
         "name": "Mashnoon Hasnat '27",
-        "title": "Events & Financing"
+        "title": "Strategy & Transformation"
       },
       {
-        "image": "team/yash_chatha.jpg",
-        "name": "Yash Chatha '27",
-        "title": "Technology Implementation"
-      },
-      {
-        "image": "team/jimmy_mulosmani.jpg",
+        "image": "/team/jimmy_mulosmani.jpg",
         "name": "Jimmy Mulosmani '29",
-        "title": "Technology Implementation"
-      },
-      {
-        "image": "team/surabhi_bachhav.jpg",
-        "name": "Surabhi Bachhav '28",
         "title": "Technology Implementation"
       }
     ],
     "associates": [
-        { "name": "Aashna Thadani", "title": "Associate", "image": "/team/aashna_thadani.jpg" },
-        { "name": "Adi Prathapa", "title": "Associate", "image": "/team/adi_prathapa.jpg" },
-        { "name": "Ava Lehmann", "title": "Associate", "image": "/team/ava_lehmann.JPG" },
-        { "name": "Cassidy Takeuchi", "title": "Associate", "image": "/team/cassidy_takeuchi.jpg" },
-        { "name": "Elise Carpenter", "title": "Associate", "image": "/team/elise_carpenter.jpg" },
-        { "name": "Fiona Chandler", "title": "Associate", "image": "/team/fiona_chandler.jpg" },
-        { "name": "Ivy Liu", "title": "Associate", "image": "/team/ivy_liu.jpg" },
-        { "name": "Max Friedman", "title": "Associate", "image": "/team/max_friedman.JPG" },
-        { "name": "Melody Qian", "title": "Associate", "image": "/team/melody_qian.JPG" },
-        { "name": "Meriem Farah", "title": "Associate", "image": "/team/meriem_farah.jpg" },
-        { "name": "Nandini Venkatesh", "title": "Associate", "image": "/team/nandini_venkatesh.JPG" },
-        { "name": "Saiakhil Chilaka", "title": "Associate", "image": "/team/saiakhil_chilaka.jpg" },
-        { "name": "Smriti Kumar", "title": "Associate", "image": "/team/smriti_kumar.JPG" },
-        { "name": "Urja Saha", "title": "Associate", "image": "/team/urja_saha.jpg" },
-        { "name": "Eric Shen", "title": "Associate", "image": "/team/eric_shen.JPG" },
-        { "name": "Audrey Chen", "title": "Associate", "image": "/team/audrey_chen.JPG" },
-        { "name": "Bryan Shao", "title": "Associate", "image": "/team/bryan_shao.JPG" },
-        { "name": "Arvin Mou", "title": "Associate", "image": "/team/arvin_mou.jpg" },
-        { "name": "Jayden Lim", "title": "Associate", "image": "/team/jayden_lim.jpg" }
+        { "name": "Aashna Thadani '29", "title": "Associate", "image": "/team/aashna_thadani.jpg" },
+        { "name": "Adi Prathapa '29", "title": "Associate", "image": "/team/adi_prathapa.jpg" },
+        { "name": "Ava Lehmann '28", "title": "Associate", "image": "/team/ava_lehmann.JPG" },
+        { "name": "Cassidy Takeuchi '29", "title": "Associate", "image": "/team/cassidy_takeuchi.jpg" },
+        { "name": "Elise Carpenter '28", "title": "Associate", "image": "/team/elise_carpenter.jpg" },
+        { "name": "Fiona Chandler '28", "title": "Associate", "image": "/team/fiona_chandler.jpg" },
+        { "name": "Ivy Liu '28", "title": "Associate", "image": "/team/ivy_liu.jpg" },
+        { "name": "Max Friedman '29", "title": "Associate", "image": "/team/max_friedman.JPG" },
+        { "name": "Melody Qian '28", "title": "Associate", "image": "/team/melody_qian.JPG" },
+        { "name": "Meriem Farah '29", "title": "Associate", "image": "/team/meriem_farah.jpg" },
+        { "name": "Nandini Venkatesh '29", "title": "Associate", "image": "/team/nandini_venkatesh.JPG" },
+        { "name": "Saiakhil Chilaka '29", "title": "Associate", "image": "/team/saiakhil_chilaka.jpg" },
+        { "name": "Smriti Kumar '29", "title": "Associate", "image": "/team/smriti_kumar.JPG" },
+        { "name": "Surabhi Bachhav '28", "title": "Associate", "image": "/team/surabhi_bachhav.jpg" },
+        { "name": "Urja Saha '29", "title": "Associate", "image": "/team/urja_saha.jpg" },
+        { "name": "Eric Shen '29", "title": "Associate", "image": "/team/eric_shen.JPG" },
+        { "name": "Audrey Chen '29", "title": "Associate", "image": "/team/audrey_chen.JPG" },
+        { "name": "Bryan Shao '29", "title": "Associate", "image": "/team/bryan_shao.JPG" },
+        { "name": "Arvin Mou '29", "title": "Associate", "image": "/team/arvin_mou.jpg" },
+        { "name": "Jayden Lim '29", "title": "Associate", "image": "/team/jayden_lim.jpg" }
     ],
     "advisory": []
 }
