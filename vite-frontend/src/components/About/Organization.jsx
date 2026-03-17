@@ -25,7 +25,7 @@ const Organization = () => {
     <section className="max-w-[1600px] mx-auto bg-white border-b border-[#051C2C]/10 mb-5">
         
         {/* Header */}
-        <div className="pb-20 px-6 md:px-12 text-center border-b border-[#051C2C]/10">
+        <div className="pb-15 px-6 md:px-12 text-center border-b border-[#051C2C]/10 pt-15">
             <h2 className="text-4xl lg:text-5xl font-serif text-[#051C2C]">Organization Divisions</h2>
             <p className="mt-4 text-slate-500 font-light">Built to cover the full spectrum of modern business challenges.</p>
         </div>
